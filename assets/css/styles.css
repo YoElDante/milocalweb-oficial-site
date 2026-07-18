@@ -1,0 +1,179 @@
+/*
+ * Hoja de estilos principal de MiLocalWeb.
+ * Estilos base para landing page, navbar y secciones.
+ */
+
+:root {
+    --color-primary: #2563eb;
+    --color-primary-dark: #1e40af;
+    --color-bg: #ffffff;
+    --color-text: #1f2937;
+    --color-muted: #6b7280;
+    --color-border: #e5e7eb;
+    --color-bg-alt: #f9fafb;
+    --radius: 8px;
+    --max-width: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.site-header {
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.navbar-menu a:hover {
+    color: var(--color-primary);
+}
+
+/* Dropdown Portal interno */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    list-style: none;
+    min-width: 160px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--color-text);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Main */
+.site-main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--color-muted);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: var(--color-primary-dark);
+}
+
+/* Sections */
+.section {
+    padding: 3rem 0;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+}
+
+.service-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.section-contact {
+    text-align: center;
+}
+
+/* Footer */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}

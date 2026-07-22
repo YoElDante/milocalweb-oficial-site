@@ -13,6 +13,7 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <section class="hero">
+    <div class="hero-effects" aria-hidden="true"></div>
     <div class="hero-content">
         <img src="<?= LOGOS_URL ?>/ISOLOGOTIPO CUADRADO VERDE NARANJA.webp"
              alt="MiLocalWeb"
@@ -85,9 +86,13 @@ require_once __DIR__ . '/includes/header.php';
         </p>
     </div>
 
-    <p class="planes-nota">
-        ¿Necesitas un <strong>dominio propio</strong>? <code>tunegocio.com.ar</code> por solo $20.000 ARS/año.
-    </p>
+    <div class="planes-promo planes-promo--accent">
+        <span class="promo-badge promo-badge--accent">Solo Tuyo</span>
+        <p>
+            ¿Necesitas un <strong>dominio propio</strong>? <code>tunegocio.com.ar</code>
+            por pago único anual de $20.000 ARS.
+        </p>
+    </div>
 </section>
 
 <section id="por-que" class="section section-why">

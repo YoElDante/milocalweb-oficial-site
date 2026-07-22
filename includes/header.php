@@ -2,9 +2,8 @@
 /**
  * Cabecera compartida del sitio MiLocalWeb.
  *
- * Incluye metadatos HTML, enlaces a hojas de estilo y la barra de navegacion.
- * Las rutas de assets usan URLs absolutas desde la raiz publica para
- * garantizar funcionamiento consistente en / y subrutas.
+ * Incluye metadatos HTML, favicon, enlaces a hojas de estilo y la barra
+ * de navegacion con los logos institucionales.
  *
  * @package MiLocalWeb
  */
@@ -14,14 +13,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MiLocalWeb — Soluciones web y servicios para tu negocio.">
-    <title><?= defined('SITE_NAME') ? SITE_NAME : 'MiLocalWeb' ?></title>
+    <meta name="description" content="MiLocalWeb — Presencia digital profesional para tu comercio. Pago unico, sin mensualidades obligatorias.">
+    <title><?= defined('SITE_NAME') ? SITE_NAME : 'MiLocalWeb' ?> — Presencia digital para tu negocio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="<?= ICONOS_URL ?>/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= ICONOS_URL ?>/favicon.ico">
+
     <link rel="stylesheet" href="<?= CSS_URL ?>/styles.css">
 </head>
 <body>
     <header class="site-header">
         <nav class="navbar">
-            <a href="/" class="navbar-brand"><?= SITE_NAME ?></a>
+            <div class="navbar-brand">
+                <a href="/" class="brand-logos">
+                    <img src="<?= LOGOS_URL ?>/LOGO VERDE NARANJA.webp"
+                         alt="Logo MiLocalWeb"
+                         class="brand-icon">
+                    <img src="<?= LOGOS_URL ?>/MI LOCAL WEB VERDE NARANJA.webp"
+                         alt="MiLocalWeb"
+                         class="brand-wordmark">
+                </a>
+            </div>
             <ul class="navbar-menu">
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/#servicios">Servicios</a></li>

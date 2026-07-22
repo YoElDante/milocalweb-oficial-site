@@ -11,14 +11,21 @@
 // Nombre del sitio
 define('SITE_NAME', 'MiLocalWeb');
 
-// URL base del sitio (ajustar segun entorno de despliegue)
-define('BASE_URL', 'https://milocalweb.com.ar');
+// Deteccion automatica de entorno: local vs produccion.
+// En local (php -S localhost:8000) usa URL relativa para que el navegador
+// cargue los assets desde el mismo servidor. En produccion usa el dominio.
+$esLocal = (php_sapi_name() === 'cli-server')
+    || in_array($_SERVER['SERVER_NAME'] ?? '', ['localhost', '127.0.0.1'], true);
+
+define('BASE_URL', $esLocal ? '' : 'https://milocalweb.com.ar');
 
 // Ruta absoluta a assets desde la raiz publica
 define('ASSETS_URL', BASE_URL . '/assets');
 define('CSS_URL', ASSETS_URL . '/css');
 define('JS_URL', ASSETS_URL . '/js');
 define('IMG_URL', ASSETS_URL . '/img');
+define('ICONOS_URL', IMG_URL . '/iconos');
+define('LOGOS_URL', IMG_URL . '/logos/Principales');
 
 // Zona horaria
 date_default_timezone_set('America/Argentina/Buenos_Aires');

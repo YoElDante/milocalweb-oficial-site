@@ -3,7 +3,7 @@
  * Logica de interaccion del lado del cliente.
  */
 (function () {
-    'use strict';
+  'use strict';
 
-    console.log('MiLocalWeb — sitio cargado.');
+  console.log('MiLocalWeb — sitio cargado.');
 })();

@@ -79,6 +79,6 @@
         </svg>
     </a>
 
-    <script src="<?= JS_URL ?>/main.js"></script>
+    <script src="<?= JS_URL ?>/main.js<?= JS_VERSION ?>"></script>
 </body>
 </html>

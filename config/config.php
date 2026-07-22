@@ -27,5 +27,14 @@ define('IMG_URL', ASSETS_URL . '/img');
 define('ICONOS_URL', IMG_URL . '/iconos');
 define('LOGOS_URL', IMG_URL . '/logos/Principales');
 
+// Cache busting: fuerza recarga de assets cuando los archivos cambian.
+// Usa el timestamp del CSS y JS real como version.
+$cssFile = __DIR__ . '/../assets/css/styles.css';
+$jsFile  = __DIR__ . '/../assets/js/main.js';
+$cssVersion = is_file($cssFile) ? filemtime($cssFile) : time();
+$jsVersion  = is_file($jsFile)  ? filemtime($jsFile)  : time();
+define('CSS_VERSION', '?v=' . $cssVersion);
+define('JS_VERSION',  '?v=' . $jsVersion);
+
 // Zona horaria
 date_default_timezone_set('America/Argentina/Buenos_Aires');

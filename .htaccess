@@ -1,0 +1,43 @@
+# MiLocalWeb — reglas y headers del servidor
+
+# ---- Headers de seguridad ----
+<IfModule mod_headers.c>
+    # Evita que el navegador reinterprete el MIME type del archivo.
+    # Crítico para que CSS y JS se procesen correctamente incluso si
+    # extensiones del navegador intentan modificar la respuesta.
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Previene que el sitio sea embebido en iframes de terceros.
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Limita la información enviada en el header Referer.
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ---- Cache para assets versionados ----
+# CSS y JS usan cache-busting via ?v=timestamp, asique son inmutables.
+<FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Imagenes: cache de 30 dias.
+<FilesMatch "\.(webp|png|jpg|jpeg|gif|ico|svg)$">
+    Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+
+# HTML y PHP: sin cache, siempre fresco.
+<FilesMatch "\.(html|php)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+</FilesMatch>
+
+# ---- URLs limpias y seguridad basica ----
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Bloquear acceso a archivos sensibles
+    RewriteRule ^(config|includes)/ - [F,L]
+
+    # Forzar HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>

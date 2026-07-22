@@ -20,7 +20,7 @@
     <link rel="icon" type="image/x-icon" href="<?= ICONOS_URL ?>/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="<?= ICONOS_URL ?>/favicon.ico">
 
-    <link rel="stylesheet" href="<?= CSS_URL ?>/styles.css">
+    <link rel="stylesheet" href="<?= CSS_URL ?>/styles.css<?= CSS_VERSION ?>">
 </head>
 <body>
     <header class="site-header">

@@ -1000,6 +1000,11 @@ a {
     text-align: center;
   }
 
+  .footer-isotipo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .footer-tagline {
     max-width: none;
   }

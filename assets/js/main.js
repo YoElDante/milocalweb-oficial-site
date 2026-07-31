@@ -1,6 +1,6 @@
 /**
  * Script principal de MiLocalWeb.
- * Logica de interaccion del lado del cliente.
+ * Lógica de interacción del lado del cliente.
  */
 (function () {
   'use strict';

@@ -12,12 +12,12 @@ milocalweb.com.ar/
 │   │   └── styles.css     # Hoja de estilos del sitio
 │   ├── js/
 │   │   └── main.js        # Scripts del sitio
-│   └── img/               # Imagenes y recursos visuales
+│   └── img/               # Imágenes y recursos visuales
 ├── includes/
 │   ├── header.php         # Cabecera compartida (navbar)
-│   └── footer.php         # Pie de pagina compartido
+│   └── footer.php         # Pie de página compartido
 ├── config/
-│   └── config.php         # Configuracion general del sitio
+│   └── config.php         # Configuración general del sitio
 ├── .gitignore
 └── README.md
 ```
@@ -26,7 +26,7 @@ milocalweb.com.ar/
 
 | Ruta          | Descripcion                              | Estado |
 |---------------|------------------------------------------|--------|
-| `/`           | Landing page publica                     | Activo |
+| `/`           | Landing page pública                     | Activo |
 | `/descargas`  | Acceso por password a archivos privados | Plan   |
 | `/pagos`      | Portal de pagos                          | Plan   |
 | `/tutoriales` | Tutoriales para clientes                 | Plan   |
@@ -38,6 +38,6 @@ milocalweb.com.ar/
 
 ## Convenciones
 
-- Documentacion y comentarios en espanol, tono formal y conciso.
+- Documentación y comentarios en español, tono formal y conciso.
 - Assets con rutas absolutas desde `public` (`/assets`, `/css`, `/js`).
 - Navbar agrupa accesos internos bajo "Portal interno".

@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MiLocalWeb — Presencia digital profesional para tu comercio. Pago unico, sin mensualidades obligatorias.">
+    <meta name="description" content="MiLocalWeb — Presencia digital profesional para tu comercio. Pago único, sin mensualidades obligatorias.">
     <title><?= defined('SITE_NAME') ? SITE_NAME : 'MiLocalWeb' ?> — Presencia digital para tu negocio</title>
 
     <!-- Favicon -->
@@ -37,6 +37,8 @@
             </div>
             <ul class="navbar-menu">
                 <li><a href="/">Inicio</a></li>
+                <li><a href="/#planes">Planes</a></li>
+                <li><a href="/#comparativa">Comparativa</a></li>
                 <li><a href="/#servicios">Servicios</a></li>
                 <li><a href="/#contacto">Contacto</a></li>
                 <li class="dropdown">

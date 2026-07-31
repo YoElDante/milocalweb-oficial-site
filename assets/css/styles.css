@@ -356,6 +356,7 @@ a {
 .btn-secondary,
 .btn-plan,
 .btn-plan-destacado,
+.btn-phone,
 .btn-whatsapp,
 .btn-email {
   display: inline-flex;
@@ -446,10 +447,27 @@ a {
   transform: translateY(-2px);
 }
 
+.btn-phone {
+  background: var(--negro);
+  color: var(--blanco);
+}
+
+.btn-phone:hover {
+  background: #333;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
 .btn-icon {
+  display: inline-flex;
   width: 20px;
   height: 20px;
   flex-shrink: 0;
+}
+
+.btn-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* Sections */
@@ -614,6 +632,85 @@ a {
 .plan-features li small {
   color: var(--color-muted);
   font-size: 0.8rem;
+}
+
+.plan-features li.feature-inherited {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.plan-features li.feature-inherited::before {
+  color: var(--color-muted);
+}
+
+.plan-features li.feature-inherited small {
+  color: var(--color-muted);
+}
+
+/* Details colapsable en planes */
+.plan-details {
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  margin-top: 0;
+}
+
+.plan-details-summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  padding: 0.6rem 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.plan-details-summary:hover {
+  color: var(--color-primary);
+}
+
+.plan-details-summary::-webkit-details-marker {
+  display: none;
+}
+
+.plan-details-summary::before {
+  content: '▸';
+  display: inline-block;
+  transition: transform 0.2s;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.plan-details[open] .plan-details-summary {
+  color: var(--color-primary);
+}
+
+.plan-details[open] .plan-details-summary::before {
+  transform: rotate(90deg);
+}
+
+.plan-features-inherited {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.plan-features-inherited li {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.plan-features-inherited li::before {
+  color: var(--color-muted);
+}
+
+.plan-features-inherited li small {
+  color: var(--color-muted);
+}
+
+.plan-features-inherited li:last-child {
+  border-bottom: none;
 }
 
 .plan-features li:last-child {
@@ -894,9 +991,15 @@ a {
 }
 
 .social-icon {
+  display: inline-flex;
   width: 22px;
   height: 22px;
   color: var(--blanco);
+}
+
+.social-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .footer-links ul {
@@ -971,6 +1074,7 @@ a {
 
   .btn-primary,
   .btn-secondary,
+  .btn-phone,
   .btn-whatsapp,
   .btn-email {
     width: 100%;
@@ -1057,9 +1161,15 @@ a {
 }
 
 .whatsapp-float__icon {
+  display: inline-flex;
   width: 32px;
   height: 32px;
   flex-shrink: 0;
+}
+
+.whatsapp-float__icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes whatsapp-pulse {
@@ -1087,5 +1197,216 @@ a {
   .whatsapp-float__icon {
     width: 28px;
     height: 28px;
+  }
+}
+
+/* Plan tagline */
+.plan-tagline {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+/* Servicios Adicionales */
+.section-extras {
+  background: var(--color-bg);
+}
+
+.extras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.extra-card {
+  background: var(--color-card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-glass);
+}
+
+.extra-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.extra-desc {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.extra-features {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.extra-features li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.extra-features li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.extra-features li:last-child {
+  border-bottom: none;
+}
+
+.extra-features li small {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+.extra-price {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 1.1rem;
+  color: var(--color-text);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.extra-price strong {
+  font-size: 1.5rem;
+  color: var(--negro);
+}
+
+.extra-price small {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.extra-price-add {
+  display: block;
+  width: 100%;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* Cuadro comparativo */
+.section-comparativa {
+  background: var(--color-bg);
+}
+
+.tabla-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass);
+}
+
+.tabla-comparativa {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background: var(--color-card-bg);
+  font-size: 0.93rem;
+}
+
+.tabla-comparativa thead th {
+  background: var(--color-primary);
+  color: var(--blanco);
+  padding: 0.9rem 0.75rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.tabla-comparativa thead th:first-child {
+  text-align: left;
+  padding-left: 1.25rem;
+}
+
+.tabla-comparativa .th-imparable {
+  background: var(--color-accent);
+}
+
+.tabla-comparativa tbody td {
+  padding: 0.7rem 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: var(--color-text);
+}
+
+.tabla-comparativa tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+  padding-left: 1.25rem;
+}
+
+.tabla-comparativa tbody tr:hover td {
+  background: rgba(90, 153, 57, 0.04);
+}
+
+.tabla-comparativa .tr-seccion td {
+  background: rgba(90, 153, 57, 0.07);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-primary);
+  padding: 0.55rem 1.25rem;
+}
+
+.tabla-comparativa .tr-seccion:hover td {
+  background: rgba(90, 153, 57, 0.07);
+}
+
+.tabla-comparativa .text-muted {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.tabla-comparativa tfoot .tr-precio td {
+  background: linear-gradient(135deg, rgba(239, 96, 21, 0.07), rgba(255, 138, 69, 0.04));
+  font-weight: 700;
+  padding: 1.1rem 0.75rem;
+  border-top: 2px solid var(--color-accent);
+}
+
+.tabla-comparativa tfoot .tr-precio td:first-child {
+  padding-left: 1.25rem;
+}
+
+.tabla-comparativa tfoot .tr-precio strong {
+  font-size: 1.35rem;
+  color: var(--negro);
+}
+
+.tabla-comparativa tfoot .tr-precio small {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.tabla-comparativa tfoot .td-imparable strong {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .extras-grid {
+    grid-template-columns: 1fr;
   }
 }

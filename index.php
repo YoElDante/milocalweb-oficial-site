@@ -2,7 +2,7 @@
 /**
  * Landing page principal de MiLocalWeb.
  *
- * Presenta el sitio publico con secciones de hero, planes de servicio
+ * Presenta el sitio público con secciones de hero, planes de servicio
  * y contacto. Incluye cabecera y pie compartidos desde includes/.
  *
  * @package MiLocalWeb
@@ -20,8 +20,8 @@ require_once __DIR__ . '/includes/header.php';
              class="hero-isotipo">
         <h1>Presencia digital profesional para tu comercio</h1>
         <p class="hero-subtitle">
-            Creamos paginas web, optimizamos tu SEO y potenciamos tus redes sociales.
-            <strong>Pago unico, sin mensualidades obligatorias.</strong>
+            Creamos páginas web, optimizamos tu SEO y potenciamos tus redes sociales.
+            <strong>Pago único, sin mensualidades obligatorias.</strong>
         </p>
         <div class="hero-actions">
             <a href="#planes" class="btn-primary">Ver planes</a>
@@ -30,99 +30,26 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<section id="planes" class="section section-plans">
-    <h2>Planes a tu medida</h2>
-    <p class="section-subtitle">Elegi el plan que mejor se adapte a tu negocio. Paga una sola vez y listo.</p>
-    <div class="plans-grid">
-        <div class="plan-card">
-            <h3 class="plan-name">Plan Inicial</h3>
-            <div class="plan-price">$65.000 <span>ARS</span></div>
-            <p class="plan-pago">Pago unico</p>
-            <ul class="plan-features">
-                <li>Google Business Profile</li>
-                <li>Instagram y Facebook</li>
-                <li>WhatsApp Business</li>
-                <li>Linktree personalizado</li>
-                <li>6 fotos editadas</li>
-            </ul>
-            <a href="https://wa.me/5493513783473" target="_blank" rel="noopener noreferrer" class="btn-plan">Lo quiero</a>
-        </div>
-
-        <div class="plan-card plan-destacado">
-            <span class="plan-badge">Recomendado</span>
-            <h3 class="plan-name">Plan Imparable</h3>
-            <div class="plan-price">$180.000 <span>ARS</span></div>
-            <p class="plan-pago">Pago unico</p>
-            <ul class="plan-features">
-                <li>Landing page completa <small>(gratis 3 meses)</small></li>
-                <li>SEO Local</li>
-                <li>Catalogo WhatsApp sincronizado</li>
-                <li>Logo personalizado</li>
-                <li>Kit QR</li>
-                <li>Capacitacion basica</li>
-                <li>24 fotos editadas</li>
-            </ul>
-            <a href="https://wa.me/5493513783473" target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-destacado">Lo quiero</a>
-        </div>
-
-        <div class="plan-card">
-            <h3 class="plan-name">Plan Visible</h3>
-            <div class="plan-price">$120.000 <span>ARS</span></div>
-            <p class="plan-pago">Pago unico</p>
-            <ul class="plan-features">
-                <li>Todo lo del Plan Inicial</li>
-                <li>Landing page <small>(gratis 1 mes)</small></li>
-                <li>Catalogo WhatsApp <small>(9 productos)</small></li>
-                <li>12 fotos editadas</li>
-            </ul>
-            <a href="https://wa.me/5493513783473" target="_blank" rel="noopener noreferrer" class="btn-plan">Lo quiero</a>
-        </div>
-    </div>
-    <div class="planes-promo">
-        <span class="promo-badge">Gratis siempre</span>
-        <p>
-            Con nosotros tu dirección profesional es <code>[tunegocio].milocalweb.com.ar</code>
-            — sin costo y lista al instante.
-        </p>
-    </div>
-
-    <div class="planes-promo planes-promo--accent">
-        <span class="promo-badge promo-badge--accent">Solo Tuyo</span>
-        <p>
-            ¿Necesitas un <strong>dominio propio</strong>? <code>tunegocio.com.ar</code>
-            por pago único anual de $20.000 ARS.
-        </p>
-    </div>
-</section>
-
 <section id="por-que" class="section section-why">
-    <h2>¿Por que MiLocalWeb?</h2>
+    <h2>¿Por qué MiLocalWeb?</h2>
     <div class="why-grid">
         <div class="why-card">
-            <div class="why-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
+            <div class="why-icon" aria-hidden="true">
+                <?php readfile(__DIR__ . '/assets/img/iconos/icon-check.svg'); ?>
             </div>
             <h3>Sin ataduras</h3>
             <p>No secuestramos tus cuentas. Las credenciales de Google, Instagram, Facebook y WhatsApp son tuyas.</p>
         </div>
         <div class="why-card">
-            <div class="why-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="12" y1="1" x2="12" y2="23"></line>
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                </svg>
+            <div class="why-icon" aria-hidden="true">
+                <?php readfile(__DIR__ . '/assets/img/iconos/icon-dollar.svg'); ?>
             </div>
-            <h3>Pago unico</h3>
-            <p>Sin mensualidades obligatorias. Pagas una vez y recibis todo armado y funcionando.</p>
+            <h3>Pago único</h3>
+            <p>Sin mensualidades obligatorias. Pagás una vez y recibís todo armado y funcionando.</p>
         </div>
         <div class="why-card">
-            <div class="why-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
+            <div class="why-icon" aria-hidden="true">
+                <?php readfile(__DIR__ . '/assets/img/iconos/icon-check-circle.svg'); ?>
             </div>
             <h3>Hecho para vos</h3>
             <p>Diseñado pensando en comercios locales, emprendedores y profesionales independientes.</p>
@@ -130,22 +57,223 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 </section>
 
+<section id="planes" class="section section-plans">
+    <h2>Planes a tu medida</h2>
+    <p class="section-subtitle">Elegí el plan que mejor se adapte a tu negocio. Pagá una sola vez y listo.</p>
+    <div class="plans-grid">
+        <div class="plan-card">
+            <h3 class="plan-name">INICIAL</h3>
+            <p class="plan-tagline">"Que te encuentren y te contacten"</p>
+            <div class="plan-price">$128.000 <span>ARS</span></div>
+            <p class="plan-pago">Pago único</p>
+            <ul class="plan-features">
+                <li>Relevamiento completo</li>
+                <li>Google Business Profile</li>
+                <li>Instagram profesional</li>
+                <li>Página de Facebook</li>
+                <li>Redirección de WhatsApp</li>
+                <li>Sesión de fotos <small>(6 fotos editadas)</small></li>
+                <li>Web propia <small>(3 meses gratis)</small></li>
+                <li>Revisión final y entrega</li>
+                <li>Kit QR A4 + Expositor acrílico</li>
+            </ul>
+            <a href="https://wa.me/5493513783473" target="_blank" rel="noopener noreferrer" class="btn-plan">Lo quiero</a>
+        </div>
+
+        <div class="plan-card plan-destacado">
+            <span class="plan-badge">Recomendado</span>
+            <h3 class="plan-name">IMPARABLE</h3>
+            <p class="plan-tagline">"Que te prefieran"</p>
+            <div class="plan-price">$280.000 <span>ARS</span></div>
+            <p class="plan-pago">Pago único</p>
+            <ul class="plan-features">
+                <li>Página Web completa <small>(4-5 secciones)</small></li>
+                <li>5 historias destacadas en Instagram</li>
+                <li>Catálogo WhatsApp sincronizado <small>(hasta 9 productos)</small></li>
+                <li>Sesión de fotos completa <small>(24 fotos editadas)</small></li>
+                <li>QR WhatsApp + QR Reseñas impresos</li>
+                <li>Capacitación básica + verificación final</li>
+                <li>Tarjetas personales + flyer</li>
+                <li>Subdominio GRATIS PARA SIEMPRE</li>
+            </ul>
+            <details class="plan-details">
+                <summary class="plan-details-summary">Incluye todo lo de VISIBLE</summary>
+                <ul class="plan-features plan-features-inherited">
+                    <li>Relevamiento completo</li>
+                    <li>Google Business Profile</li>
+                    <li>Instagram profesional</li>
+                    <li>Página de Facebook</li>
+                    <li>Redirección de WhatsApp</li>
+                    <li>Sesión de fotos <small>(6 fotos editadas)</small></li>
+                    <li>Web propia <small>(3 meses gratis)</small></li>
+                    <li>Revisión final y entrega</li>
+                    <li>Kit QR A4 + Expositor acrílico</li>
+                    <li>Página web <small>(foto + oferta + mapa)</small></li>
+                    <li>Web bonificada <small>(3 meses gratis + 50% el resto)</small></li>
+                    <li>Catálogo WhatsApp Business <small>(hasta 9 productos)</small></li>
+                    <li>3 historias destacadas en Instagram</li>
+                    <li>1 mes de publicaciones programadas</li>
+                    <li>Sesión de fotos ampliada <small>(12 fotos)</small></li>
+                </ul>
+            </details>
+            <a href="https://wa.me/5493513783473" target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-destacado">Lo quiero</a>
+        </div>
+
+        <div class="plan-card">
+            <h3 class="plan-name">VISIBLE</h3>
+            <p class="plan-tagline">"Que te vean y te elijan"</p>
+            <div class="plan-price">$188.000 <span>ARS</span></div>
+            <p class="plan-pago">Pago único</p>
+            <ul class="plan-features">
+                <li>Página web <small>(foto + oferta + mapa)</small></li>
+                <li>Web bonificada <small>(3 meses gratis + 50% el resto)</small></li>
+                <li>Catálogo WhatsApp Business <small>(hasta 9 productos)</small></li>
+                <li>3 historias destacadas en Instagram</li>
+                <li>1 mes de publicaciones programadas</li>
+                <li>Sesión de fotos ampliada <small>(12 fotos)</small></li>
+            </ul>
+            <details class="plan-details">
+                <summary class="plan-details-summary">Incluye todo lo de INICIAL</summary>
+                <ul class="plan-features plan-features-inherited">
+                    <li>Relevamiento completo</li>
+                    <li>Google Business Profile</li>
+                    <li>Instagram profesional</li>
+                    <li>Página de Facebook</li>
+                    <li>Redirección de WhatsApp</li>
+                    <li>Sesión de fotos <small>(6 fotos editadas)</small></li>
+                    <li>Web propia <small>(3 meses gratis)</small></li>
+                    <li>Revisión final y entrega</li>
+                    <li>Kit QR A4 + Expositor acrílico</li>
+                </ul>
+            </details>
+            <a href="https://wa.me/5493513783473" target="_blank" rel="noopener noreferrer" class="btn-plan">Lo quiero</a>
+        </div>
+    </div>
+    <div class="planes-promo">
+        <span class="promo-badge">Gratis siempre</span>
+        <p>
+            Todos los planes incluyen subdominio <code>tunegocio.milocalweb.com.ar</code>
+            sin costo adicional, listo al instante y para siempre.
+        </p>
+    </div>
+
+    <div class="planes-promo planes-promo--accent">
+        <span class="promo-badge promo-badge--accent">Solo Tuyo</span>
+        <p>
+            ¿Querés tu <strong>dominio propio</strong>? <code>tunegocio.com.ar</code>
+            desde <strong>$25.000 ARS/año</strong>. (Sin "milocalweb" en la URL).
+        </p>
+    </div>
+</section>
+
+<section id="comparativa" class="section section-comparativa">
+    <h2>Cuadro comparativo</h2>
+    <p class="section-subtitle">Todos los servicios, plan por plan. Para que elijas sin dudas.</p>
+    <div class="tabla-wrapper">
+        <table class="tabla-comparativa">
+            <thead>
+                <tr>
+                    <th>Servicio</th>
+                    <th>INICIAL</th>
+                    <th class="th-destacada">VISIBLE</th>
+                    <th class="th-imparable">IMPARABLE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tr-seccion"><td colspan="4">Presencia digital base</td></tr>
+                <tr><td>Relevamiento completo</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td>Google Business Profile</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td>Instagram profesional</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td>Página de Facebook</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td>Redirección de WhatsApp</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td>Revisión final y entrega</td><td>✅</td><td>✅</td><td>✅</td></tr>
+
+                <tr class="tr-seccion"><td colspan="4">Material publicitario</td></tr>
+                <tr><td>Kit QR A4 plastificado + Expositor acrílico</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td>QR de Reseñas impreso</td><td>—</td><td>—</td><td>✅</td></tr>
+                <tr><td>Tarjetas personales + flyer listo para impresión</td><td>—</td><td>—</td><td>✅</td></tr>
+
+                <tr class="tr-seccion"><td colspan="4">Sesión de fotos</td></tr>
+                <tr><td>Fotos editadas</td><td>6</td><td>12</td><td>24</td></tr>
+
+                <tr class="tr-seccion"><td colspan="4">Página web</td></tr>
+                <tr><td>Web con link a redes, productos estrella y contacto</td><td>3 meses gratis</td><td><span class="check">✅</span></td><td><span class="check">✅</span></td></tr>
+                <tr><td>Web con foto del local, 3 productos, mapa y WhatsApp</td><td>—</td><td>✅</td><td><span class="text-muted">incluido</span></td></tr>
+                <tr><td>Web completa (4-5 secciones: inicio, quiénes somos, ofertas, contacto)</td><td>—</td><td>—</td><td>✅</td></tr>
+                <tr><td>Web bonificada (3 meses gratis + 50% resto del año)</td><td>—</td><td>✅</td><td>✅</td></tr>
+
+                <tr class="tr-seccion"><td colspan="4">WhatsApp Business</td></tr>
+                <tr><td>Catálogo WhatsApp (hasta 9 productos con foto y precio)</td><td>—</td><td>✅</td><td>✅</td></tr>
+                <tr><td>Catálogo sincronizado (3 llamadores + 3 ofertas + 3 mayor margen)</td><td>—</td><td>—</td><td>✅</td></tr>
+
+                <tr class="tr-seccion"><td colspan="4">Redes sociales</td></tr>
+                <tr><td>Historias destacadas en Instagram</td><td>—</td><td>3</td><td>5</td></tr>
+                <tr><td>Publicaciones programadas (1 mes)</td><td>—</td><td>✅</td><td>✅</td></tr>
+                <tr><td>Capacitación: autogestión de redes</td><td>—</td><td>—</td><td>✅</td></tr>
+
+                <tr class="tr-seccion"><td colspan="4">Dominio</td></tr>
+                <tr><td>Subdominio gratuito <code>tunegocio.milocalweb.com.ar</code></td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td>Dominio propio <code>.com.ar</code> (opcional)</td><td>—</td><td>+$25.000/año</td><td>+$20.000/año</td></tr>
+            </tbody>
+            <tfoot>
+                <tr class="tr-precio">
+                    <td>Precio final</td>
+                    <td><strong>$128.000</strong><br><small>pago único</small></td>
+                    <td class="td-destacada"><strong>$188.000</strong><br><small>pago único</small></td>
+                    <td class="td-imparable"><strong>$280.000</strong><br><small>pago único</small></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</section>
+
+<section id="servicios" class="section section-extras">
+    <h2>Servicios Adicionales</h2>
+    <p class="section-subtitle">Complementa tu plan con servicios extra. Pago único, sin mensualidades.</p>
+    <div class="extras-grid">
+        <div class="extra-card">
+            <h3 class="extra-name">Teléfono Exclusivo para tu Negocio</h3>
+            <p class="extra-desc">Separa tu vida personal del trabajo. Un número exclusivo para atender clientes.</p>
+            <ul class="extra-features">
+                <li><strong>Básico</strong> — desde $200.000 <small>(línea exclusiva)</small></li>
+                <li><strong>Intermedio</strong> — consultar <small>(+ IVR, bienvenida automática)</small></li>
+                <li><strong>Avanzado</strong> — consultar <small>(+ centralita virtual, extensiones)</small></li>
+            </ul>
+        </div>
+        <div class="extra-card">
+            <h3 class="extra-name">Capacitación: Autogestión Digital de Redes</h3>
+            <p class="extra-desc">Aprende a manejar tus propias redes sin depender de nosotros.</p>
+            <ul class="extra-features">
+                <li>Publicar en Instagram y Facebook</li>
+                <li>Responder mensajes y reseñas</li>
+                <li>Armar historias y destacadas</li>
+                <li>Tips de contenido para tu rubro</li>
+                <li>Uso básico de WhatsApp Business</li>
+            </ul>
+            <div class="extra-price">
+                <strong>$150.000</strong> <small>(hasta 4 personas)</small>
+                <span class="extra-price-add">+ $30.000 por persona extra</span>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="contacto" class="section section-contact">
     <h2>Conversemos</h2>
     <p class="contact-subtitle">
-        Contanos que necesita tu negocio. Escribinos por WhatsApp o email y te respondemos a la brevedad.
+        Contanos que necesita tu negocio. Llamanos, escribinos por WhatsApp o email y te respondemos a la brevedad.
     </p>
     <div class="contact-actions">
+        <a href="tel:+5493513783473" class="btn-phone">
+            <span class="btn-icon" aria-hidden="true"><?php readfile(__DIR__ . '/assets/img/iconos/icon-phone.svg'); ?></span>
+            +54 9 351 378-3473
+        </a>
         <a href="https://wa.me/5493513783473" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
-            </svg>
+            <span class="btn-icon" aria-hidden="true"><?php readfile(__DIR__ . '/assets/img/iconos/icon-whatsapp.svg'); ?></span>
             WhatsApp Comercial
         </a>
         <a href="mailto:comercial@milocalweb.com.ar" class="btn-email">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
+            <span class="btn-icon" aria-hidden="true"><?php readfile(__DIR__ . '/assets/img/iconos/icon-mail.svg'); ?></span>
             comercial@milocalweb.com.ar
         </a>
     </div>

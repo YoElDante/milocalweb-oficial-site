@@ -38,3 +38,17 @@ define('JS_VERSION',  '?v=' . $jsVersion);
 
 // Zona horaria
 date_default_timezone_set('America/Argentina/Buenos_Aires');
+
+// Google Maps API key (misma cuenta usada en las landingpages de clientes)
+define('GOOGLE_MAPS_API_KEY', 'AIzaSyDNqXAEhl4AqBQpOlu_3VA_PFBsx-LMqwk');
+
+// Datos de la oficina comercial para la sección "Nuestra Oficina"
+$oficina = [
+    'nombre'     => 'MiLocalWeb',
+    'direccion'  => "Angelo de Peredo 34\nX5000BTB Córdoba",
+    'telefono'   => '+54 9 351 378-3473',
+    'lat'        => '-31.4282461',
+    'lng'        => '-64.1896678',
+    'foto'       => IMG_URL . '/oficina/oficina.webp',
+    'gmaps_link' => 'https://maps.app.goo.gl/322Nu5SZxSpRDYy17',
+];

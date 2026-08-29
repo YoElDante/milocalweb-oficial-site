@@ -40,7 +40,8 @@ define('JS_VERSION',  '?v=' . $jsVersion);
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 // Google Maps API key (misma cuenta usada en las landingpages de clientes)
-define('GOOGLE_MAPS_API_KEY', 'AIzaSyDNqXAEhl4AqBQpOlu_3VA_PFBsx-LMqwk');
+// Se lee de env var en producción; fallback al valor de consola para compatibilidad.
+define('GOOGLE_MAPS_API_KEY', getenv('GOOGLE_MAPS_API_KEY') ?: 'AIzaSyAcV2YdYUk07mJnRLBl_pXi4uG7BOrfYZE');
 
 // Datos de la oficina / ubicación comercial — sección "Ubicación" (alias legacy: oficina)
 // Industria IT: la sección del mapa suele llamarse "Ubicación", "Location" o "Dónde estamos" / "Where to find us"

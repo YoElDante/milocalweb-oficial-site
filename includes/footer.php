@@ -8,6 +8,21 @@
  */
 ?>
     </main>
+    <div class="footer-transition" aria-hidden="true">
+        <img src="<?= IMG_URL ?>/pie%20de%20pagina/pie%20de%20pagina.webp"
+             alt=""
+             class="footer-transition__img"
+             width="1774"
+             height="887"
+             loading="lazy"
+             decoding="async"
+             fetchpriority="low">
+        <div class="footer-transition__scrim footer-transition__scrim--top"></div>
+        <div class="footer-transition__scrim footer-transition__scrim--bottom"></div>
+        <svg class="footer-transition__wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M0,32 C320,78 640,2 960,36 C1160,58 1320,52 1440,38 L1440,80 L0,80 Z" fill="var(--mlw-bosque-950)"/>
+        </svg>
+    </div>
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -25,21 +40,21 @@
                 <div class="social-links">
                     <a href="https://www.instagram.com/milocalweb.com.ar"
                        target="_blank" rel="noopener noreferrer"
-                       class="social-link" aria-label="Instagram">
+                       class="social-link social-link--instagram" aria-label="Instagram">
                         <span class="social-icon" aria-hidden="true"><?php readfile(__DIR__ . '/../assets/img/iconos/icon-instagram.svg'); ?></span>
                     </a>
                     <a href="https://www.facebook.com/milocalweb.com.ar"
                        target="_blank" rel="noopener noreferrer"
-                       class="social-link" aria-label="Facebook">
+                       class="social-link social-link--facebook" aria-label="Facebook">
                         <span class="social-icon" aria-hidden="true"><?php readfile(__DIR__ . '/../assets/img/iconos/icon-facebook.svg'); ?></span>
                     </a>
                     <a href="https://wa.me/5493513783473"
                        target="_blank" rel="noopener noreferrer"
-                       class="social-link" aria-label="WhatsApp Comercial">
+                       class="social-link social-link--whatsapp" aria-label="WhatsApp Comercial">
                         <span class="social-icon" aria-hidden="true"><?php readfile(__DIR__ . '/../assets/img/iconos/icon-whatsapp-brand.svg'); ?></span>
                     </a>
                     <a href="mailto:comercial@milocalweb.com.ar"
-                       class="social-link" aria-label="Email Comercial">
+                       class="social-link social-link--mail" aria-label="Email Comercial">
                         <span class="social-icon" aria-hidden="true"><?php readfile(__DIR__ . '/../assets/img/iconos/icon-mail.svg'); ?></span>
                     </a>
                 </div>
@@ -49,7 +64,6 @@
                 <h4>Enlaces</h4>
                 <ul>
                     <li><a href="http://demo.milocalweb.com.ar" target="_blank" rel="noopener noreferrer">Portal de Demostración</a></li>
-                    <li><a href="https://linktr.ee/milocalweb" target="_blank" rel="noopener noreferrer">Linktree</a></li>
                     <li><a href="https://wa.me/5493513783473" target="_blank" rel="noopener noreferrer">WhatsApp Comercial</a></li>
                     <li><a href="https://wa.me/5493396577" target="_blank" rel="noopener noreferrer">WhatsApp Sistemas</a></li>
                 </ul>

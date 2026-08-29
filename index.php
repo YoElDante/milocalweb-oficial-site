@@ -12,20 +12,40 @@ require_once __DIR__ . '/config/config.php';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<section class="hero">
+<section id="inicio" class="hero" aria-label="Inicio — MiLocalWeb presencia digital">
     <div class="hero-effects" aria-hidden="true">
-        <!-- Onda inferior tipo ilustraciones de producto -->
-        <svg class="hero-wave" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0,120 C240,180 480,60 720,100 C960,140 1200,40 1440,100 L1440,180 L0,180 Z" fill="var(--mlw-bosque-900)"/>
-            <path d="M0,140 C280,190 520,80 760,120 C1000,160 1220,60 1440,120 L1440,180 L0,180 Z" fill="var(--mlw-bosque-700)" opacity="0.55"/>
-        </svg>
+        <!-- Halo central mint — como el círculo claro de las ilustraciones -->
+        <div class="hero-halo"></div>
 
-        <!-- Blob orgánico verde -->
+        <!-- Arcos finos outline — detalle productos arriba izquierda -->
+        <div class="hero-arc hero-arc--tl"></div>
+        <div class="hero-arc hero-arc--tr"></div>
+
+        <!-- Blobs orgánicos estáticos (sin animación) -->
         <div class="hero-blob hero-blob--green"></div>
-        <!-- Blob orgánico naranja -->
         <div class="hero-blob hero-blob--orange"></div>
 
-        <!-- Pin de local flotante (estilo ilustraciones) -->
+        <!-- Puntitos sobre blob naranja — como grid verde sobre naranja en productos -->
+        <div class="hero-dots hero-dots--on-orange"></div>
+
+        <!-- Onda superior sutil — transición orgánica header blanco → mint -->
+        <svg class="hero-wave-top" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,0 L1440,0 L1440,12 C1080,38 720,-8 360,20 C180,32 90,16 0,18 Z" fill="var(--mlw-blanco)"/>
+        </svg>
+
+        <!-- Onda inferior — banda verde orgánica con doble curva superior e inferior -->
+        <svg class="hero-wave" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,92 C240,152 480,32 720,72 C960,112 1200,12 1440,72 L1440,180 L0,180 Z" fill="var(--mlw-bosque-900)"/>
+            <path d="M0,112 C280,162 520,52 760,92 C1000,132 1220,32 1440,92 L1440,180 L0,180 Z" fill="var(--mlw-bosque-700)" opacity="0.55"/>
+            <!-- Línea fina verde clara siguiendo la curva — como en productos -->
+            <path d="M0,80 C240,138 480,22 720,60 C960,98 1200,2 1440,60" fill="none" class="hero-wave-line"/>
+        </svg>
+        <!-- Continuidad blanca — crea el borde inferior ondulado y tapa el corte horizontal -->
+        <svg class="hero-wave--continuity" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,32 C240,66 480,10 720,32 C960,54 1200,8 1440,32 L1440,80 L0,80 Z" fill="var(--mlw-blanco)"/>
+        </svg>
+
+        <!-- Pin de local — estático -->
         <div class="hero-float hero-float--pin">
             <svg viewBox="0 0 80 100" width="80" height="100" aria-hidden="true">
                 <path d="M40 0C17.9 0 0 17.9 0 40c0 30 40 60 40 60s40-30 40-60C80 17.9 62.1 0 40 0z" fill="var(--mlw-naranja-vivo)"/>
@@ -35,7 +55,13 @@ require_once __DIR__ . '/includes/header.php';
             </svg>
         </div>
 
-        <!-- Hojas decorativas flotantes -->
+        <!-- Destellos — rayitas verdes en abanico (estilo productos) -->
+        <div class="hero-spark hero-spark--pin"><span></span><span></span><span></span></div>
+        <div class="hero-spark hero-spark--left"><span></span><span></span><span></span></div>
+        <div class="hero-spark hero-spark--right"><span></span><span></span><span></span></div>
+        <div class="hero-spark hero-spark--laptop"><span></span><span></span><span></span></div>
+
+        <!-- Hojas decorativas — estáticas -->
         <div class="hero-float hero-float--leaf hero-float--leaf-1">
             <svg viewBox="0 0 60 80" width="60" height="80" aria-hidden="true">
                 <path d="M30 0C30 0 5 20 5 45c0 20 15 35 25 35s25-15 25-35C55 20 30 0 30 0z" fill="var(--mlw-verde-500)"/>
@@ -48,7 +74,7 @@ require_once __DIR__ . '/includes/header.php';
             </svg>
         </div>
 
-        <!-- Dispositivos estilizados flotantes -->
+        <!-- Dispositivos estilizados — estáticos -->
         <div class="hero-float hero-float--laptop">
             <svg viewBox="0 0 120 90" width="120" height="90" aria-hidden="true">
                 <rect x="10" y="10" width="90" height="55" rx="6" fill="var(--mlw-bosque-900)"/>
@@ -72,36 +98,41 @@ require_once __DIR__ . '/includes/header.php';
             </svg>
         </div>
 
-        <!-- Grid de puntos decorativos -->
+        <!-- Grids de puntos decorativos — estilo productos (sin movimiento) -->
         <div class="hero-dots hero-dots--top"></div>
         <div class="hero-dots hero-dots--bottom"></div>
+        <div class="hero-dots hero-dots--mint"></div>
     </div>
 
     <div class="hero-content">
-        <span class="hero-badge">
-            <span class="hero-badge-pulse" aria-hidden="true"></span>
-            <span>Presencia digital en 24hs</span>
-        </span>
-        <img src="<?= LOGOS_URL ?>/ISOLOGOTIPO CUADRADO VERDE NARANJA.webp"
-             alt="MiLocalWeb"
-             class="hero-isotipo">
+        <div class="hero-isotipo-wrap" aria-hidden="false">
+            <img src="<?= IMG_URL ?>/logos/Transparentes/ISOLOGOTIPO CUADRADO VERDE NARANJA Transparente 1184x1166.webp"
+                 alt="MiLocalWeb"
+                 class="hero-isotipo"
+                 width="1184"
+                 height="1166"
+                 decoding="async"
+                 fetchpriority="high">
+        </div>
         <h1 class="h1--with-accent">
-            Tu comercio<br>
-            <span class="hero-title-highlight">en internet</span><br>
-            y en el mapa
+            Posicionamiento Web<br>
+            <span class="hero-title-highlight">Profesional en Córdoba</span>
         </h1>
-        <p class="hero-subtitle">
-            Te configuramos <strong>Google, Instagram, Facebook y WhatsApp Business</strong>. Te armamos una web propia con meses bonificados y mantenimiento fijo por 1 año. <strong>Todo queda a tu nombre.</strong>
-        </p>
         <div class="hero-actions">
-            <a href="#planes" class="btn-primary btn-primary--hero">Ver planes</a>
-            <a href="#contacto" class="btn-secondary btn-secondary--hero">Contactanos</a>
+            <a href="#resumen-planes" class="btn-primary btn-primary--hero">Ver planes</a>
+            <a href="https://wa.me/5493513783473" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                <span class="btn-icon" aria-hidden="true"><?php readfile(__DIR__ . '/assets/img/iconos/icon-whatsapp-brand.svg'); ?></span>
+                WhatsApp Comercial
+            </a>
         </div>
     </div>
 </section>
 
-<section id="por-que" class="section section-why">
-    <h2>¿Por qué MiLocalWeb?</h2>
+<!-- Alias legacy: #por-que → #beneficios -->
+<div id="por-que" aria-hidden="true" class="anchor-legacy"></div>
+
+<section id="beneficios" class="section section-why section-beneficios" aria-labelledby="beneficios-heading">
+    <h2 id="beneficios-heading">¿Por qué MiLocalWeb?</h2>
     <p class="section-subtitle">Tres formas de hacer crecer tu negocio en internet, sin depender de nadie más.</p>
     <div class="why-grid">
         <div class="why-card">
@@ -112,8 +143,8 @@ require_once __DIR__ . '/includes/header.php';
                  height="200"
                  loading="lazy"
                  decoding="async">
-            <h3>Tu negocio online</h3>
-            <p>Creamos tu sitio web profesional para que tus clientes te encuentren, conozcan tus servicios y contacten contigo desde cualquier dispositivo.</p>
+            <h3>Tu lugar en internet</h3>
+            <p>Se dueño de tu propio sitio web profesional! Tus clientes te encuentren, conozcan tus servicios y contacten contigo desde cualquier dispositivo.</p>
         </div>
         <div class="why-card">
             <img src="<?= IMG_URL ?>/beneficios/Tienda Online.webp"
@@ -123,8 +154,8 @@ require_once __DIR__ . '/includes/header.php';
                  height="200"
                  loading="lazy"
                  decoding="async">
-            <h3>Vendé 24/7</h3>
-            <p>Armá tu tienda online con catálogo de productos y carrito por WhatsApp. Tus clientes compran cuando quieran, vos atendés desde el celular.</p>
+            <h3>Siempre abierto</h3>
+            <p>Armamos tu tienda online con catálogo de productos y carrito por WhatsApp. Tus clientes compran cuando quieran, vos atendés desde el celular.</p>
         </div>
         <div class="why-card">
             <img src="<?= IMG_URL ?>/beneficios/Visibilidad Digital.webp"
@@ -134,32 +165,31 @@ require_once __DIR__ . '/includes/header.php';
                  height="200"
                  loading="lazy"
                  decoding="async">
-            <h3>Te encuentran, te eligen</h3>
+            <h3>Llegan hasta vos</h3>
             <p>Aparecé en Google Maps, redes sociales y búsquedas locales. Mejoramos tu reputación online para que te prefieran antes que a la competencia.</p>
         </div>
     </div>
 </section>
 
-<section id="planes" class="section section-plans">
-    <h2>Planes a tu medida</h2>
+<!-- Alias legacy: #planes → #resumen-planes -->
+<div id="planes" aria-hidden="true" class="anchor-legacy"></div>
+
+<section id="resumen-planes" class="section section-plans section-resumen-planes" aria-labelledby="resumen-planes-heading">
+    <h2 id="resumen-planes-heading">Planes a tu medida</h2>
     <p class="section-subtitle">Elegí el plan de posicionamiento digital que se ajuste a tu negocio. Todos incluyen configuración profesional de tus perfiles. Agregá una web propia con meses gratis y mantenimiento fijo por 1 año.</p>
 
     <div class="plans-grid">
         <div class="plan-card">
-            <span class="plan-float" aria-hidden="true">
-                <span class="plan-float-text">contratalo</span>
-                <span class="plan-float-arrow">↘</span>
-            </span>
             <img src="<?= IMG_URL ?>/productos/Logo INICIAL.webp" alt="Logo Plan INICIAL" class="plan-logo">
             <h3 class="plan-name">INICIAL</h3>
             <p class="plan-tagline">"Que te encuentren y te contacten"</p>
             <div class="plan-price-block">
-                <div class="plan-price">$498.000 <span>ARS</span></div>
+                <div class="plan-price">$498.000.- <span>ARS</span></div>
                 <p class="plan-price-label">Precio de contado</p>
             </div>
             <div class="plan-finance">
                 <p class="plan-finance-title">Opción de financiación</p>
-                <p class="plan-finance-text">3 cuotas de $199.000</p>
+                <p class="plan-finance-text">3 cuotas de $199.000.-</p>
             </div>
             <ul class="plan-features">
                 <li>Google Business Profile configurado</li>
@@ -167,25 +197,21 @@ require_once __DIR__ . '/includes/header.php';
                 <li>Web propia con subdominio gratis</li>
                 <li>6 fotos editadas + kit QR</li>
             </ul>
-            <a href="#plan-inicial" class="btn-plan-anchor">Quiero arrancar con el plan INICIAL</a>
+            <a href="#plan-inicial" class="btn-plan-anchor btn-plan-anchor--ghost" data-scroll-to-product>Ver detalles del plan INICIAL</a>
         </div>
 
         <div class="plan-card plan-destacado">
             <span class="plan-badge">Recomendado</span>
-            <span class="plan-float plan-float--destacado" aria-hidden="true">
-                <span class="plan-float-text">hacelo tuyo</span>
-                <span class="plan-float-arrow">↓</span>
-            </span>
             <img src="<?= IMG_URL ?>/productos/Logo IMPARABLE.webp" alt="Logo Plan IMPARABLE" class="plan-logo">
             <h3 class="plan-name">IMPARABLE</h3>
             <p class="plan-tagline">"Que te prefieran"</p>
             <div class="plan-price-block">
-                <div class="plan-price">$998.000 <span>ARS</span></div>
+                <div class="plan-price">$998.000.- <span>ARS</span></div>
                 <p class="plan-price-label">Precio de contado</p>
             </div>
             <div class="plan-finance">
                 <p class="plan-finance-title">Opción de financiación</p>
-                <p class="plan-finance-text">$399.000 + 4 cuotas de $199.000</p>
+                <p class="plan-finance-text">$399.000.- + 4 cuotas de $199.000.-</p>
             </div>
             <ul class="plan-features">
                 <li>Todo lo de VISIBLE</li>
@@ -193,24 +219,20 @@ require_once __DIR__ . '/includes/header.php';
                 <li>Hasta 30 productos cargados + 30 actualizaciones</li>
                 <li>3 meses de publicaciones profesionales en redes</li>
             </ul>
-            <a href="#plan-imparable" class="btn-plan-anchor btn-plan-anchor-destacado">VOY A SER IMPARABLE</a>
+            <a href="#plan-imparable" class="btn-plan-anchor btn-plan-anchor--ghost btn-plan-anchor--ghost-destacado" data-scroll-to-product>Ver detalles del plan IMPARABLE</a>
         </div>
 
         <div class="plan-card">
-            <span class="plan-float" aria-hidden="true">
-                <span class="plan-float-text">compralo</span>
-                <span class="plan-float-arrow">↙</span>
-            </span>
             <img src="<?= IMG_URL ?>/productos/Logo VISIBLE.webp" alt="Logo Plan VISIBLE" class="plan-logo">
             <h3 class="plan-name">VISIBLE</h3>
             <p class="plan-tagline">"Que te vean y te elijan"</p>
             <div class="plan-price-block">
-                <div class="plan-price">$648.000 <span>ARS</span></div>
+                <div class="plan-price">$648.000.- <span>ARS</span></div>
                 <p class="plan-price-label">Precio de contado</p>
             </div>
             <div class="plan-finance">
                 <p class="plan-finance-title">Opción de financiación</p>
-                <p class="plan-finance-text">4 cuotas de $199.000</p>
+                <p class="plan-finance-text">4 cuotas de $199.000.-</p>
             </div>
             <ul class="plan-features">
                 <li>Todo lo de INICIAL</li>
@@ -218,7 +240,7 @@ require_once __DIR__ . '/includes/header.php';
                 <li>Hasta 15 productos cargados + 10 actualizaciones</li>
                 <li>12 fotos editadas + 1 mes de publicaciones</li>
             </ul>
-            <a href="#plan-visible" class="btn-plan-anchor">Quiero SER VISIBLE</a>
+            <a href="#plan-visible" class="btn-plan-anchor btn-plan-anchor--ghost" data-scroll-to-product>Ver detalles del plan VISIBLE</a>
         </div>
     </div>
 
@@ -241,15 +263,18 @@ require_once __DIR__ . '/includes/header.php';
         <span class="promo-badge promo-badge--accent">Solo Tuyo</span>
         <p>
             ¿Querés tu <strong>dominio propio</strong>? <code>tunegocio.com.ar</code>
-            desde <strong>$25.000 ARS/año</strong>. (Sin "milocalweb" en la URL).
+            desde <strong>$25.000.- ARS/año</strong>. (Sin "milocalweb" en la URL).
         </p>
     </div>
 </section>
 
-<section id="plan-inicial" class="section plan-detail-section">
+<section id="productos" class="section-productos" aria-labelledby="productos-heading">
+    <h2 id="productos-heading" class="sr-only">Productos — detalle de planes MiLocalWeb</h2>
+    <!-- Cada plan detallado es un artículo autocontenido dentro de Productos -->
+    <article id="plan-inicial" class="section plan-detail-section" aria-labelledby="plan-inicial-heading">
     <div class="plan-detail-header">
         <div class="plan-detail-title-block">
-            <h2 class="plan-detail-name">INICIAL</h2>
+            <h3 id="plan-inicial-heading" class="plan-detail-name">INICIAL</h3>
             <p class="plan-detail-tagline">Que te encuentren y te contacten</p>
             <p class="plan-detail-intro">Para comercios, profesionales independientes y emprendedores que quieren aparecer en Google, tener redes presentables y un punto de contacto digital sin complicaciones.</p>
         </div>
@@ -284,27 +309,33 @@ require_once __DIR__ . '/includes/header.php';
 
         <aside class="plan-detail-sidebar">
             <div class="plan-detail-box">
-                <div class="plan-detail-price">$498.000</div>
+                <div class="plan-detail-price">$498.000.-</div>
                 <p class="plan-detail-price-note">Precio de contado — mejor valor</p>
-                <p class="plan-detail-finance">O 3 cuotas de <strong>$199.000</strong></p>
-                <p class="plan-detail-saving">Ahorrá <strong>$99.000</strong> pagando de contado.</p>
+                <p class="plan-detail-finance">O 3 cuotas de <strong>$199.000.-</strong></p>
+                <p class="plan-detail-saving">Ahorrá <strong>$99.000.-</strong> pagando de contado.</p>
             </div>
 
             <div class="plan-detail-box plan-detail-box--muted">
                 <h4>Web incluida</h4>
-                <p>1 mes gratis de hosting y mantenimiento.<br>A partir del mes 2: <strong>$50.000/mes</strong> hasta completar 1 año.</p>
+                <p>1 mes gratis de hosting y mantenimiento.<br>A partir del mes 2: <strong>$50.000.-/mes</strong> hasta completar 1 año.</p>
             </div>
 
-            <a href="https://wa.me/5493513783473?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20INICIAL%20de%20MiLocalWeb.%20Quisiera%20recibir%20asesoramiento."
-               target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-detail">Quiero el plan INICIAL</a>
+            <div class="plan-cta-wrap plan-cta-wrap--producto">
+                <span class="plan-float" aria-hidden="true">
+                    <span class="plan-float-text">contratalo</span>
+                    <span class="plan-float-arrow">↘</span>
+                </span>
+                <a href="https://wa.me/5493513783473?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20INICIAL%20de%20MiLocalWeb.%20Quisiera%20recibir%20asesoramiento."
+                   target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-detail btn-plan-detail--cta">CONTRATAR</a>
+            </div>
         </aside>
     </div>
-</section>
+</article>
 
-<section id="plan-visible" class="section plan-detail-section plan-detail-section--alt">
+<article id="plan-visible" class="section plan-detail-section plan-detail-section--alt" aria-labelledby="plan-visible-heading">
     <div class="plan-detail-header">
         <div class="plan-detail-title-block">
-            <h2 class="plan-detail-name">VISIBLE</h2>
+            <h3 id="plan-visible-heading" class="plan-detail-name">VISIBLE</h3>
             <p class="plan-detail-tagline">Que te vean y te elijan</p>
             <p class="plan-detail-intro">Para negocios que venden productos físicos y quieren mostrar catálogo online sin integrar pagos electrónicos complejos. Ideal para comercios que atienden por WhatsApp.</p>
         </div>
@@ -350,27 +381,33 @@ require_once __DIR__ . '/includes/header.php';
 
         <aside class="plan-detail-sidebar">
             <div class="plan-detail-box">
-                <div class="plan-detail-price">$648.000</div>
+                <div class="plan-detail-price">$648.000.-</div>
                 <p class="plan-detail-price-note">Precio de contado — mejor valor</p>
-                <p class="plan-detail-finance">O 4 cuotas de <strong>$199.000</strong></p>
-                <p class="plan-detail-saving">Ahorrá <strong>$148.000</strong> pagando de contado.</p>
+                <p class="plan-detail-finance">O 4 cuotas de <strong>$199.000.-</strong></p>
+                <p class="plan-detail-saving">Ahorrá <strong>$148.000.-</strong> pagando de contado.</p>
             </div>
 
             <div class="plan-detail-box plan-detail-box--muted">
                 <h4>Web incluida</h4>
-                <p>3 meses gratis de hosting y mantenimiento.<br>A partir del mes 4: <strong>$68.000/mes</strong> hasta completar 1 año.</p>
+                <p>3 meses gratis de hosting y mantenimiento.<br>A partir del mes 4: <strong>$68.000.-/mes</strong> hasta completar 1 año.</p>
             </div>
 
-            <a href="https://wa.me/5493513783473?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20VISIBLE%20de%20MiLocalWeb.%20Quisiera%20recibir%20asesoramiento."
-               target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-detail">Quiero el plan VISIBLE</a>
+            <div class="plan-cta-wrap plan-cta-wrap--producto">
+                <span class="plan-float plan-float--compralo" aria-hidden="true">
+                    <span class="plan-float-text">compralo</span>
+                    <span class="plan-float-arrow">↙</span>
+                </span>
+                <a href="https://wa.me/5493513783473?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20VISIBLE%20de%20MiLocalWeb.%20Quisiera%20recibir%20asesoramiento."
+                   target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-detail btn-plan-detail--cta">CONTRATAR</a>
+            </div>
         </aside>
     </div>
-</section>
+</article>
 
-<section id="plan-imparable" class="section plan-detail-section">
+<article id="plan-imparable" class="section plan-detail-section" aria-labelledby="plan-imparable-heading">
     <div class="plan-detail-header">
         <div class="plan-detail-title-block">
-            <h2 class="plan-detail-name">IMPARABLE</h2>
+            <h3 id="plan-imparable-heading" class="plan-detail-name">IMPARABLE</h3>
             <p class="plan-detail-tagline">Que te prefieran</p>
             <p class="plan-detail-intro">Para negocios que quieren una presencia digital completa: web propia con múltiples secciones, catálogo, gestión profesional de redes y contenido durante los primeros meses.</p>
         </div>
@@ -410,7 +447,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <div class="plan-detail-highlight">
                 <h4>¿Cuánto vale la gestión de redes?</h4>
-                <p>Durante 3 meses publicamos 3 veces por semana en tus redes para que tu marca esté activa, aparezca en el feed de tu zona y genere confianza. Eso equivale a más de 36 publicaciones profesionales + 3 piezas de novedad. Contratar un community manager para hacer eso sale entre $450.000 y $1.200.000 en el mercado. Acá viene incluido en tu plan.</p>
+                <p>Durante 3 meses publicamos 3 veces por semana en tus redes para que tu marca esté activa, aparezca en el feed de tu zona y genere confianza. Eso equivale a más de 36 publicaciones profesionales + 3 piezas de novedad. Contratar un community manager para hacer eso sale entre $450.000.- y $1.200.000.- en el mercado. Acá viene incluido en tu plan.</p>
             </div>
 
             <h3>Beneficios principales</h3>
@@ -424,25 +461,47 @@ require_once __DIR__ . '/includes/header.php';
 
         <aside class="plan-detail-sidebar">
             <div class="plan-detail-box">
-                <div class="plan-detail-price">$998.000</div>
+                <div class="plan-detail-price">$998.000.-</div>
                 <p class="plan-detail-price-note">Precio de contado — mejor valor</p>
-                <p class="plan-detail-finance">O $399.000 + 4 cuotas de <strong>$199.000</strong> (financiación).</p>
-                <p class="plan-detail-finance">Forma de pago: <strong>$500.000 al inicio</strong> y <strong>$498.000 a las 2 semanas</strong>, una vez que revises el trabajo y quedes conforme.</p>
-                <p class="plan-detail-saving">Ahorrá <strong>$197.000</strong> pagando de contado.</p>
+                <p class="plan-detail-finance">O $399.000.- + 4 cuotas de <strong>$199.000.-</strong> (financiación).</p>
+                <p class="plan-detail-finance">Forma de pago: <strong>$500.000.- al inicio</strong> y <strong>$498.000.- a las 2 semanas</strong>, una vez que revises el trabajo y quedes conforme.</p>
+                <p class="plan-detail-saving">Ahorrá <strong>$197.000.-</strong> pagando de contado.</p>
             </div>
 
             <div class="plan-detail-box plan-detail-box--muted">
                 <h4>Web incluida</h4>
-                <p>6 meses gratis de hosting y mantenimiento.<br>A partir del mes 7: <strong>$78.000/mes</strong> hasta completar 1 año.</p>
+                <p>6 meses gratis de hosting y mantenimiento.<br>A partir del mes 7: <strong>$78.000.-/mes</strong> hasta completar 1 año.</p>
             </div>
 
-            <a href="https://wa.me/5493513783473?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20IMPARABLE%20de%20MiLocalWeb.%20Quisiera%20recibir%20asesoramiento."
-               target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-destacado btn-plan-detail">Quiero el plan IMPARABLE</a>
+            <div class="plan-cta-wrap plan-cta-wrap--producto">
+                <span class="plan-float plan-float--destacado" aria-hidden="true">
+                    <span class="plan-float-text">hacelo tuyo</span>
+                    <span class="plan-float-arrow">↓</span>
+                </span>
+                <a href="https://wa.me/5493513783473?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20IMPARABLE%20de%20MiLocalWeb.%20Quisiera%20recibir%20asesoramiento."
+                   target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-destacado btn-plan-detail btn-plan-detail--cta btn-plan-detail--cta-destacado">CONTRATAR</a>
+            </div>
         </aside>
     </div>
-</section>
+</article>
 
-<section id="conservas" class="section section-keep">
+    <div class="productos-ayuda" role="complementary" aria-label="Asesoramiento comercial">
+        <div class="productos-ayuda__text">
+            <h3 class="productos-ayuda__title">¿Dudás cuál plan te conviene?</h3>
+            <p class="productos-ayuda__desc">Escribinos y te asesoramos sin compromiso. Ajustamos el plan a tu negocio, te explicamos cada detalle y si preferís te llamamos por teléfono.</p>
+        </div>
+        <a href="https://wa.me/5493513783473?text=Hola%20equipo%20MiLocalWeb%2C%20quiero%20asesoramiento%20para%20elegir%20el%20plan%20ideal%20para%20mi%20negocio%20y%20conocer%20el%20detalle%20telef%C3%B3nico."
+           target="_blank" rel="noopener noreferrer" class="btn-whatsapp productos-ayuda__btn">
+            <span class="btn-icon" aria-hidden="true"><?php readfile(__DIR__ . '/assets/img/iconos/icon-whatsapp-brand.svg'); ?></span>
+            Consultar al equipo comercial
+        </a>
+    </div>
+</section><!-- /#productos -->
+
+<!-- Alias legacy: #conservas → #garantia -->
+<div id="conservas" aria-hidden="true" class="anchor-legacy"></div>
+
+<section id="garantia" class="section section-keep section-garantia" aria-labelledby="garantia-heading">
     <div class="keep-contract-float" aria-hidden="true">
         <img src="<?= IMG_URL ?>/contrato/contrato.webp"
              alt="Contrato de propiedad digital de MiLocalWeb"
@@ -453,7 +512,7 @@ require_once __DIR__ . '/includes/header.php';
              decoding="async">
     </div>
 
-    <h2>Todo el posicionamiento es tuyo</h2>
+    <h2 id="garantia-heading">Todo el posicionamiento es tuyo</h2>
     <p class="section-subtitle">Si en algún momento decidís no seguir con el sitio web, conservás todo lo que configuramos para tu negocio.</p>
 
     <div class="keep-grid">
@@ -478,17 +537,28 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<section id="servicios" class="section section-extras">
-    <h2>Servicios Adicionales</h2>
+<!-- Alias legacy: #servicios → #complementarios (+ alias #adicionales) -->
+<div id="servicios" aria-hidden="true" class="anchor-legacy"></div>
+<div id="adicionales" aria-hidden="true" class="anchor-legacy"></div>
+
+<section id="complementarios" class="section section-extras section-complementarios" aria-labelledby="complementarios-heading">
+    <h2 id="complementarios-heading">Servicios Adicionales</h2>
     <p class="section-subtitle">Complementa tu plan con servicios extra. Pago único, sin mensualidades.</p>
     <div class="extras-grid">
         <div class="extra-card">
+            <img src="<?= IMG_URL ?>/productos/telefono y linea.webp"
+                 alt="Teléfono y línea exclusiva para tu negocio"
+                 class="extra-img"
+                 width="400"
+                 height="300"
+                 loading="lazy"
+                 decoding="async">
             <h3 class="extra-name">Teléfono Exclusivo para tu Negocio</h3>
-            <p class="extra-desc">Separa tu vida personal del trabajo. Un número exclusivo para atender clientes.</p>
+            <p class="extra-desc">Separa tu vida personal del trabajo. Un número exclusivo para atender clientes, con equipo propio y línea nueva.</p>
             <ul class="extra-features">
-                <li><strong>Básico</strong> — desde $200.000 <small>(línea exclusiva)</small></li>
-                <li><strong>Intermedio</strong> — consultar <small>(+ IVR, bienvenida automática)</small></li>
-                <li><strong>Avanzado</strong> — consultar <small>(+ centralita virtual, extensiones)</small></li>
+                <li>Desde <strong>$200.000.-</strong> <small>incluye línea prepago nueva</small></li>
+                <li>Equipos con capacidad para configurar y administrar redes</li>
+                <li>Con garantía</li>
             </ul>
         </div>
         <div class="extra-card">
@@ -502,15 +572,19 @@ require_once __DIR__ . '/includes/header.php';
                 <li>Uso básico de WhatsApp Business</li>
             </ul>
             <div class="extra-price">
-                <strong>$150.000</strong> <small>(hasta 4 personas)</small>
-                <span class="extra-price-add">+ $30.000 por persona extra</span>
+                <strong>$150.000.-</strong> <small>(hasta 4 personas)</small>
+                <span class="extra-price-add">+ $30.000.- por persona extra</span>
             </div>
         </div>
     </div>
 </section>
 
-<section id="faqs" class="section section-faq">
-    <h2>Preguntas frecuentes</h2>
+<!-- Alias legacy: #faqs → #preguntas-frecuentes -->
+<div id="faqs" aria-hidden="true" class="anchor-legacy"></div>
+<div id="preguntas" aria-hidden="true" class="anchor-legacy"></div>
+
+<section id="preguntas-frecuentes" class="section section-faq section-preguntas" aria-labelledby="preguntas-heading">
+    <h2 id="preguntas-heading">Preguntas frecuentes</h2>
 
     <div class="faq-list">
         <details class="faq-item">
@@ -565,7 +639,7 @@ require_once __DIR__ . '/includes/header.php';
 </section>
 
 <?php
-// Datos de la sección "Nuestra Oficina"
+// Datos de la sección "Ubicación" (industria: location/address/map)
 $oficinaImgPath = __DIR__ . '/assets/img/oficina/oficina.webp';
 $oficinaImgSize = (function_exists('getimagesize') && is_file($oficinaImgPath)) ? getimagesize($oficinaImgPath) : null;
 $oficinaImgDims = $oficinaImgSize ? ' width="' . $oficinaImgSize[0] . '" height="' . $oficinaImgSize[1] . '"' : '';
@@ -581,8 +655,11 @@ $staticMapUrl = sprintf(
     urlencode(GOOGLE_MAPS_API_KEY)
 );
 ?>
-<section id="oficina" class="section section-office" aria-label="Nuestra Oficina">
-    <h2>Nuestra Oficina</h2>
+<!-- Alias legacy: #oficina → #ubicacion -->
+<div id="oficina" aria-hidden="true" class="anchor-legacy"></div>
+
+<section id="ubicacion" class="section section-office section-ubicacion" aria-labelledby="ubicacion-heading">
+    <h2 id="ubicacion-heading">Nuestra Oficina</h2>
     <p class="section-subtitle">
         Te invitamos a conocernos. Vení a tomar un café y charlamos sobre cómo llevar tu negocio al mundo digital.
     </p>
@@ -622,8 +699,8 @@ $staticMapUrl = sprintf(
     </div>
 </section>
 
-<section id="contacto" class="section section-contact">
-    <h2>Conversemos</h2>
+<section id="contacto" class="section section-contact" aria-labelledby="contacto-heading">
+    <h2 id="contacto-heading">Conversemos</h2>
     <p class="contact-subtitle">
         Contanos qué necesita tu negocio. Llamanos, escribinos por WhatsApp o email y te respondemos a la brevedad.
     </p>
@@ -633,7 +710,7 @@ $staticMapUrl = sprintf(
             +54 9 351 378-3473
         </a>
         <a href="https://wa.me/5493513783473" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-            <span class="btn-icon" aria-hidden="true"><?php readfile(__DIR__ . '/assets/img/iconos/icon-whatsapp.svg'); ?></span>
+            <span class="btn-icon" aria-hidden="true"><?php readfile(__DIR__ . '/assets/img/iconos/icon-whatsapp-brand.svg'); ?></span>
             WhatsApp Comercial
         </a>
         <a href="mailto:comercial@milocalweb.com.ar" class="btn-email">
@@ -642,5 +719,115 @@ $staticMapUrl = sprintf(
         </a>
     </div>
 </section>
+
+<?php
+// --- SEO: JSON-LD structured data (LocalBusiness + Offers + FAQPage) ---
+$baseUrl = defined('BASE_URL') && BASE_URL !== '' ? BASE_URL : 'https://milocalweb.com.ar';
+$orgLogo = LOGOS_URL . '/LOGO VERDE NARANJA.webp';
+?>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "MiLocalWeb",
+  "url": "<?= htmlspecialchars($baseUrl) ?>",
+  "logo": "<?= htmlspecialchars($orgLogo) ?>",
+  "image": "<?= htmlspecialchars($oficina['foto']) ?>",
+  "telephone": "<?= htmlspecialchars($oficina['telefono']) ?>",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Angelo de Peredo 34",
+    "addressLocality": "Córdoba",
+    "addressRegion": "Córdoba",
+    "postalCode": "X5000BTB",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "<?= htmlspecialchars($oficina['lat']) ?>",
+    "longitude": "<?= htmlspecialchars($oficina['lng']) ?>"
+  },
+  "hasMap": "<?= htmlspecialchars($oficina['gmaps_link']) ?>",
+  "priceRange": "$$",
+  "areaServed": "AR",
+  "description": "Presencia digital profesional para comercios y emprendedores: Google Business, redes, WhatsApp Business y web propia."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  "name": "Planes MiLocalWeb",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "name": "Plan INICIAL — Que te encuentren y te contacten",
+      "url": "<?= htmlspecialchars($baseUrl) ?>/#plan-inicial",
+      "priceCurrency": "ARS",
+      "price": "498000",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "Plan VISIBLE — Que te vean y te elijan",
+      "url": "<?= htmlspecialchars($baseUrl) ?>/#plan-visible",
+      "priceCurrency": "ARS",
+      "price": "648000",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "Plan IMPARABLE — Que te prefieran",
+      "url": "<?= htmlspecialchars($baseUrl) ?>/#plan-imparable",
+      "priceCurrency": "ARS",
+      "price": "998000",
+      "availability": "https://schema.org/InStock"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si no pago el mantenimiento mensual?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Se suspende el sitio web, pero todo el posicionamiento configurado (Google Business, redes sociales, WhatsApp, Meta Business Suite) sigue siendo tuyo." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué las cuotas suman más que el precio de contado?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Porque financiar el pago tiene un costo administrativo. Pagando de contado accedés al mejor precio." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El dominio propio está incluido?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El subdominio tunegocio.milocalweb.com.ar es gratuito. El dominio propio .com.ar tiene un costo anual aparte." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántos productos puedo tener en el plan VISIBLE?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Te cargamos hasta 15 productos inicialmente y te actualizamos hasta 10 durante los 3 meses bonificados. Después podés contratar mantenimiento adicional." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La publicación en redes incluye respuesta a mensajes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El plan IMPARABLE incluye programación de contenido durante 3 meses. La atención de mensajes y comentarios puede contratarse como servicio adicional." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo cambiar de plan después?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí, podés actualizar tu plan en cualquier momento. Escribinos por WhatsApp y te explicamos cómo hacer la transición." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa al año con el precio del mantenimiento?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Al cumplirse el año revisamos el valor según ajustes de mercado. Vos decidís si renovás, te bajás de plan o cancelás." }
+    }
+  ]
+}
+</script>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

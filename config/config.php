@@ -42,7 +42,8 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 // Google Maps API key (misma cuenta usada en las landingpages de clientes)
 define('GOOGLE_MAPS_API_KEY', 'AIzaSyDNqXAEhl4AqBQpOlu_3VA_PFBsx-LMqwk');
 
-// Datos de la oficina comercial para la sección "Nuestra Oficina"
+// Datos de la oficina / ubicación comercial — sección "Ubicación" (alias legacy: oficina)
+// Industria IT: la sección del mapa suele llamarse "Ubicación", "Location" o "Dónde estamos" / "Where to find us"
 $oficina = [
     'nombre'     => 'MiLocalWeb',
     'direccion'  => "Angelo de Peredo 34\nX5000BTB Córdoba",

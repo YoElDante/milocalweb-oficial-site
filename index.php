@@ -180,7 +180,8 @@ require_once __DIR__ . '/includes/header.php';
 
     <div class="plans-grid">
         <div class="plan-card">
-            <img src="<?= IMG_URL ?>/productos/Logo INICIAL.webp" alt="Logo Plan INICIAL" class="plan-logo">
+            <img src="<?= IMG_URL ?>/productos/Logo INICIAL.webp" alt="Logo Plan INICIAL" class="plan-logo"
+                 width="1254" height="1254" loading="lazy" decoding="async">
             <h3 class="plan-name">INICIAL</h3>
             <p class="plan-tagline">"Que te encuentren y te contacten"</p>
             <div class="plan-price-block">
@@ -202,7 +203,8 @@ require_once __DIR__ . '/includes/header.php';
 
         <div class="plan-card plan-destacado">
             <span class="plan-badge">Recomendado</span>
-            <img src="<?= IMG_URL ?>/productos/Logo IMPARABLE.webp" alt="Logo Plan IMPARABLE" class="plan-logo">
+            <img src="<?= IMG_URL ?>/productos/Logo IMPARABLE.webp" alt="Logo Plan IMPARABLE" class="plan-logo"
+                 width="1254" height="1254" loading="lazy" decoding="async">
             <h3 class="plan-name">IMPARABLE</h3>
             <p class="plan-tagline">"Que te prefieran"</p>
             <div class="plan-price-block">
@@ -223,7 +225,8 @@ require_once __DIR__ . '/includes/header.php';
         </div>
 
         <div class="plan-card">
-            <img src="<?= IMG_URL ?>/productos/Logo VISIBLE.webp" alt="Logo Plan VISIBLE" class="plan-logo">
+            <img src="<?= IMG_URL ?>/productos/Logo VISIBLE.webp" alt="Logo Plan VISIBLE" class="plan-logo"
+                 width="1254" height="1254" loading="lazy" decoding="async">
             <h3 class="plan-name">VISIBLE</h3>
             <p class="plan-tagline">"Que te vean y te elijan"</p>
             <div class="plan-price-block">
@@ -279,7 +282,8 @@ require_once __DIR__ . '/includes/header.php';
             <p class="plan-detail-intro">Para comercios, profesionales independientes y emprendedores que quieren aparecer en Google, tener redes presentables y un punto de contacto digital sin complicaciones.</p>
         </div>
         <div class="plan-detail-hero">
-            <img src="<?= IMG_URL ?>/productos/INICIAL Explicado.webp" alt="Ilustración del Plan INICIAL" class="plan-detail-hero-img">
+            <img src="<?= IMG_URL ?>/productos/INICIAL Explicado.webp" alt="Ilustración del Plan INICIAL" class="plan-detail-hero-img"
+                 width="1254" height="1254" loading="lazy" decoding="async">
         </div>
     </div>
 
@@ -340,7 +344,8 @@ require_once __DIR__ . '/includes/header.php';
             <p class="plan-detail-intro">Para negocios que venden productos físicos y quieren mostrar catálogo online sin integrar pagos electrónicos complejos. Ideal para comercios que atienden por WhatsApp.</p>
         </div>
         <div class="plan-detail-hero">
-            <img src="<?= IMG_URL ?>/productos/VISIBLE Explicado.webp" alt="Ilustración del Plan VISIBLE" class="plan-detail-hero-img">
+            <img src="<?= IMG_URL ?>/productos/VISIBLE Explicado.webp" alt="Ilustración del Plan VISIBLE" class="plan-detail-hero-img"
+                 width="1254" height="1254" loading="lazy" decoding="async">
         </div>
     </div>
 
@@ -412,7 +417,8 @@ require_once __DIR__ . '/includes/header.php';
             <p class="plan-detail-intro">Para negocios que quieren una presencia digital completa: web propia con múltiples secciones, catálogo, gestión profesional de redes y contenido durante los primeros meses.</p>
         </div>
         <div class="plan-detail-hero">
-            <img src="<?= IMG_URL ?>/productos/IMPARABLE Explicado.webp" alt="Ilustración del Plan IMPARABLE" class="plan-detail-hero-img">
+            <img src="<?= IMG_URL ?>/productos/IMPARABLE Explicado.webp" alt="Ilustración del Plan IMPARABLE" class="plan-detail-hero-img"
+                 width="1254" height="1254" loading="lazy" decoding="async">
         </div>
     </div>
 
@@ -693,7 +699,8 @@ $staticMapUrl = sprintf(
                      class="office-map-img"
                      width="640"
                      height="350"
-                     loading="lazy">
+                     loading="lazy"
+                     decoding="async">
             </a>
         </div>
     </div>
@@ -721,19 +728,21 @@ $staticMapUrl = sprintf(
 </section>
 
 <?php
-// --- SEO: JSON-LD structured data (LocalBusiness + Offers + FAQPage) ---
-$baseUrl = defined('BASE_URL') && BASE_URL !== '' ? BASE_URL : 'https://milocalweb.com.ar';
-$orgLogo = LOGOS_URL . '/LOGO VERDE NARANJA.webp';
+// --- SEO: JSON-LD structured data (LocalBusiness + WebSite + Offers + FAQPage) ---
+$siteUrl = SITE_URL;
+$orgLogo = LOGOS_URL . '/' . rawurlencode('LOGO VERDE NARANJA.webp');
 ?>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "<?= htmlspecialchars($siteUrl) ?>/#localbusiness",
   "name": "MiLocalWeb",
-  "url": "<?= htmlspecialchars($baseUrl) ?>",
+  "url": "<?= htmlspecialchars($siteUrl) ?>/",
   "logo": "<?= htmlspecialchars($orgLogo) ?>",
-  "image": "<?= htmlspecialchars($oficina['foto']) ?>",
-  "telephone": "<?= htmlspecialchars($oficina['telefono']) ?>",
+  "image": "<?= htmlspecialchars(OG_IMAGE_URL) ?>",
+  "telephone": "<?= htmlspecialchars($oficina['telefono_e164']) ?>",
+  "email": "comercial@milocalweb.com.ar",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Angelo de Peredo 34",
@@ -749,8 +758,37 @@ $orgLogo = LOGOS_URL . '/LOGO VERDE NARANJA.webp';
   },
   "hasMap": "<?= htmlspecialchars($oficina['gmaps_link']) ?>",
   "priceRange": "$$",
-  "areaServed": "AR",
+  "areaServed": "Córdoba, Argentina",
+  "sameAs": [
+    "https://www.instagram.com/milocalweb.com.ar",
+    "https://www.facebook.com/milocalweb.com.ar"
+  ],
   "description": "Presencia digital profesional para comercios y emprendedores: Google Business, redes, WhatsApp Business y web propia."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "<?= htmlspecialchars($siteUrl) ?>/#website",
+      "url": "<?= htmlspecialchars($siteUrl) ?>/",
+      "name": "MiLocalWeb",
+      "inLanguage": "es-AR",
+      "publisher": { "@id": "<?= htmlspecialchars($siteUrl) ?>/#localbusiness" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "<?= htmlspecialchars($siteUrl) ?>/#webpage",
+      "url": "<?= htmlspecialchars($siteUrl) ?>/",
+      "name": "Posicionamiento Web Profesional en Córdoba — MiLocalWeb",
+      "description": "Presencia digital profesional para tu comercio en Córdoba: Google Business, redes sociales, WhatsApp Business y web propia.",
+      "inLanguage": "es-AR",
+      "isPartOf": { "@id": "<?= htmlspecialchars($siteUrl) ?>/#website" },
+      "about": { "@id": "<?= htmlspecialchars($siteUrl) ?>/#localbusiness" }
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -762,7 +800,7 @@ $orgLogo = LOGOS_URL . '/LOGO VERDE NARANJA.webp';
     {
       "@type": "Offer",
       "name": "Plan INICIAL — Que te encuentren y te contacten",
-      "url": "<?= htmlspecialchars($baseUrl) ?>/#plan-inicial",
+      "url": "<?= htmlspecialchars($siteUrl) ?>/#plan-inicial",
       "priceCurrency": "ARS",
       "price": "498000",
       "availability": "https://schema.org/InStock"
@@ -770,7 +808,7 @@ $orgLogo = LOGOS_URL . '/LOGO VERDE NARANJA.webp';
     {
       "@type": "Offer",
       "name": "Plan VISIBLE — Que te vean y te elijan",
-      "url": "<?= htmlspecialchars($baseUrl) ?>/#plan-visible",
+      "url": "<?= htmlspecialchars($siteUrl) ?>/#plan-visible",
       "priceCurrency": "ARS",
       "price": "648000",
       "availability": "https://schema.org/InStock"
@@ -778,7 +816,7 @@ $orgLogo = LOGOS_URL . '/LOGO VERDE NARANJA.webp';
     {
       "@type": "Offer",
       "name": "Plan IMPARABLE — Que te prefieran",
-      "url": "<?= htmlspecialchars($baseUrl) ?>/#plan-imparable",
+      "url": "<?= htmlspecialchars($siteUrl) ?>/#plan-imparable",
       "priceCurrency": "ARS",
       "price": "998000",
       "availability": "https://schema.org/InStock"

@@ -28,7 +28,11 @@
             <div class="footer-brand">
                 <img src="<?= LOGOS_URL ?>/ISOLOGOTIPO CUADRADO VERDE NARANJA.webp"
                      alt="MiLocalWeb"
-                     class="footer-isotipo">
+                     class="footer-isotipo"
+                     width="1184"
+                     height="1166"
+                     loading="lazy"
+                     decoding="async">
                 <p class="footer-tagline">
                     Ayudamos a comercios, profesionales y emprendedores a tener
                     una presencia digital profesional.

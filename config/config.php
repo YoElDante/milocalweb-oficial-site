@@ -17,7 +17,11 @@ define('SITE_NAME', 'MiLocalWeb');
 $esLocal = (php_sapi_name() === 'cli-server')
     || in_array($_SERVER['SERVER_NAME'] ?? '', ['localhost', '127.0.0.1'], true);
 
-define('BASE_URL', $esLocal ? '' : 'https://milocalweb.com.ar');
+// URL pública canónica del sitio. Siempre absoluta, incluso en local,
+// porque canonical y Open Graph requieren una URL completa.
+define('SITE_URL', 'https://milocalweb.com.ar');
+
+define('BASE_URL', $esLocal ? '' : SITE_URL);
 
 // Ruta absoluta a assets desde la raíz pública
 define('ASSETS_URL', BASE_URL . '/assets');
@@ -26,6 +30,11 @@ define('JS_URL', ASSETS_URL . '/js');
 define('IMG_URL', ASSETS_URL . '/img');
 define('ICONOS_URL', IMG_URL . '/iconos');
 define('LOGOS_URL', IMG_URL . '/logos/Principales');
+
+// Imagen para Open Graph y Twitter Cards (1200x630, relación 1.91:1).
+define('OG_IMAGE_URL', SITE_URL . '/assets/img/logos/og-milocalweb-1200x630.jpg');
+define('OG_IMAGE_WIDTH', 1200);
+define('OG_IMAGE_HEIGHT', 630);
 
 // Cache busting: fuerza recarga de assets cuando los archivos cambian.
 // Usa el timestamp del CSS y JS real como versión.
@@ -49,6 +58,7 @@ $oficina = [
     'nombre'     => 'MiLocalWeb',
     'direccion'  => "Angelo de Peredo 34\nX5000BTB Córdoba",
     'telefono'   => '+54 9 351 378-3473',
+    'telefono_e164' => '+5493513783473',
     'lat'        => '-31.4282461',
     'lng'        => '-64.1896678',
     'foto'       => IMG_URL . '/oficina/oficina.webp',

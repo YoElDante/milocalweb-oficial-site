@@ -1711,6 +1711,24 @@ a {
   max-height: 520px;
   min-height: 220px;
   filter: none;
+
+  /* La imagen tiene fondo blanco opaco y el degradado + la onda viven
+     detrás (z-index menor). La máscara funde los bordes de la imagen para
+     que la transición no termine en un corte recto contra el footer. */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 7%,
+    #000 56%,
+    transparent 90%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 7%,
+    #000 56%,
+    transparent 90%
+  );
 }
 
 /* Velos desactivados a pedido: la imagen ya no es translúcida */

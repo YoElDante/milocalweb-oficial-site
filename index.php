@@ -199,6 +199,17 @@ require_once __DIR__ . '/includes/header.php';
                 <li>6 fotos editadas + kit QR</li>
             </ul>
             <a href="#plan-inicial" class="btn-plan-anchor btn-plan-anchor--ghost" data-scroll-to-product>Ver detalles del plan INICIAL</a>
+            <div class="plan-share">
+                <button type="button" class="plan-share__btn"
+                        data-share-plan="INICIAL"
+                        data-share-tagline="Que te encuentren y te contacten"
+                        data-share-anchor="plan-inicial"
+                        aria-expanded="false"
+                        aria-label="Compartir el plan INICIAL">
+                    <span class="plan-share__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98"/><path d="M15.41 6.51L8.59 10.49"/></svg></span>
+                    <span>Compartir</span>
+                </button>
+            </div>
         </div>
 
         <div class="plan-card plan-destacado">
@@ -222,6 +233,17 @@ require_once __DIR__ . '/includes/header.php';
                 <li>3 meses de publicaciones profesionales en redes</li>
             </ul>
             <a href="#plan-imparable" class="btn-plan-anchor btn-plan-anchor--ghost btn-plan-anchor--ghost-destacado" data-scroll-to-product>Ver detalles del plan IMPARABLE</a>
+            <div class="plan-share">
+                <button type="button" class="plan-share__btn"
+                        data-share-plan="IMPARABLE"
+                        data-share-tagline="Que te prefieran"
+                        data-share-anchor="plan-imparable"
+                        aria-expanded="false"
+                        aria-label="Compartir el plan IMPARABLE">
+                    <span class="plan-share__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98"/><path d="M15.41 6.51L8.59 10.49"/></svg></span>
+                    <span>Compartir</span>
+                </button>
+            </div>
         </div>
 
         <div class="plan-card">
@@ -244,6 +266,17 @@ require_once __DIR__ . '/includes/header.php';
                 <li>12 fotos editadas + 1 mes de publicaciones</li>
             </ul>
             <a href="#plan-visible" class="btn-plan-anchor btn-plan-anchor--ghost" data-scroll-to-product>Ver detalles del plan VISIBLE</a>
+            <div class="plan-share">
+                <button type="button" class="plan-share__btn"
+                        data-share-plan="VISIBLE"
+                        data-share-tagline="Que te vean y te elijan"
+                        data-share-anchor="plan-visible"
+                        aria-expanded="false"
+                        aria-label="Compartir el plan VISIBLE">
+                    <span class="plan-share__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98"/><path d="M15.41 6.51L8.59 10.49"/></svg></span>
+                    <span>Compartir</span>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -332,6 +365,18 @@ require_once __DIR__ . '/includes/header.php';
                 <a href="https://wa.me/5493513783473?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20INICIAL%20de%20MiLocalWeb.%20Quisiera%20recibir%20asesoramiento."
                    target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-detail btn-plan-detail--cta">CONTRATAR</a>
             </div>
+
+            <div class="plan-share plan-share--detail">
+                <button type="button" class="plan-share__btn"
+                        data-share-plan="INICIAL"
+                        data-share-tagline="Que te encuentren y te contacten"
+                        data-share-anchor="plan-inicial"
+                        aria-expanded="false"
+                        aria-label="Compartir el plan INICIAL">
+                    <span class="plan-share__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98"/><path d="M15.41 6.51L8.59 10.49"/></svg></span>
+                    <span>Compartir este plan</span>
+                </button>
+            </div>
         </aside>
     </div>
 </article>
@@ -404,6 +449,18 @@ require_once __DIR__ . '/includes/header.php';
                 </span>
                 <a href="https://wa.me/5493513783473?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20VISIBLE%20de%20MiLocalWeb.%20Quisiera%20recibir%20asesoramiento."
                    target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-detail btn-plan-detail--cta">CONTRATAR</a>
+            </div>
+
+            <div class="plan-share plan-share--detail">
+                <button type="button" class="plan-share__btn"
+                        data-share-plan="VISIBLE"
+                        data-share-tagline="Que te vean y te elijan"
+                        data-share-anchor="plan-visible"
+                        aria-expanded="false"
+                        aria-label="Compartir el plan VISIBLE">
+                    <span class="plan-share__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98"/><path d="M15.41 6.51L8.59 10.49"/></svg></span>
+                    <span>Compartir este plan</span>
+                </button>
             </div>
         </aside>
     </div>
@@ -486,6 +543,18 @@ require_once __DIR__ . '/includes/header.php';
                 </span>
                 <a href="https://wa.me/5493513783473?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20IMPARABLE%20de%20MiLocalWeb.%20Quisiera%20recibir%20asesoramiento."
                    target="_blank" rel="noopener noreferrer" class="btn-plan btn-plan-destacado btn-plan-detail btn-plan-detail--cta btn-plan-detail--cta-destacado">CONTRATAR</a>
+            </div>
+
+            <div class="plan-share plan-share--detail">
+                <button type="button" class="plan-share__btn"
+                        data-share-plan="IMPARABLE"
+                        data-share-tagline="Que te prefieran"
+                        data-share-anchor="plan-imparable"
+                        aria-expanded="false"
+                        aria-label="Compartir el plan IMPARABLE">
+                    <span class="plan-share__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98"/><path d="M15.41 6.51L8.59 10.49"/></svg></span>
+                    <span>Compartir este plan</span>
+                </button>
             </div>
         </aside>
     </div>

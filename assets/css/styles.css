@@ -2572,6 +2572,126 @@ a {
   line-height: 1;
 }
 
+/* Compartir plan — resumen (#resumen-planes) y detalle (#productos) */
+.plan-share {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.85rem;
+}
+
+.plan-share--detail {
+  margin-top: 0;
+}
+
+.plan-share__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid rgba(18, 63, 36, 0.18);
+  border-radius: var(--mlw-radius-pill);
+  background: transparent;
+  color: var(--mlw-bosque-900);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.plan-share__btn:hover,
+.plan-share__btn:focus-visible {
+  background: var(--mlw-mint-50);
+  border-color: var(--mlw-bosque-900);
+}
+
+.plan-share--detail .plan-share__btn {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  background: var(--mlw-blanco);
+}
+
+.plan-destacado .plan-share__btn {
+  border-color: rgba(255, 106, 0, 0.28);
+}
+
+.plan-destacado .plan-share__btn:hover,
+.plan-destacado .plan-share__btn:focus-visible {
+  background: rgba(255, 106, 0, 0.07);
+  border-color: var(--mlw-naranja-vivo);
+  color: var(--mlw-naranja-500);
+}
+
+.plan-share__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.plan-share__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  min-width: 190px;
+  padding: 0.35rem;
+  background: var(--mlw-blanco);
+  border: 1px solid var(--mlw-mint-100);
+  border-radius: 14px;
+  box-shadow: var(--shadow-dropdown);
+}
+
+.plan-share__menu[hidden] {
+  display: none;
+}
+
+.plan-share--detail .plan-share__menu {
+  left: 0;
+  right: 0;
+  transform: none;
+}
+
+.plan-share__option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--mlw-texto);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.plan-share__option-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--mlw-bosque-900);
+}
+
+.plan-share__option--whatsapp .plan-share__option-icon {
+  color: #25D366;
+}
+
+.plan-share__option:hover,
+.plan-share__option:focus-visible {
+  background: var(--mlw-mint-50);
+  color: var(--mlw-bosque-900);
+}
+
 /* Cierre de Productos — invitación a asesoramiento */
 .productos-ayuda {
   max-width: var(--max-width);
@@ -3304,5 +3424,37 @@ a {
   .btn-maps {
     align-self: stretch;
     max-width: none;
+  }
+}
+
+/* =====================================================
+   Aviso al copiar enlace — Compartir planes
+   ===================================================== */
+.share-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 1000;
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--mlw-radius-pill);
+  background: var(--mlw-bosque-900);
+  color: var(--mlw-blanco);
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(18, 63, 36, 0.28);
+  opacity: 0;
+  transform: translate(-50%, 12px);
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+}
+
+.share-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .share-toast {
+    transition: none;
   }
 }

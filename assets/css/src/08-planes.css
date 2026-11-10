@@ -1,0 +1,348 @@
+/* =====================================================
+   Parcial 08 — Resumen comercial de planes.
+   Tarjetas, precios, financiación y promos de #resumen-planes. Los estilos
+   de las fichas de detalle viven en 14-planes-detalle.css; este parcial debe
+   cargarse antes para que el detalle pueda sobrescribir sin pelear.
+   ===================================================== */
+.section-plans,
+.section-resumen-planes {
+  position: relative;
+  background: var(--mlw-mint-50);
+  overflow: hidden;
+}
+
+.section-plans .section,
+.section-resumen-planes .section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Wrapper semántico #productos: agrupa los 3 detalles — sin estilos extra, usa el de cada artículo */
+.section-productos {
+  /* contenedor semántico, sin background propio */
+}
+
+/* Anclas legacy invisibles: conservan URLs viejas sin duplicar secciones. */
+.anchor-legacy {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  scroll-margin-top: 100px;
+}
+
+/* auto-fit + minmax: 3 columnas en desktop y 1 en mobile (21-responsive.css). */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.plan-card {
+  background: var(--mlw-blanco);
+  border: 1px solid #E8E8E8;
+  border-radius: var(--mlw-radius-card);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.plan-logo {
+  width: clamp(92px, 10vw, 140px);
+  height: clamp(92px, 10vw, 140px);
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  opacity: 0.92;
+}
+
+/* La tarjeta destacada es IMPARABLE; su orden en el DOM lo define resumen-planes.php. */
+.plan-destacado {
+  border: 2px solid var(--mlw-naranja-vivo);
+  box-shadow: 0 4px 16px rgba(255, 106, 0, 0.10);
+}
+
+.plan-destacado:hover {
+  box-shadow: 0 10px 28px rgba(255, 106, 0, 0.16);
+}
+
+.plan-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--mlw-naranja-vivo);
+  color: var(--mlw-blanco);
+  padding: 0.3rem 1.25rem;
+  border-radius: var(--mlw-radius-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.25);
+}
+
+.plan-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--mlw-bosque-900);
+  margin-bottom: 0.75rem;
+}
+
+.plan-price {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--mlw-negro);
+  line-height: 1.1;
+}
+
+.plan-price span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--mlw-texto-muted);
+}
+
+.plan-pago {
+  color: var(--mlw-bosque-900);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.plan-price-block {
+  margin-bottom: 0.5rem;
+}
+
+.plan-price-label {
+  color: var(--mlw-texto-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.plan-finance {
+  background: var(--mlw-mint-50);
+  border: 1px solid var(--mlw-mint-100);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.plan-destacado .plan-finance {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 106, 0, 0.15);
+}
+
+.plan-finance-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--mlw-texto-muted);
+  margin-bottom: 0.35rem;
+}
+
+.plan-finance-text {
+  color: var(--mlw-bosque-900);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.plan-finance-total {
+  color: var(--mlw-texto-muted);
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.plan-features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.plan-features li {
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.95rem;
+  color: var(--mlw-texto);
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.plan-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--mlw-bosque-900);
+  font-weight: 700;
+}
+
+.plan-features li small {
+  color: var(--mlw-texto-muted);
+  font-size: 0.8rem;
+}
+
+.plan-features li.feature-inherited {
+  color: var(--mlw-texto-muted);
+  font-size: 0.85rem;
+}
+
+.plan-features li.feature-inherited::before {
+  color: var(--mlw-texto-muted);
+}
+
+.plan-features li.feature-inherited small {
+  color: var(--mlw-texto-muted);
+}
+
+/* Details colapsable en planes */
+.plan-details {
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  margin-top: 0;
+}
+
+.plan-details-summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--mlw-texto-muted);
+  padding: 0.6rem 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.plan-details-summary:hover {
+  color: var(--mlw-bosque-900);
+}
+
+.plan-details-summary::-webkit-details-marker {
+  display: none;
+}
+
+.plan-details-summary::before {
+  content: '▸';
+  display: inline-block;
+  transition: transform 0.2s;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.plan-details[open] .plan-details-summary {
+  color: var(--mlw-bosque-900);
+}
+
+.plan-details[open] .plan-details-summary::before {
+  transform: rotate(90deg);
+}
+
+.plan-features-inherited {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.plan-features-inherited li {
+  color: var(--mlw-texto-muted);
+  font-size: 0.85rem;
+}
+
+.plan-features-inherited li::before {
+  color: var(--mlw-texto-muted);
+}
+
+.plan-features-inherited li small {
+  color: var(--mlw-texto-muted);
+}
+
+.plan-features-inherited li:last-child {
+  border-bottom: none;
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+.planes-nota {
+  text-align: center;
+  margin-top: 1.25rem;
+  color: var(--mlw-texto-muted);
+  font-size: 0.95rem;
+}
+
+.planes-nota code {
+  background: var(--mlw-mint-50);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--mlw-bosque-900);
+  font-weight: 600;
+}
+
+/* Estas clases de promo también se reutilizan en la sección de garantía. */
+.planes-promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1rem 1.5rem;
+  background: var(--mlw-blanco);
+  border: 1px solid #E8E8E8;
+  border-radius: var(--mlw-radius-card);
+  color: var(--mlw-texto);
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: var(--shadow-card);
+}
+
+.planes-promo code {
+  background: var(--mlw-mint-50);
+  border: 1px solid var(--mlw-mint-100);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.95em;
+  color: var(--mlw-bosque-900);
+  font-weight: 600;
+}
+
+.promo-badge {
+  display: inline-block;
+  background: var(--mlw-naranja-vivo);
+  color: var(--mlw-blanco);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--mlw-radius-pill);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.25);
+}
+
+.planes-promo--accent {
+  background: var(--mlw-blanco);
+  border: 1px solid rgba(255, 106, 0, 0.25);
+  margin-top: 1rem;
+}
+
+.promo-badge--accent {
+  background: var(--mlw-bosque-900);
+  box-shadow: 0 4px 12px rgba(18, 63, 36, 0.18);
+}
+

@@ -1,0 +1,195 @@
+/* =====================================================
+   Parcial 05 — Contenido del hero: isotipo, titular y CTAs.
+   Los halos blancos son capas ::before con filter blur y z-index negativo;
+   requieren isolation para quedar detrás del contenido sin tapar el fondo.
+   Depende de 01-base.css y de 06-botones.css para los botones.
+   ===================================================== */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Badge — ESTÁTICO sin bounce/pulse */
+.hero-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--mlw-blanco);
+  color: var(--mlw-bosque-900);
+  border: 2px solid var(--mlw-verde-300);
+  border-radius: var(--mlw-radius-pill);
+  padding: 0.55rem 1.1rem 0.55rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 6px 20px rgba(90, 153, 57, 0.12);
+  margin-bottom: 1.25rem;
+}
+
+.hero-badge-pulse {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--mlw-naranja-vivo);
+  flex-shrink: 0;
+}
+
+/* isolation + z-index negativo en los ::before permiten poner el halo detrás
+   del isotipo sin que se escape del contexto apilado del hero. */
+.hero-isotipo-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto 1.5rem;
+  isolation: isolate;
+}
+
+.hero-isotipo-wrap::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: 115%;
+  height: 115%;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(255, 255, 255, 0.85) 32%,
+    rgba(255, 255, 255, 0.45) 58%,
+    rgba(255, 255, 255, 0) 74%
+  );
+  filter: blur(18px);
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.hero-isotipo {
+  width: clamp(185px, 26vw, 260px);
+  height: auto;
+  display: block;
+  filter:
+    drop-shadow(0 0 22px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 48px rgba(255, 255, 255, 0.75))
+    drop-shadow(0 12px 24px rgba(18, 63, 36, 0.14));
+}
+
+@media (min-width: 768px) {
+  .hero-isotipo {
+    width: clamp(220px, 18vw, 300px);
+  }
+}
+
+.hero h1 {
+  position: relative;
+  isolation: isolate;
+  font-size: clamp(34px, 6vw, 58px);
+  font-weight: 900;
+  margin-bottom: 1.25rem;
+  line-height: 1.05;
+  color: var(--mlw-bosque-600);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85),
+    0 2px 18px rgba(255, 255, 255, 0.65);
+  letter-spacing: -0.02em;
+}
+
+.hero h1::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  width: 118%;
+  height: 150%;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.78) 28%,
+    rgba(255, 255, 255, 0.38) 55%,
+    rgba(255, 255, 255, 0) 72%
+  );
+  filter: blur(16px);
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 28px;
+}
+
+.hero-title-highlight {
+  display: inline-block;
+  color: var(--mlw-naranja-vivo);
+  position: relative;
+}
+
+.hero-title-highlight::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: 4px;
+  height: 14px;
+  background: var(--mlw-naranja-100);
+  border-radius: var(--mlw-radius-pill);
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.hero h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--mlw-naranja-vivo), var(--mlw-verde-300));
+  border-radius: var(--mlw-radius-pill);
+  margin: 14px auto 0;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--mlw-gris-700);
+  margin-bottom: 2.25rem;
+  line-height: 1.65;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-subtitle strong {
+  color: var(--mlw-bosque-900);
+  font-weight: 700;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.btn-primary--hero {
+  position: relative;
+  background: var(--mlw-bosque-900);
+  box-shadow: 0 6px 22px rgba(18, 63, 36, 0.25);
+}
+
+.btn-primary--hero:hover {
+  background: var(--mlw-bosque-600);
+  box-shadow: 0 8px 28px rgba(18, 63, 36, 0.35);
+}
+
+.btn-secondary--hero {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-width: 2.5px;
+  box-shadow: 0 4px 16px rgba(18, 63, 36, 0.08);
+}
+

@@ -1,0 +1,85 @@
+/* =====================================================
+   Parcial 10 — Contacto (#contacto).
+   Botones grandes con borde punteado y reglas anti-desborde para el email.
+   Depende de 06-botones.css; se carga después para poder agrandar los CTA
+   sin modificar las variantes globales.
+   ===================================================== */
+.section-contact {
+  position: relative;
+  background: var(--mlw-mint-50);
+  text-align: center;
+  overflow: hidden;
+}
+
+.section-contact>* {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-subtitle {
+  color: var(--mlw-texto-muted);
+  max-width: 550px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Conversemos — botones más grandes con estilo producto (borde entrecortado) */
+.contact-actions .btn-phone,
+.contact-actions .btn-whatsapp,
+.contact-actions .btn-email {
+  position: relative;
+  padding: 1.15rem 1.9rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  gap: 0.6rem;
+  min-width: 240px;
+  max-width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.10);
+  overflow-wrap: anywhere;
+}
+
+.contact-actions .btn-phone::before,
+.contact-actions .btn-whatsapp::before,
+.contact-actions .btn-email::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1.8px dashed rgba(255, 255, 255, 0.62);
+  border-radius: var(--mlw-radius-pill);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contact-actions .btn-icon {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Email es el más largo — asegurar que no se desborde en móvil */
+.contact-actions .btn-email {
+  font-size: clamp(0.92rem, 3.6vw, 1.08rem);
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .contact-actions .btn-email {
+    font-size: clamp(0.82rem, 4.2vw, 0.95rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+

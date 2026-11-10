@@ -1,0 +1,341 @@
+/* =====================================================
+   Parcial 14 — Fichas de detalle de planes (#productos).
+   Scroll offsets, grilla contenido/sidebar sticky, precios y CTA ancla.
+   Se carga después de 08-planes.css para heredar y sobrescribir el resumen.
+   El top del sidebar sticky (100px) acompasa el alto del header.
+   ===================================================== */
+/* El offset de scroll cubre el header sticky; los alias legacy repiten el
+   valor para que los hashes viejos aterricen en el mismo lugar. */
+#inicio,
+#beneficios,
+#plan-inicial,
+#plan-visible,
+#plan-imparable,
+#resumen-planes,
+#productos,
+#garantia,
+#complementarios,
+#ubicacion,
+#preguntas-frecuentes,
+#contacto {
+  scroll-margin-top: 100px;
+}
+
+/* Alias legacy — mantienen scroll correcto si se usa el hash viejo */
+#planes,
+#conservas,
+#servicios,
+#oficina,
+#adicionales,
+#por-que,
+#faqs,
+#preguntas {
+  scroll-margin-top: 100px;
+}
+
+.plan-detail-section {
+  background: var(--mlw-blanco);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.plan-detail-section--alt {
+  background: var(--mlw-mint-50);
+}
+
+.plan-detail-header {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.5rem;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto 3rem;
+}
+
+.plan-detail-title-block {
+  text-align: left;
+}
+
+.plan-detail-pill {
+  display: inline-block;
+  background: var(--mlw-verde-marca);
+  color: var(--mlw-blanco);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.35rem 1rem;
+  border-radius: var(--mlw-radius-pill);
+  margin-bottom: 0.5rem;
+}
+
+.plan-detail-title-block .plan-detail-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(48px, 8vw, 92px);
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--mlw-verde-marca);
+  margin-bottom: 0.5rem;
+  text-align: left;
+  letter-spacing: -2px;
+}
+
+.plan-detail-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(18px, 2.4vw, 26px);
+  font-weight: 700;
+  color: var(--mlw-bosque-900);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.plan-detail-intro {
+  color: var(--mlw-texto-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 540px;
+}
+
+.plan-detail-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plan-detail-hero-img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: var(--mlw-radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.plan-detail-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.plan-detail-content h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--mlw-bosque-900);
+}
+
+.plan-detail-content h3:first-child {
+  margin-top: 0;
+}
+
+.plan-detail-content p {
+  color: var(--mlw-texto);
+  margin-bottom: 0.75rem;
+}
+
+.plan-detail-list,
+.plan-detail-benefits {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.plan-detail-list li,
+.plan-detail-benefits li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: var(--mlw-texto);
+  line-height: 1.5;
+}
+
+.plan-detail-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--mlw-bosque-900);
+  font-weight: 700;
+}
+
+.plan-detail-benefits li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--mlw-naranja-vivo);
+  font-weight: 700;
+}
+
+.plan-detail-list li:last-child,
+.plan-detail-benefits li:last-child {
+  border-bottom: none;
+}
+
+.plan-detail-highlight {
+  background: var(--mlw-mint-50);
+  border: 1px solid var(--mlw-mint-100);
+  border-left: 4px solid var(--mlw-naranja-vivo);
+  border-radius: var(--mlw-radius-card);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.plan-detail-section--alt .plan-detail-highlight {
+  background: var(--mlw-blanco);
+}
+
+.plan-detail-highlight h4 {
+  color: var(--mlw-bosque-900);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.plan-detail-highlight p {
+  margin-bottom: 0;
+  color: var(--mlw-texto);
+  line-height: 1.6;
+}
+
+/* Sticky solo en desktop; en mobile se reordena arriba (21-responsive.css). */
+.plan-detail-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: 100px;
+}
+
+.plan-detail-box {
+  background: var(--mlw-blanco);
+  border: 1px solid #E8E8E8;
+  border-radius: var(--mlw-radius-card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.plan-detail-section--alt .plan-detail-box {
+  background: var(--mlw-blanco);
+}
+
+.plan-detail-box--muted {
+  background: var(--mlw-mint-50);
+  border-color: var(--mlw-mint-100);
+}
+
+.plan-detail-section--alt .plan-detail-box--muted {
+  background: var(--mlw-blanco);
+  border-color: #E8E8E8;
+}
+
+.plan-detail-box--accent,
+.plan-detail-section--alt .plan-detail-box--accent {
+  background: var(--mlw-bosque-900);
+  border-color: var(--mlw-bosque-900);
+  color: var(--mlw-blanco);
+}
+
+.plan-detail-box--accent h4,
+.plan-detail-section--alt .plan-detail-box--accent h4 {
+  color: var(--mlw-blanco);
+  margin-bottom: 0.75rem;
+}
+
+.plan-detail-price {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--mlw-negro);
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.plan-detail-price-note {
+  color: var(--mlw-texto-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.plan-detail-finance {
+  color: var(--mlw-texto);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.plan-detail-finance:last-of-type {
+  border-bottom: none;
+}
+
+.plan-detail-saving {
+  color: var(--mlw-bosque-900);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.plan-detail-box--accent .plan-detail-inversion {
+  list-style: none;
+}
+
+.plan-detail-inversion li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.95rem;
+}
+
+.plan-detail-inversion li:last-child {
+  border-bottom: none;
+}
+
+.plan-detail-total {
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-plan-detail {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Anchor CTA in plan cards */
+.btn-plan-anchor {
+  display: block;
+  text-align: center;
+  padding: 0.9rem 1.25rem;
+  border-radius: var(--mlw-radius-pill);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  background: var(--mlw-bosque-900);
+  color: var(--mlw-blanco);
+  border: 2px solid var(--mlw-bosque-900);
+  box-shadow: 0 4px 14px rgba(18, 63, 36, 0.22);
+  transition: background 0.25s, color 0.25s, transform 0.15s, box-shadow 0.25s;
+}
+
+.btn-plan-anchor:hover {
+  background: var(--mlw-bosque-600);
+  border-color: var(--mlw-bosque-600);
+  color: var(--mlw-blanco);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(18, 63, 36, 0.32);
+}
+
+.btn-plan-anchor-destacado {
+  background: var(--mlw-naranja-vivo);
+  border-color: var(--mlw-naranja-vivo);
+  color: var(--mlw-blanco);
+  box-shadow: 0 4px 14px rgba(255, 106, 0, 0.35);
+}
+
+.btn-plan-anchor-destacado:hover {
+  background: var(--mlw-naranja-300);
+  border-color: var(--mlw-naranja-300);
+  color: var(--mlw-blanco);
+  box-shadow: 0 6px 20px rgba(255, 106, 0, 0.45);
+}
+

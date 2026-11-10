@@ -1,0 +1,97 @@
+/* =====================================================
+   Parcial 13 — Ubicación (#ubicacion).
+   Grilla foto/mapa, dirección y CTA a Google Maps. En mobile el mapa pasa
+   arriba del texto (21-responsive.css). Depende de 01-base.css.
+   ===================================================== */
+.section-office,
+.section-ubicacion {
+  background: var(--mlw-blanco);
+}
+
+.office-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.office-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.office-photo {
+  width: 100%;
+  height: auto;
+  border-radius: var(--mlw-radius-card);
+  box-shadow: var(--shadow-card);
+  object-fit: cover;
+}
+
+.office-address {
+  background: var(--mlw-mint-50);
+  border: 1px solid var(--mlw-mint-100);
+  border-radius: var(--mlw-radius-card);
+  padding: 1.25rem 1.5rem;
+}
+
+.office-address h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--mlw-bosque-900);
+  margin-bottom: 0.5rem;
+}
+
+.office-address p {
+  color: var(--mlw-texto);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.btn-maps {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2.25rem;
+  border-radius: var(--mlw-radius-pill);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  background: var(--mlw-bosque-900);
+  color: var(--mlw-blanco);
+  transition: background 0.25s, transform 0.15s, box-shadow 0.25s;
+  align-self: flex-start;
+}
+
+.btn-maps:hover {
+  background: var(--mlw-bosque-600);
+  box-shadow: 0 6px 22px rgba(18, 63, 36, 0.28);
+  transform: translateY(-2px);
+}
+
+.office-map {
+  border-radius: var(--mlw-radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid #E8E8E8;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.office-map:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.office-map-link {
+  display: block;
+  line-height: 0;
+}
+
+.office-map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+

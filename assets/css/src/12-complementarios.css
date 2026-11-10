@@ -1,0 +1,129 @@
+/* =====================================================
+   Parcial 12 — Servicios adicionales y tagline de planes.
+   Incluye la tagline reutilizada por las tarjetas de resumen y el layout de
+   #complementarios. Depende de 01-base.css y 08-planes.css.
+   ===================================================== */
+.plan-tagline {
+  font-size: 0.85rem;
+  color: var(--mlw-texto-muted);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+/* =====================================================
+   Servicios Adicionales
+   ===================================================== */
+.section-extras,
+.section-complementarios {
+  background: var(--mlw-blanco);
+}
+
+.extras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.extra-card {
+  background: var(--mlw-blanco);
+  border: 1px solid #E8E8E8;
+  border-radius: var(--mlw-radius-card);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.extra-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.extra-img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin: 0 auto 1.25rem;
+  display: block;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.extra-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--mlw-verde-marca);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.extra-desc {
+  font-size: 0.95rem;
+  color: var(--mlw-texto);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.extra-features {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.extra-features li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  color: var(--mlw-texto);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.extra-features li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--mlw-naranja-vivo);
+  font-weight: 700;
+}
+
+.extra-features li:last-child {
+  border-bottom: none;
+}
+
+.extra-features li small {
+  color: var(--mlw-texto-muted);
+  font-size: 0.8rem;
+}
+
+.extra-price {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 1.1rem;
+  color: var(--mlw-texto);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.extra-price strong {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: var(--mlw-negro);
+}
+
+.extra-price small {
+  color: var(--mlw-texto-muted);
+  font-size: 0.85rem;
+}
+
+.extra-price-add {
+  display: block;
+  width: 100%;
+  font-size: 0.85rem;
+  color: var(--mlw-texto-muted);
+}
+

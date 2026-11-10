@@ -1,0 +1,53 @@
+/* =====================================================
+   Parcial 09 — Beneficios (#beneficios).
+   Grilla de tarjetas con imagen, título y descripción. Depende de
+  01-base.css y de 07-secciones.css para el ritmo vertical.
+   ===================================================== */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.why-card {
+  background: var(--mlw-blanco);
+  border: 1px solid #E8E8E8;
+  border-radius: var(--mlw-radius-card);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.why-img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.why-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--mlw-bosque-900);
+}
+
+.why-card p {
+  color: var(--mlw-texto-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.section-why,
+.section-beneficios {
+  background: var(--mlw-blanco);
+}
+

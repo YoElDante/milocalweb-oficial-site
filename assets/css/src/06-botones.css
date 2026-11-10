@@ -1,0 +1,123 @@
+/* =====================================================
+   Parcial 06 — Botones base y variantes de CTA.
+   Depende de 01-base.css. Se carga antes de los partials de sección para que
+   cada contexto (planes, contacto, ubicación) pueda ajustar la variante.
+   ===================================================== */
+.btn-primary,
+.btn-secondary,
+.btn-plan,
+.btn-plan-destacado,
+.btn-phone,
+.btn-whatsapp,
+.btn-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2.25rem;
+  border-radius: var(--mlw-radius-pill);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.15s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.btn-primary {
+  background: var(--mlw-bosque-900);
+  color: var(--mlw-blanco);
+  box-shadow: 0 4px 16px rgba(18, 63, 36, 0.18);
+}
+
+.btn-primary:hover {
+  background: var(--mlw-bosque-600);
+  box-shadow: 0 6px 22px rgba(18, 63, 36, 0.28);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--mlw-blanco);
+  color: var(--mlw-bosque-900);
+  border: 2px solid var(--mlw-bosque-900);
+}
+
+.btn-secondary:hover {
+  background: var(--mlw-mint-50);
+  border-color: var(--mlw-bosque-600);
+  color: var(--mlw-bosque-600);
+  transform: translateY(-2px);
+}
+
+.btn-plan {
+  display: block;
+  text-align: center;
+  background: var(--mlw-bosque-900);
+  color: var(--mlw-blanco);
+  width: 100%;
+}
+
+.btn-plan:hover {
+  background: var(--mlw-bosque-600);
+  box-shadow: 0 6px 20px rgba(18, 63, 36, 0.18);
+  transform: translateY(-2px);
+}
+
+.btn-plan-destacado {
+  display: block;
+  text-align: center;
+  background: var(--mlw-naranja-vivo);
+  color: var(--mlw-blanco);
+  width: 100%;
+}
+
+.btn-plan-destacado:hover {
+  background: var(--mlw-naranja-300);
+  box-shadow: 0 6px 20px rgba(255, 106, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: var(--mlw-blanco);
+}
+
+.btn-whatsapp:hover {
+  background: #34ea7a;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-email {
+  background: var(--mlw-teal-600);
+  color: var(--mlw-blanco);
+}
+
+.btn-email:hover {
+  background: var(--mlw-teal-500);
+  box-shadow: 0 6px 20px rgba(14, 125, 114, 0.30);
+  transform: translateY(-2px);
+}
+
+.btn-phone {
+  background: var(--mlw-negro);
+  color: var(--mlw-blanco);
+}
+
+.btn-phone:hover {
+  background: #333;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.btn-icon svg {
+  width: 100%;
+  height: 100%;
+}
+

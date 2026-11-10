@@ -1,5 +1,10 @@
 # MiLocalWeb — reglas y headers del servidor
 
+# Sin listados de directorio si falta un index.
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
 # ---- Headers de seguridad ----
 <IfModule mod_headers.c>
     # Evita que el navegador reinterprete el MIME type del archivo.
@@ -43,8 +48,10 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Bloquear acceso a archivos sensibles
-    RewriteRule ^(config|includes)/ - [F,L]
+    # Bloquear acceso directo a código, documentación interna y metadatos.
+    # Las reglas son para Apache; el servidor embebido de PHP no las aplica.
+    RewriteRule ^(?:config|includes|tools|docs|\.git|\.atl)(?:/|$) - [F,L,NC]
+    RewriteRule ^(?:README\.md|\.gitignore)$ - [F,L,NC]
 
     # Host canonico: www → sin www (evita contenido duplicado).
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]

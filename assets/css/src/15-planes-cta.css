@@ -1,0 +1,140 @@
+/* =====================================================
+   Parcial 15 — CTA de planes y señales flotantes.
+   Depende de 06-botones.css y 14-planes-detalle.css. Los cues decorativos
+   usan pointer-events: none para no robar clicks al botón real.
+   ===================================================== */
+
+/* Resumen: invitación secundaria — no compite con el producto */
+.btn-plan-anchor--ghost {
+  background: var(--mlw-blanco);
+  color: var(--mlw-negro);
+  border-color: rgba(18, 63, 36, 0.18);
+  box-shadow: 0 2px 10px rgba(18, 63, 36, 0.06);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.btn-plan-anchor--ghost:hover {
+  background: var(--mlw-bosque-900);
+  border-color: var(--mlw-bosque-900);
+  color: var(--mlw-blanco);
+  box-shadow: 0 4px 14px rgba(18, 63, 36, 0.22);
+}
+
+.btn-plan-anchor--ghost-destacado {
+  border-color: rgba(255, 106, 0, 0.28);
+}
+
+.btn-plan-anchor--ghost-destacado:hover {
+  background: var(--mlw-naranja-vivo);
+  border-color: var(--mlw-naranja-vivo);
+  color: var(--mlw-blanco);
+  box-shadow: 0 4px 14px rgba(255, 106, 0, 0.30);
+}
+
+/* Producto: CTA principal con detalle de rayitas entrecortadas */
+.btn-plan-detail--cta {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.18rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 1.15rem 1.6rem;
+  overflow: hidden;
+  isolation: isolate;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn-plan-detail--cta::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1.8px dashed rgba(255, 255, 255, 0.62);
+  border-radius: var(--mlw-radius-pill);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btn-plan-detail--cta-destacado::before {
+  border-color: rgba(255, 255, 255, 0.72);
+}
+
+/* El texto del botón queda sobre el borde punteado */
+.btn-plan-detail--cta > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating CTA cues — señalan los botones de la sección productos */
+.plan-cta-wrap {
+  position: relative;
+  margin-top: 0.25rem;
+}
+
+.plan-cta-wrap--producto {
+  margin-top: 0.85rem;
+}
+
+.plan-float {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--mlw-blanco);
+  color: var(--mlw-bosque-900);
+  border: 1px solid var(--mlw-mint-100);
+  border-radius: var(--mlw-radius-pill);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  pointer-events: none;
+  white-space: nowrap;
+  transform: translateX(-55%) rotate(-5deg);
+}
+
+.plan-float--destacado {
+  background: var(--mlw-naranja-vivo);
+  color: var(--mlw-blanco);
+  border-color: var(--mlw-naranja-vivo);
+  transform: translateX(-50%) rotate(2deg);
+  bottom: calc(100% + 14px);
+}
+
+.plan-float--compralo {
+  transform: translateX(-45%) rotate(5deg);
+}
+
+/* Producto: posicionamiento asimétrico — no centrado */
+.plan-cta-wrap--producto .plan-float {
+  left: 4%;
+  right: auto;
+  transform: rotate(-6deg);
+  transform-origin: left bottom;
+}
+
+.plan-cta-wrap--producto .plan-float--compralo {
+  left: auto;
+  right: 4%;
+  transform: rotate(6deg);
+  transform-origin: right bottom;
+}
+
+.plan-cta-wrap--producto .plan-float--destacado {
+  /* IMPARABLE queda centrado como punto focal */
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%) rotate(2deg);
+}
+
+.plan-float-arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+

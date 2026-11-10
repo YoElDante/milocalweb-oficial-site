@@ -1,0 +1,305 @@
+/* =====================================================
+   Parcial 03 — Navegación principal y menú móvil.
+   Depende de 01-base.css. Gestiona su propio breakpoint en 1024px y los
+   estados .is-open / aria-expanded que controla assets/js/main/03-navbar.js.
+   El layout móvil limita el alto al viewport dinámico y bloquea el scroll.
+   ===================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--mlw-blanco);
+  border-bottom: 1px solid #E9E9E9;
+  box-shadow: 0 2px 12px rgba(18, 63, 36, 0.04);
+}
+
+.navbar {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1.5rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.brand-logos {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.brand-icon {
+  height: 48px;
+  width: auto;
+}
+
+.brand-wordmark {
+  height: 40px;
+  width: auto;
+}
+
+/* Hamburger toggle — hidden on desktop */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.navbar-toggle:hover {
+  background: var(--mlw-mint-50);
+  border-color: rgba(18, 63, 36, 0.08);
+}
+
+.navbar-toggle:focus-visible {
+  outline: 2px solid var(--mlw-bosque-900);
+  outline-offset: 2px;
+}
+
+.navbar-toggle__bar {
+  display: block;
+  width: 22px;
+  height: 2.5px;
+  background: var(--mlw-bosque-900);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease, width 0.25s ease;
+  transform-origin: center;
+}
+
+.navbar-toggle[aria-expanded="true"] .navbar-toggle__bar:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.navbar-toggle[aria-expanded="true"] .navbar-toggle__bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.navbar-toggle[aria-expanded="true"] .navbar-toggle__bar:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navbar-menu a,
+.navbar-menu .dropdown-toggle {
+  text-decoration: none;
+  color: var(--mlw-texto);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+.navbar-menu a:hover,
+.navbar-menu .dropdown-toggle:hover {
+  color: var(--mlw-bosque-600);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dropdown-toggle::after {
+  content: '▾';
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.dropdown.is-open .dropdown-toggle::after,
+.dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--mlw-blanco);
+  border: 1px solid #E9E9E9;
+  border-radius: var(--mlw-radius-card);
+  list-style: none;
+  min-width: 200px;
+  box-shadow: var(--shadow-dropdown);
+  padding: 0.35rem 0;
+  z-index: 20;
+}
+
+.dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  color: var(--mlw-texto);
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+.dropdown-menu li a:hover {
+  background: var(--mlw-mint-50);
+  color: var(--mlw-bosque-900);
+}
+
+/* Desktop: hover opens, focus-within keeps open for keyboard */
+@media (min-width: 1025px) {
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu,
+  .dropdown.is-open .dropdown-menu {
+    display: block;
+  }
+}
+
+.badge-soon {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  background: var(--mlw-mint-100);
+  color: var(--mlw-bosque-700);
+  padding: 0.15rem 0.4rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.dropdown-link--soon {
+  opacity: 0.9;
+}
+
+/* Mobile / tablet hamburger breakpoint — 03-navbar.js usa el mismo corte (1024px). */
+@media (max-width: 1024px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar {
+    padding: 0.65rem 1rem;
+  }
+
+  .brand-icon {
+    height: 40px;
+  }
+
+  .brand-wordmark {
+    height: 30px;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--mlw-blanco);
+    border-top: 1px solid #E9E9E9;
+    border-bottom: 1px solid #E9E9E9;
+    box-shadow: 0 16px 40px rgba(18, 63, 36, 0.10);
+    padding: 0.5rem 0 0.75rem;
+    display: none;
+    max-height: calc(100dvh - 64px);
+    overflow-y: auto;
+    z-index: 99;
+  }
+
+  .navbar-menu.is-open {
+    display: flex;
+  }
+
+  .navbar-menu > li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-menu > li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-menu a,
+  .navbar-menu .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.95rem 1.25rem;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .navbar-menu a:hover,
+  .navbar-menu .dropdown-toggle:hover {
+    background: var(--mlw-mint-50);
+  }
+
+  /* Dropdown in mobile becomes accordion */
+  .dropdown-menu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 0;
+    min-width: 0;
+    padding: 0;
+    background: #F8FBF7;
+    top: auto;
+  }
+
+  .dropdown.is-open .dropdown-menu {
+    display: block;
+  }
+
+  /* Disable hover opening on touch devices */
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown.is-open:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu li a {
+    padding: 0.85rem 1.25rem 0.85rem 2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Main layout */
+.site-main {
+  position: relative;
+  background: var(--mlw-blanco);
+  z-index: 2;
+}
+

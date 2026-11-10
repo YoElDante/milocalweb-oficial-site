@@ -1,0 +1,109 @@
+/* =====================================================
+   Parcial 19 — Tabla comparativa de planes.
+   No se usa en la home actual; queda disponible para landings que incluyan
+   comparativa. El wrapper habilita scroll horizontal en mobile.
+   ===================================================== */
+.section-comparativa {
+  background: var(--mlw-blanco);
+}
+
+.tabla-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  border-radius: var(--mlw-radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.tabla-comparativa {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background: var(--mlw-blanco);
+  font-size: 0.93rem;
+}
+
+.tabla-comparativa thead th {
+  background: var(--mlw-bosque-900);
+  color: var(--mlw-blanco);
+  padding: 0.9rem 0.75rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.tabla-comparativa thead th:first-child {
+  text-align: left;
+  padding-left: 1.25rem;
+}
+
+.tabla-comparativa .th-destacada,
+.tabla-comparativa .th-imparable {
+  background: var(--mlw-naranja-vivo);
+}
+
+.tabla-comparativa tbody td {
+  padding: 0.7rem 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: var(--mlw-texto);
+}
+
+.tabla-comparativa tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+  padding-left: 1.25rem;
+}
+
+.tabla-comparativa tbody tr:hover td {
+  background: var(--mlw-mint-50);
+}
+
+.tabla-comparativa .tr-seccion td {
+  background: var(--mlw-mint-50);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--mlw-bosque-900);
+  padding: 0.55rem 1.25rem;
+}
+
+.tabla-comparativa .tr-seccion:hover td {
+  background: var(--mlw-mint-50);
+}
+
+.tabla-comparativa .text-muted {
+  color: var(--mlw-texto-muted);
+  font-size: 0.85rem;
+}
+
+.tabla-comparativa tfoot .tr-precio td {
+  background: var(--mlw-mint-50);
+  font-weight: 700;
+  padding: 1.1rem 0.75rem;
+  border-top: 2px solid var(--mlw-naranja-vivo);
+}
+
+.tabla-comparativa tfoot .tr-precio td:first-child {
+  padding-left: 1.25rem;
+}
+
+.tabla-comparativa tfoot .tr-precio strong {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35rem;
+  color: var(--mlw-negro);
+}
+
+.tabla-comparativa tfoot .tr-precio small {
+  color: var(--mlw-texto-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.tabla-comparativa tfoot .td-imparable strong,
+.tabla-comparativa tfoot .td-destacada strong {
+  color: var(--mlw-naranja-vivo);
+}
+

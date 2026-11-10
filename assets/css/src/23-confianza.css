@@ -1,0 +1,207 @@
+/* =====================================================
+   Parcial 23 — Vidriera de clientes (#confiaron-en-nosotros).
+   Breakpoint propio en 600px. Se carga último, por lo que puede ajustar
+   componentes ya definidos. Depende de los tokens de 01-base.css.
+   ===================================================== */
+.section-confianza {
+  position: relative;
+  background: var(--mlw-mint-50);
+  overflow: hidden;
+}
+
+.confianza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.confianza-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--mlw-blanco);
+  border: 1px solid #E8E8E8;
+  border-radius: var(--mlw-radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.confianza-card:hover,
+.confianza-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.confianza-card:focus-visible {
+  outline: 2px solid var(--mlw-naranja-vivo);
+  outline-offset: 2px;
+}
+
+/* Imagen meta (og) de cada web — funciona como el link visual */
+.confianza-card__media {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 1200 / 630;
+  background: var(--mlw-mint-100);
+}
+
+.confianza-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Logo del negocio, debajo de la imagen */
+.confianza-card__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 84px;
+  padding: 0.9rem 1rem 0;
+}
+
+.confianza-card__logo img {
+  max-height: 64px;
+  max-width: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Fallback: cliente sin logo → nombre como wordmark tipográfico */
+.confianza-card__logo--wordmark {
+  align-items: center;
+}
+
+.confianza-wordmark {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--mlw-bosque-900);
+}
+
+/* Logo diseñado para fondo oscuro (partes blancas) → tile de marca oscuro */
+.confianza-card__logo--dark {
+  padding: 0;
+  height: auto;
+  margin: 0.9rem auto 0;
+}
+
+.confianza-card__logo--dark img {
+  width: 92px;
+  height: 92px;
+  max-width: none;
+  max-height: none;
+  background: #0D0D0D;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+/* Nombre del negocio, debajo del logo */
+.confianza-card__nombre {
+  margin-top: 0.3rem;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--mlw-bosque-900);
+  text-align: center;
+}
+
+.confianza-card__rubro {
+  display: block;
+  margin: 0.25rem 0 1rem;
+  padding: 0 1rem;
+  font-size: 0.82rem;
+  color: var(--mlw-texto-muted);
+  text-align: center;
+}
+
+/* Placeholder publicitario: próxima empresa */
+.confianza-card--ad {
+  border: 2px dashed var(--mlw-naranja-vivo);
+  background: linear-gradient(180deg, #FFF8F3 0%, var(--mlw-blanco) 65%);
+}
+
+.confianza-card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  background: var(--mlw-naranja-vivo);
+  color: var(--mlw-blanco);
+  padding: 0.25rem 0.85rem;
+  border-radius: var(--mlw-radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.25);
+}
+
+.confianza-card__media--ad {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding-top: 2rem;
+  background: var(--mlw-mint-100);
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.confianza-ad__plus {
+  width: 56px;
+  height: 56px;
+  border: 2px dashed var(--mlw-naranja-vivo);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--mlw-naranja-vivo);
+  background: var(--mlw-blanco);
+}
+
+.confianza-ad__text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.3;
+  max-width: 240px;
+  padding: 0 1rem;
+  text-align: center;
+  color: var(--mlw-bosque-900);
+}
+
+/* Invitación a visitar las webs */
+.confianza-invita {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--mlw-texto);
+}
+
+.confianza-invita strong {
+  color: var(--mlw-verde-marca);
+}
+
+@media (max-width: 600px) {
+  .confianza-card__logo {
+    height: 72px;
+  }
+
+  .confianza-card__logo img {
+    max-height: 54px;
+    max-width: 120px;
+  }
+
+  .confianza-invita {
+    font-size: 0.95rem;
+  }
+}

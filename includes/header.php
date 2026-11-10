@@ -9,6 +9,10 @@
  * $seoTitle, $seoDescription, $seoCanonical, $seoImage, $seoImageAlt,
  * $seoType y $seoRobots.
  *
+ * Depende de: config/config.php incluido previamente (SITE_URL, CSS_URL,
+ * ICONOS_URL, LOGOS_URL, OG_IMAGE_URL). Abre <body> y <main>, que cierra
+ * includes/footer.php.
+ *
  * @package MiLocalWeb
  */
 

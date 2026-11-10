@@ -1,0 +1,35 @@
+/* =====================================================
+   Parcial 22 — Utilidades puntuales.
+   Toast de "enlace copiado" que crea assets/js/main/04-share.js. Se carga
+   después de responsive para no ser sobrescrito. Su z-index 1000 queda por
+   encima del botón flotante de WhatsApp (999).
+   ===================================================== */
+.share-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 1000;
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--mlw-radius-pill);
+  background: var(--mlw-bosque-900);
+  color: var(--mlw-blanco);
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(18, 63, 36, 0.28);
+  opacity: 0;
+  transform: translate(-50%, 12px);
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+}
+
+.share-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .share-toast {
+    transition: none;
+  }
+}
+

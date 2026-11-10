@@ -5,6 +5,9 @@
  * Define constantes globales para rutas, nombre del sitio y parámetros
  * operativos. Este archivo es incluido por todas las páginas del sitio.
  *
+ * Depende de: nada; debe incluirse antes que header.php y que cualquier
+ * sección, porque de aquí salen SITE_URL, ASSETS_URL, IMG_URL y $oficina.
+ *
  * @package MiLocalWeb
  */
 
@@ -49,8 +52,8 @@ define('JS_VERSION',  '?v=' . $jsVersion);
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 // Google Maps API key (misma cuenta usada en las landingpages de clientes)
-// Se lee de env var en producción; fallback al valor de consola para compatibilidad.
-define('GOOGLE_MAPS_API_KEY', getenv('GOOGLE_MAPS_API_KEY') ?: 'AIzaSyAcV2YdYUk07mJnRLBl_pXi4uG7BOrfYZE');
+// El mapa de la oficina es una imagen local (assets/img/oficina/mapa-oficina.webp).
+// No se usa Google Static Maps en runtime para no exponer API keys en el HTML.
 
 // Datos de la oficina / ubicación comercial — sección "Ubicación" (alias legacy: oficina)
 // Industria IT: la sección del mapa suele llamarse "Ubicación", "Location" o "Dónde estamos" / "Where to find us"

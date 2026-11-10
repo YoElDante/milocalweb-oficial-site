@@ -1,6 +1,10 @@
 /**
- * Script principal de MiLocalWeb.
- * Lógica de interacción del lado del cliente.
+ * Parcial 00 — Apertura del bundle JS de MiLocalWeb.
+ *
+ * Crea el IIFE y activa strict mode. Debe ser el primer archivo de
+ * tools/build-js.php: el resto de los parciales comparten este scope y se
+ * ejecutan en el orden declarado allí. El docblock siguiente documenta el
+ * handler que continúa en 01-smooth-scroll.js.
  */
 (function () {
   'use strict';
@@ -8,6 +12,13 @@
   /**
    * Scroll suave con offset para el header sticky.
    * Compensa la altura del navbar al navegar por anclas internas.
+   */
+  /**
+   * Parcial 01 — Scroll suave para anclas internas.
+   *
+   * Continúa el docblock de 00-header.js. Usa un offset fijo de 90px para el
+   * header sticky y, en mobile, centra la ficha del plan para dejar ver que
+   * hay contenido debajo. Depende de los IDs definidos por las secciones.
    */
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (event) {
@@ -37,6 +48,7 @@
         var viewportTarget = window.innerHeight * 0.42;
         offsetPosition = window.pageYOffset + referenceCenter - viewportTarget;
       } else {
+        // 90px compensa aproximadamente el alto del header sticky.
         var headerOffset = 90;
         var elementPosition = target.getBoundingClientRect().top;
         offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -53,6 +65,13 @@
    * FAQ acordeón: al abrir una pregunta, se cierran las demás.
    */
   var faqItems = document.querySelectorAll('.faq-item');
+  /**
+   * Parcial 02 — Acordeón de FAQ y referencias del navbar.
+   *
+   * Al abrir una pregunta cierra las demás (comportamiento exclusivo) y
+   * cachea los nodos que 03-navbar.js reutiliza. Depende de .faq-item en
+   * includes/sections/faq.php.
+   */
   faqItems.forEach(function (item) {
     item.addEventListener('toggle', function () {
       if (!item.open) {
@@ -74,10 +93,20 @@
   var dropdown = document.querySelector('.dropdown');
   var dropdownToggle = document.querySelector('.dropdown-toggle');
 
+  /**
+   * Parcial 03 — Comportamiento del navbar móvil y del dropdown.
+   *
+   * Usa el breakpoint 1024px (igual que 03-navbar.css), bloquea el scroll del
+   * body con el menú abierto y mantiene aria-expanded sincronizado. Depende
+   * de las variables declaradas en 02-faq.js.
+   */
+
+  // Mismo breakpoint que el media query de 03-navbar.css.
   function isMobileNav() {
     return window.innerWidth <= 1024;
   }
 
+  // Restaura el estado cerrado y libera el scroll del body.
   function closeNavbar() {
     if (!navbarMenu || !navbarToggle) return;
     navbarMenu.classList.remove('is-open');
@@ -86,6 +115,7 @@
     document.body.style.overflow = '';
   }
 
+  // Abre el menú y bloquea el scroll solo en mobile.
   function openNavbar() {
     if (!navbarMenu || !navbarToggle) return;
     navbarMenu.classList.add('is-open');
@@ -193,11 +223,15 @@
   });
 
   /**
-   * Compartir planes — Web Share API con fallback propio.
-   * Cada botón [data-share-plan] comparte el enlace directo a su plan
-   * (resumen y detalle). En móvil se usa la hoja nativa del sistema;
-   * en desktop se abre un menú con WhatsApp y "copiar enlace".
+   * Parcial 04 — Compartir planes (Web Share API + fallback propio).
+   *
+   * Cada botón [data-share-plan] comparte el enlace directo a su plan, tanto
+   * en el resumen como en el detalle. En pantallas táctiles usa la hoja
+   * nativa; en desktop abre un menú con WhatsApp y "copiar enlace".
+   * Depende del toast .share-toast definido en 22-utilidades.css.
    */
+
+  // Construye la URL absoluta del plan: origen + ruta + hash del ancla.
   var shareButtons = document.querySelectorAll('[data-share-plan]');
   var shareMenu = null;
   var shareTrigger = null;
@@ -209,6 +243,7 @@
     return anchor ? base + '#' + anchor : base;
   }
 
+  // Lee los data-* del botón y arma el payload que espera navigator.share.
   function sharePayloadFor(button) {
     var plan = button.getAttribute('data-share-plan') || 'MiLocalWeb';
     var tagline = button.getAttribute('data-share-tagline') || '';
@@ -226,6 +261,7 @@
     };
   }
 
+  // Crea el toast una sola vez y reinicia el timer en cada mensaje.
   function showShareToast(message) {
     if (!shareToast) {
       shareToast = document.createElement('div');
@@ -243,6 +279,7 @@
     }, 2400);
   }
 
+  // Intenta Clipboard API y cae al textarea temporal si no está disponible.
   function copyShareUrl(url) {
     if (!url) {
       return;
@@ -281,6 +318,7 @@
     showShareToast(copied ? 'Enlace copiado' : 'No pudimos copiar el enlace');
   }
 
+  // Oculta el menú y devuelve aria-expanded a false.
   function closeShareMenu() {
     if (!shareMenu || shareMenu.hidden) {
       return;
@@ -293,6 +331,7 @@
     shareTrigger = null;
   }
 
+  // Crea el menú singleton y registra los cierres por click fuera y Escape.
   function getShareMenu() {
     if (shareMenu) {
       return shareMenu;
@@ -353,6 +392,7 @@
     return shareMenu;
   }
 
+  // Mueve el menú junto al botón que lo abrió y actualiza el estado ARIA.
   function openShareMenu(button, payload) {
     var menu = getShareMenu();
     var wrap = (button.closest && button.closest('.plan-share')) || button.parentNode;
@@ -400,5 +440,11 @@
     });
   });
 
+  /**
+   * Parcial 99 — Cierre del bundle JS.
+   *
+   * Debe ser el último archivo de tools/build-js.php: cierra el IIFE abierto
+   * en 00-header.js. El log es solo una señal de carga para diagnóstico.
+   */
   console.log('MiLocalWeb — sitio cargado.');
 })();

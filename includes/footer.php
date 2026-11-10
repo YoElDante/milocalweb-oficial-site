@@ -4,6 +4,10 @@
  *
  * Incluye enlaces a redes sociales, información de contacto y copyright.
  *
+ * Depende de: config/config.php (SITE_NAME, IMG_URL, LOGOS_URL, JS_URL).
+ * Cierra el <main> abierto en header.php, carga el bundle JS y lee los
+ * iconos SVG inline con readfile() para evitar requests adicionales.
+ *
  * @package MiLocalWeb
  */
 ?>

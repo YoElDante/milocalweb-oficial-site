@@ -1,0 +1,64 @@
+/* =====================================================
+   Parcial 02 — Utilidades tipográficas y de presentación.
+   Depende de los tokens de 01-base.css. Se carga antes de los componentes
+   para que estas clases puedan reutilizarse sin duplicar estilos.
+   ===================================================== */
+
+.display {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+.display--impact {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  color: var(--mlw-color-acento);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--mlw-radius-pill);
+  padding: 12px 22px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+
+.pill--bosque {
+  background: var(--mlw-bosque-900);
+  color: var(--mlw-blanco);
+}
+
+.pill--naranja {
+  background: var(--mlw-naranja-vivo);
+  color: var(--mlw-blanco);
+}
+
+.underline-naranja {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-naranja::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: var(--mlw-naranja-vivo);
+  border-radius: var(--mlw-radius-pill);
+  margin-top: 10px;
+}
+
+/* Glass helper (variante secundaria, no default) */
+.glass {
+  background: var(--mlw-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-glass);
+}
+

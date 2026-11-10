@@ -1,0 +1,78 @@
+/* =====================================================
+   Parcial 18 — Preguntas frecuentes (#preguntas-frecuentes).
+   Acordeón nativo con <details>; 02-faq.js solo cierra los demás al abrir
+   uno. Depende de 01-base.css.
+   ===================================================== */
+.section-faq,
+.section-preguntas {
+  background: var(--mlw-mint-50);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  background: var(--mlw-blanco);
+  border: 1px solid #E8E8E8;
+  border-radius: var(--mlw-radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.faq-question {
+  padding: 1.25rem 1.5rem;
+  font-weight: 700;
+  color: var(--mlw-bosque-900);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: background 0.2s;
+}
+
+.faq-question:hover {
+  background: var(--mlw-mint-50);
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: var(--mlw-naranja-vivo);
+  font-weight: 400;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.faq-item[open] .faq-question::after {
+  content: '−';
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.25rem;
+  color: var(--mlw-texto);
+  line-height: 1.6;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-answer code {
+  background: var(--mlw-mint-50);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--mlw-bosque-900);
+}
+

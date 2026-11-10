@@ -1,0 +1,286 @@
+/* =====================================================
+   Parcial 04 — Decoración estática del hero.
+   Estética productos: puntitos, líneas finas y ondas. Sin animaciones por
+   decisión de diseño. Capas: halo/blobs (z 0), ondas y arcos (z 1),
+   continuidad inferior (z 2). Depende de los tokens de 01-base.css.
+   ===================================================== */
+
+.hero {
+  position: relative;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 106, 0, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 85% 15%, rgba(90, 153, 57, 0.10) 0%, transparent 35%),
+    linear-gradient(180deg, var(--mlw-mint-50) 0%, var(--mlw-blanco) 55%, var(--mlw-blanco) 100%);
+  color: var(--mlw-texto);
+  text-align: center;
+  padding: 4.5rem 1.5rem 9rem;
+  overflow: clip;
+  z-index: 1;
+}
+
+/* Stacking: .hero crea contexto con z-index 1; los efectos viven en z 0-2 y
+   el contenido se pinta arriba con z-index 2. */
+.hero-effects {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Halo central mint — como el círculo claro de las ilustraciones de producto */
+.hero-halo {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: 860px;
+  height: 860px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--mlw-mint-50) 0%, rgba(238, 245, 234, 0.85) 58%, transparent 72%);
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 1;
+}
+
+/* Arcos finos outline — detalle esquina sup. izquierda / derecha */
+.hero-arc {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  z-index: 1;
+}
+
+.hero-arc--tl {
+  top: -80px;
+  left: -80px;
+  border-color: rgba(255, 106, 0, 0.9);
+  clip-path: inset(0 0 55% 0);
+}
+
+.hero-arc--tr {
+  top: -35px;
+  right: -32px;
+  width: 340px;
+  height: 340px;
+  border-color: rgba(90, 153, 57, 0.55);
+  /* línea fina secundaria interior a 10px */
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.0);
+}
+
+.hero-arc--tr::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 106, 0, 0.35);
+  clip-path: inset(0 0 60% 0);
+}
+
+/* Onda inferior verde bosque + línea fina interior — banda orgánica con doble curva */
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 165px;
+  z-index: 1;
+}
+
+.hero-wave--continuity {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Onda superior sutil — une el header blanco con el mint del hero */
+.hero-wave-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 36px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-wave-line {
+  fill: none;
+  stroke: var(--mlw-verde-300);
+  stroke-width: 1.6;
+  opacity: 0.9;
+}
+
+/* Blobs orgánicos — ESTÁTICOS (sin morph ni float) */
+.hero-blob {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+}
+
+.hero-blob--green {
+  top: -10%;
+  right: -8%;
+  width: 420px;
+  height: 420px;
+  background: var(--mlw-bosque-900);
+  opacity: 0.95;
+  border-radius: 42% 58% 55% 45% / 48% 42% 58% 52%;
+}
+
+.hero-blob--orange {
+  top: -12%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
+  background: var(--mlw-naranja-vivo);
+  opacity: 0.92;
+  border-radius: 55% 45% 40% 60% / 60% 40% 55% 45%;
+}
+
+/* Grids de puntos decorativos — estilo productos */
+.hero-dots {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.9) 2.5px, transparent 2.5px);
+  background-size: 16px 16px;
+  z-index: 1;
+}
+
+.hero-dots--top {
+  top: 7%;
+  right: 8%;
+}
+
+.hero-dots--bottom {
+  bottom: 18%;
+  left: 6%;
+  background-image: radial-gradient(circle, rgba(18, 63, 36, 0.15) 2.5px, transparent 2.5px);
+}
+
+/* Puntitos sobre el blob naranja — como en INICIAL/VISIBLE/IMPARABLE arriba a la derecha */
+.hero-dots--on-orange {
+  top: 6%;
+  right: 4.5%;
+  width: 64px;
+  height: 64px;
+  background-image: radial-gradient(circle, var(--mlw-bosque-900) 2.2px, transparent 2.2px);
+  background-size: 14px 14px;
+  opacity: 0.95;
+  z-index: 2;
+}
+
+/* Puntitos mint abajo-izquierda — detalle productos inferior izquierdo */
+.hero-dots--mint {
+  bottom: 16%;
+  left: 3.5%;
+  width: 68px;
+  height: 68px;
+  background-image:
+    radial-gradient(circle, rgba(18, 63, 36, 0.22) 2.2px, transparent 2.2px),
+    radial-gradient(circle, rgba(18, 63, 36, 0.12) 2.2px, transparent 2.2px);
+  background-size: 14px 14px;
+  background-position: 0 0, 0 7px;
+  z-index: 2;
+}
+
+/* Elementos flotantes — ESTÁTICOS */
+.hero-float {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 12px 24px rgba(18, 63, 36, 0.12));
+}
+
+.hero-float--pin {
+  top: 18%;
+  right: 12%;
+  width: 72px;
+  height: 90px;
+}
+
+.hero-float--leaf-1 {
+  top: 10%;
+  left: 10%;
+  width: 56px;
+  height: 74px;
+}
+
+.hero-float--leaf-2 {
+  bottom: 22%;
+  right: 18%;
+  width: 46px;
+  height: 64px;
+}
+
+.hero-float--laptop {
+  top: 28%;
+  left: 6%;
+  width: 110px;
+  height: 82px;
+}
+
+.hero-float--phone {
+  bottom: 26%;
+  right: 8%;
+  width: 46px;
+  height: 82px;
+}
+
+/* Destellos — 3 rayitas en abanico (verde bosque) como en ilustraciones */
+.hero-spark {
+  position: absolute;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  pointer-events: none;
+}
+
+.hero-spark span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 3.5px;
+  background: var(--mlw-bosque-900);
+  border-radius: var(--mlw-radius-pill);
+  transform-origin: left center;
+  opacity: 0.95;
+}
+
+.hero-spark span:nth-child(1) { transform: translate(2px, -10px) rotate(-18deg); width: 16px; }
+.hero-spark span:nth-child(2) { transform: translate(4px, -1px) rotate(6deg); width: 20px; }
+.hero-spark span:nth-child(3) { transform: translate(2px, 8px) rotate(32deg); width: 14px; }
+
+.hero-spark--pin {
+  top: 16.5%;
+  right: 8.5%;
+  transform: rotate(-12deg);
+}
+
+.hero-spark--left {
+  top: 22%;
+  left: 15.5%;
+  transform: rotate(-28deg) scale(0.85);
+}
+
+.hero-spark--right {
+  bottom: 23%;
+  right: 5.5%;
+  transform: rotate(18deg) scale(0.9);
+}
+
+.hero-spark--laptop {
+  top: 34%;
+  left: 14.5%;
+  transform: rotate(-10deg) scale(0.75);
+  opacity: 0.85;
+}
+

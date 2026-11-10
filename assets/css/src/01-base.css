@@ -1,0 +1,201 @@
+/* =====================================================
+   Parcial 01 — Base, reset y tokens visuales.
+   Debe cargarse primero: define las custom properties, el reset y los
+   helpers globales que consumen todos los partials siguientes.
+   Fuente de verdad de la paleta: docs/guia-estilo-visual-2026.md.
+   ===================================================== */
+:root {
+  /* =====================================================
+     MiLocalWeb — Tokens visuales v2 (flat-orgánico 2026)
+     Fuente de verdad: docs/guia-estilo-visual-2026.md
+     ===================================================== */
+
+  /* Marca inmutable (del logo) */
+  --mlw-verde-marca: #5A9939;
+  --mlw-naranja-marca: #EF6015;
+
+  /* Bosque — nuevo primario real (promo) */
+  --mlw-bosque-950: #0B2816;
+  --mlw-bosque-900: #123F24;
+  --mlw-bosque-700: #164A2B;
+  --mlw-bosque-600: #1D5E36;
+
+  /* Escala marca luminosa (compat con paleta vieja) */
+  --mlw-verde-500: #5A9939;
+  --mlw-verde-400: #6EB348;
+  --mlw-verde-300: #7BC352;
+  --mlw-verde-200: #9BD97A;
+  --mlw-verde-100: #C8F0B0;
+  --mlw-mint-50: #EEF5EA;
+  --mlw-mint-100: #E0EFE0;
+
+  /* Naranja vivo digital */
+  --mlw-naranja-vivo: #FF6A00;
+  --mlw-naranja-500: #EF6015;
+  --mlw-naranja-300: #FF8A45;
+  --mlw-naranja-100: #FFD6BD;
+
+  /* Teal / cian — para botón email Conversemos (más claro que bosque, buen contraste con blanco) */
+  --mlw-teal-600: #0E7D72;
+  --mlw-teal-500: #14B8A6;
+
+  /* Neutros */
+  --mlw-negro: #1A1A1A;
+  --mlw-gris-700: #4A4A4A;
+  --mlw-gris-500: #7A7A7A;
+  --mlw-gris-300: #D9D9D9;
+  --mlw-blanco: #FFFFFF;
+
+  /* Glass — solo variante secundaria */
+  --mlw-glass: rgba(255, 255, 255, 0.72);
+  --mlw-glass-strong: rgba(255, 255, 255, 0.88);
+
+  /* Aliases semánticos v2 */
+  --mlw-color-primario: var(--mlw-bosque-900);
+  --mlw-color-primario-hover: var(--mlw-bosque-600);
+  --mlw-color-marca: var(--mlw-verde-marca);
+  --mlw-color-acento: var(--mlw-naranja-vivo);
+  --mlw-color-acento-hover: var(--mlw-naranja-300);
+  --mlw-texto: var(--mlw-negro);
+  --mlw-texto-muted: var(--mlw-gris-500);
+  --mlw-fondo: var(--mlw-blanco);
+  --mlw-fondo-trama: var(--mlw-mint-50);
+
+  /* Legacy aliases (mantienen compatibilidad durante la transición) */
+  --verde-900: var(--mlw-bosque-900);
+  --verde-700: var(--mlw-bosque-700);
+  --verde-500: var(--mlw-verde-500);
+  --verde-300: var(--mlw-verde-300);
+  --verde-200: var(--mlw-verde-200);
+  --verde-100: var(--mlw-verde-100);
+  --verde-glass: rgba(90, 153, 57, 0.15);
+  --naranja-900: #7A2E08;
+  --naranja-700: #A7470D;
+  --naranja-500: var(--mlw-naranja-500);
+  --naranja-300: var(--mlw-naranja-300);
+  --naranja-100: var(--mlw-naranja-100);
+  --naranja-glass: rgba(239, 96, 21, 0.15);
+  --negro: var(--mlw-negro);
+  --gris-700: var(--mlw-gris-700);
+  --gris-500: var(--mlw-gris-500);
+  --gris-300: var(--mlw-gris-300);
+  --blanco: var(--mlw-blanco);
+  --blanco-glass: var(--mlw-glass);
+  --blanco-glass-strong: var(--mlw-glass-strong);
+  --negro-glass: rgba(30, 30, 30, 0.55);
+  --color-primary: var(--mlw-color-primario);
+  --color-primary-hover: var(--mlw-color-primario-hover);
+  --color-accent: var(--mlw-color-acento);
+  --color-accent-hover: var(--mlw-color-acento-hover);
+  --color-text: var(--mlw-texto);
+  --color-muted: var(--mlw-texto-muted);
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-solid: var(--mlw-gris-300);
+  --color-bg: var(--mlw-fondo);
+  --color-bg-alt: var(--mlw-mint-50);
+  --color-card-bg: var(--mlw-blanco);
+
+  /* Shapes */
+  --mlw-radius-pill: 999px;
+  --mlw-radius-card: 20px;
+  --mlw-radius-blob: 32px;
+
+  /* Layout / sombras */
+  --radius: 14px;
+  --radius-lg: var(--mlw-radius-card);
+  --radius-xl: 28px;
+  --max-width: 1100px;
+  --shadow-card: 0 2px 12px rgba(18, 63, 36, 0.06);
+  --shadow-card-hover: 0 8px 24px rgba(18, 63, 36, 0.10);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-glass-hover: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-dropdown: 0 10px 30px rgba(18, 63, 36, 0.10);
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--mlw-texto);
+  background: var(--mlw-fondo);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display, .plan-name, .brand-wordmark {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 800;
+  color: var(--mlw-bosque-900);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-size: clamp(22px, 4vw, 30px);
+  font-weight: 700;
+  color: var(--mlw-bosque-900);
+  letter-spacing: -0.01em;
+}
+
+/* A11y / SEO helpers — sin impacto visual */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.6rem 1rem;
+  background: var(--mlw-bosque-900);
+  color: var(--mlw-blanco);
+  border-radius: var(--mlw-radius-pill);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+h3 {
+  font-size: clamp(16px, 2.5vw, 19px);
+  font-weight: 600;
+  color: var(--mlw-bosque-900);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+

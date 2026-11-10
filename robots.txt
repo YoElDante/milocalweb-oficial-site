@@ -5,5 +5,10 @@ User-agent: *
 Allow: /
 Disallow: /config/
 Disallow: /includes/
+Disallow: /tools/
+Disallow: /docs/
+Disallow: /.git/
+Disallow: /.atl/
+Disallow: /README.md
 
 Sitemap: https://milocalweb.com.ar/sitemap.xml

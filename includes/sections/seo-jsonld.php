@@ -143,7 +143,7 @@ $orgLogo = LOGOS_URL . '/' . rawurlencode('LOGO VERDE NARANJA.webp');
     {
       "@type": "Question",
       "name": "¿Puedo cambiar de plan después?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sí, podés actualizar tu plan en cualquier momento. Escribinos por WhatsApp y te explicamos cómo hacer la transición." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí, podés actualizar tu plan en cualquier momento y lo que ya pagaste en tu plan anterior se reconoce como crédito para el nuevo. Escribinos por WhatsApp y te explicamos cómo hacer la transición." }
     },
     {
       "@type": "Question",

@@ -10,7 +10,10 @@
  * que consume assets/js/main/04-share.js.
  */ ?>
 <section id="productos" class="section-productos" aria-labelledby="productos-heading">
-    <h2 id="productos-heading" class="sr-only">Productos — detalle de planes MiLocalWeb</h2>
+    <div class="section-productos__intro">
+        <h2 id="productos-heading">Planes a tu medida</h2>
+        <p class="section-subtitle">Elegí el plan de posicionamiento digital que se ajuste a tu negocio. Todos incluyen configuración profesional de tus perfiles. Agregá una web propia con meses bonificados y mantenimiento fijo por 1 año.</p>
+    </div>
     <!-- Cada plan detallado es un artículo autocontenido dentro de Productos -->
     <?php /* Cada artículo es el destino de un ancla del resumen; el id no debe cambiar sin actualizar enlaces, menú y JSON-LD. */ ?>
     <article id="plan-inicial" class="section plan-detail-section" aria-labelledby="plan-inicial-heading">

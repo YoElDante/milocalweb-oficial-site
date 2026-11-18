@@ -55,7 +55,7 @@
         <details class="faq-item">
             <summary class="faq-question">¿Puedo cambiar de plan después?</summary>
             <div class="faq-answer">
-                <p>Sí, podés actualizar tu plan en cualquier momento. Escribinos por WhatsApp y te explicamos cómo hacer la transición.</p>
+                <p>Sí, podés actualizar tu plan en cualquier momento y lo que ya pagaste en tu plan anterior se reconoce como crédito para el nuevo. Escribinos por WhatsApp y te explicamos cómo hacer la transición.</p>
             </div>
         </details>
 

@@ -12,8 +12,7 @@
 <div id="planes" aria-hidden="true" class="anchor-legacy"></div>
 
 <section id="resumen-planes" class="section section-plans section-resumen-planes" aria-labelledby="resumen-planes-heading">
-    <h2 id="resumen-planes-heading">Planes a tu medida</h2>
-    <p class="section-subtitle">Elegí el plan de posicionamiento digital que se ajuste a tu negocio. Todos incluyen configuración profesional de tus perfiles. Agregá una web propia con meses bonificados y mantenimiento fijo por 1 año.</p>
+    <h2 id="resumen-planes-heading">Comparalos y encontrá el que más se adapte a vos</h2>
 
     <?php /* Orden visual: INICIAL, IMPARABLE (destacado) y VISIBLE. El badge y el borde naranja identifican la recomendación; no cambiar sin revisar la grilla de 08-planes.css. */ ?>
     <div class="plans-grid">
@@ -124,6 +123,9 @@
         <p>
             Pagá de contado y ahorrá. O financiá en cuotas fijas. La primera cuota se abona al contratar.
             <br><small>El mantenimiento mensual aplica después del período bonificado y se mantiene fijo durante 12 meses.</small>
+        </p>
+        <p>
+            ¿Empezaste con un plan y querés crecer? Podés pasar a un plan superior en cualquier momento y <strong>lo que ya pagaste se reconoce como crédito</strong> para el nuevo plan.
         </p>
     </div>
 

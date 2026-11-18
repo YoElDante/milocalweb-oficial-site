@@ -404,7 +404,7 @@ Te cargamos hasta 20 productos inicialmente y te actualizamos hasta 10 por mes d
 El plan IMPARABLE incluye programación de contenido durante 6 meses. La atención de mensajes y comentarios puede contratarse como servicio adicional.
 
 **¿Puedo cambiar de plan después?**  
-Sí, podés actualizar tu plan en cualquier momento. Consultanos por WhatsApp y te explicamos cómo hacer la transición.
+Sí, podés actualizar tu plan en cualquier momento y lo que ya pagaste en tu plan anterior se reconoce como crédito para el nuevo. Consultanos por WhatsApp y te explicamos cómo hacer la transición.
 
 **¿Qué pasa al año con el precio del mantenimiento?**  
 Al cumplirse el año revisamos el valor según ajustes de mercado. Vos decidís si renovás, te bajás de plan o cancelás.

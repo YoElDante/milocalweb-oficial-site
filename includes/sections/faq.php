@@ -34,21 +34,21 @@
         <details class="faq-item">
             <summary class="faq-question">¿El dominio propio está incluido?</summary>
             <div class="faq-answer">
-                <p>El subdominio <code>tunegocio.milocalweb.com.ar</code> es gratuito. El dominio propio <code>.com.ar</code> tiene un costo anual aparte.</p>
+                <p>El subdominio <code>tunegocio.milocalweb.com.ar</code> es gratuito en todos los planes. El dominio propio <code>.com.ar</code> tiene un costo anual aparte, salvo en el Plan IMPARABLE, donde el dominio queda incluido durante los 6 meses bonificados.</p>
             </div>
         </details>
 
         <details class="faq-item">
             <summary class="faq-question">¿Cuántos productos puedo tener en el plan VISIBLE?</summary>
             <div class="faq-answer">
-                <p>Te cargamos hasta 15 productos inicialmente y te actualizamos hasta 10 durante los 3 meses bonificados. Después podés contratar mantenimiento adicional.</p>
+                <p>Te cargamos hasta 20 productos inicialmente y te actualizamos hasta 10 por mes durante los 3 meses bonificados. Después podés contratar mantenimiento adicional.</p>
             </div>
         </details>
 
         <details class="faq-item">
             <summary class="faq-question">¿La publicación en redes incluye respuesta a mensajes?</summary>
             <div class="faq-answer">
-                <p>El plan IMPARABLE incluye programación de contenido durante 3 meses. La atención de mensajes y comentarios puede contratarse como servicio adicional.</p>
+                <p>El plan IMPARABLE incluye programación de contenido durante 6 meses. La atención de mensajes y comentarios puede contratarse como servicio adicional.</p>
             </div>
         </details>
 

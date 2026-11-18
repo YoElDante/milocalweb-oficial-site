@@ -19,8 +19,8 @@ require_once __DIR__ . '/includes/header.php';
 
 <?php require_once __DIR__ . '/includes/sections/hero.php'; ?>
 <?php require_once __DIR__ . '/includes/sections/beneficios.php'; ?>
-<?php require_once __DIR__ . '/includes/sections/resumen-planes.php'; ?>
 <?php require_once __DIR__ . '/includes/sections/productos.php'; ?>
+<?php require_once __DIR__ . '/includes/sections/resumen-planes.php'; ?>
 <?php require_once __DIR__ . '/includes/sections/confianza.php'; ?>
 <?php require_once __DIR__ . '/includes/sections/garantia.php'; ?>
 <?php require_once __DIR__ . '/includes/sections/complementarios.php'; ?>

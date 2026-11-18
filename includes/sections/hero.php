@@ -114,7 +114,7 @@
             <span class="hero-title-highlight">Profesional en Córdoba</span>
         </h1>
         <div class="hero-actions">
-            <a href="#resumen-planes" class="btn-primary btn-primary--hero">Ver planes</a>
+            <a href="#productos" class="btn-primary btn-primary--hero">Ver planes</a>
             <a href="https://wa.me/5493513783473" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
                 <span class="btn-icon" aria-hidden="true"><?php readfile(dirname(__DIR__, 2) . '/assets/img/iconos/icon-whatsapp-brand.svg'); ?></span>
                 WhatsApp Comercial

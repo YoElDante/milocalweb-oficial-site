@@ -33,11 +33,13 @@
                 <li>Relevamiento completo de tu negocio.</li>
                 <li>Configuración y optimización de Google Business Profile.</li>
                 <li>Instagram profesional (bio, foto, links, historias destacadas iniciales).</li>
+                <li>Historias de Instagram programadas: 3 por semana durante 1 mes.</li>
                 <li>Página de Facebook vinculada.</li>
-                <li>Redirección de WhatsApp Business.</li>
-                <li>Sesión de fotos: 6 fotos editadas.</li>
-                <li>Kit QR A4 plastificado + expositor acrílico.</li>
-                <li>Página web propia con subdominio gratis.</li>
+                <li>Redirección a WhatsApp desde todas tus redes.</li>
+                <li class="li-icon"><svg class="li-icon__svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Sesión de fotos de tu negocio: 6 fotos por dentro y por fuera, editadas y mejoradas.</span></li>
+                <li class="li-icon"><svg class="li-icon__svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Hasta 9 fotos de productos, también editadas y mejoradas: 3 productos estrella (esos por los que te reconocen tus clientes), 3 novedades y 3 ofertas para tu web.</span></li>
+                <li>Kit QR A4 plastificado + expositor acrílico para locales físicos. Si sos profesional independiente: tarjeta personal digital con PDF imprimible, con tu logo y datos de contacto (diseño incluido en el plan).</li>
+                <li>Página web propia con tu nombre: <code>https://tunegocio.milocalweb.com.ar</code>.</li>
                 <li>Revisión final y entrega.</li>
             </ul>
 
@@ -45,7 +47,7 @@
             <ul class="plan-detail-benefits">
                 <li><strong>Aparecés en Google Maps</strong> cuando busquen tu rubro en tu zona.</li>
                 <li><strong>Tus redes quedan profesionales</strong> desde el primer día.</li>
-                <li><strong>Tu web queda online</strong> con 1 mes gratis para probar el servicio.</li>
+                <li><strong>Tu web queda online</strong> con 2 meses de hosting, mantenimiento y actualizaciones incluidos en el precio del plan.</li>
                 <li><strong>Todo es tuyo:</strong> las cuentas y configuraciones quedan a tu nombre.</li>
             </ul>
         </div>
@@ -61,7 +63,7 @@
 
             <div class="plan-detail-box plan-detail-box--muted">
                 <h4>Web incluida</h4>
-                <p>1 mes gratis de hosting y mantenimiento.<br>A partir del mes 2: <strong>$50.000.-/mes</strong> hasta completar 1 año.</p>
+                <p>Hosting, mantenimiento y actualizaciones incluidos en el precio del plan durante los primeros 2 meses.<br>A partir del 3er mes: <strong>$50.000.-/mes</strong> hasta completar 1 año.</p>
             </div>
 
             <div class="plan-cta-wrap plan-cta-wrap--producto">
@@ -104,26 +106,40 @@
     <div class="plan-detail-grid">
         <div class="plan-detail-content">
             <h3>¿Qué incluye?</h3>
-            <p>Todo lo del Plan INICIAL, más:</p>
+            <details class="plan-incluye-prev">
+                <summary>Todo lo del Plan <strong>INICIAL</strong><span class="plan-incluye-prev__hint">ver ítems incluidos</span></summary>
+                <ul class="plan-detail-list plan-detail-list--small">
+                    <li>Relevamiento completo de tu negocio.</li>
+                    <li>Configuración y optimización de Google Business Profile.</li>
+                    <li>Instagram profesional (bio, foto, links, historias destacadas iniciales).</li>
+                    <li>Historias de Instagram programadas: 3 por semana durante 1 mes.</li>
+                    <li>Página de Facebook vinculada.</li>
+                    <li>Redirección a WhatsApp desde todas tus redes.</li>
+                    <li>Sesión de fotos de tu negocio: 6 fotos por dentro y por fuera, editadas y mejoradas.</li>
+                    <li>Hasta 9 fotos de productos editadas y mejoradas: 3 estrella, 3 novedades y 3 ofertas.</li>
+                    <li>Kit QR A4 plastificado + expositor acrílico para locales físicos, o tarjeta personal digital con PDF imprimible para profesionales.</li>
+                    <li>Página web propia con tu nombre: tunegocio.milocalweb.com.ar.</li>
+                    <li>Revisión final y entrega.</li>
+                </ul>
+            </details>
+            <p><strong>Más en el Plan VISIBLE:</strong></p>
             <ul class="plan-detail-list">
                 <li>Sitio web con catálogo de productos.</li>
                 <li>Carrito virtual <strong>sin login</strong>: el cliente arma su lista y te envía el pedido por WhatsApp.</li>
-                <li>Catálogo sincronizado con WhatsApp Business.</li>
-                <li>Botón de WhatsApp flotante en la web.</li>
-                <li>Sesión de fotos ampliada: 12 fotos editadas.</li>
+                <li class="li-icon"><svg class="li-icon__svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Fotos de hasta <strong>20 productos</strong>, editadas y mejoradas (las 6 fotos del negocio ya vienen del Plan INICIAL).</span></li>
                 <li>3 historias destacadas en Instagram.</li>
-                <li>1 mes de publicaciones programadas en redes.</li>
+                <li>3 meses de historias de Instagram programadas para autopublicarse, a ritmo de 3 por semana.</li>
             </ul>
 
             <h3>Productos incluidos</h3>
             <ul class="plan-detail-list">
-                <li>Carga inicial de hasta <strong>15 productos</strong> con foto y descripción.</li>
-                <li>Durante los 3 meses bonificados: actualización de hasta <strong>10 productos</strong> en total.</li>
+                <li>Carga inicial de hasta <strong>20 productos</strong> con foto y descripción.</li>
+                <li>Durante los 3 meses bonificados: hasta <strong>10 actualizaciones de productos por mes</strong> en tu web.</li>
                 <li>Actualizaciones adicionales: se cotizan como mantenimiento web.</li>
             </ul>
 
             <div class="plan-detail-highlight">
-                <h4>¿Cómo funciona el carrito por WhatsApp?</h4>
+                <h4 class="h4-icon"><svg class="h4-icon__svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>¿Cómo funciona el carrito por WhatsApp?</h4>
                 <p>Tu cliente elige productos en tu web como si armara una lista de pedido. Al tocar "Pedir por WhatsApp", le llega a vos el mensaje con el listado completo. Vos cerrás la venta como siempre: por WhatsApp, con transferencia, efectivo o el medio de pago que uses. Sin comisiones por venta, sin pasarelas complejas.</p>
             </div>
 
@@ -131,7 +147,7 @@
             <ul class="plan-detail-benefits">
                 <li><strong>Tu cliente elige productos en tu web</strong> y te manda el pedido por WhatsApp.</li>
                 <li><strong>Sin comisiones por venta</strong>, sin pasarelas de pago complejas.</li>
-                <li><strong>Nosotros cargamos y actualizamos tus productos</strong> durante los meses bonificados.</li>
+                <li><strong>Nosotros cargamos y actualizamos tus productos</strong>.</li>
                 <li><strong>Todo el posicionamiento queda en tus cuentas</strong>, no en las nuestras.</li>
             </ul>
         </div>
@@ -146,7 +162,7 @@
 
             <div class="plan-detail-box plan-detail-box--muted">
                 <h4>Web incluida</h4>
-                <p>3 meses gratis de hosting y mantenimiento.<br>A partir del mes 4: <strong>$68.000.-/mes</strong> hasta completar 1 año.</p>
+                <p>4 meses de hosting, mantenimiento y actualizaciones incluidos en el costo del plan: el mes de desarrollo, cuando pagás, más los 3 meses de las cuotas.<br>A partir del mes 4: <strong>$68.000.-/mes</strong> hasta completar 1 año.</p>
             </div>
 
             <div class="plan-cta-wrap plan-cta-wrap--producto">
@@ -189,43 +205,53 @@
     <div class="plan-detail-grid">
         <div class="plan-detail-content">
             <h3>¿Qué incluye?</h3>
-            <p>Todo lo del Plan VISIBLE, más:</p>
+            <details class="plan-incluye-prev">
+                <summary>Todo lo del Plan <strong>VISIBLE</strong><span class="plan-incluye-prev__hint">ver ítems incluidos</span></summary>
+                <ul class="plan-detail-list plan-detail-list--small">
+                    <li>Sitio web con catálogo de productos.</li>
+                    <li>Carrito virtual sin login: el cliente arma su lista y te envía el pedido por WhatsApp.</li>
+                    <li>Fotos de hasta 20 productos, editadas y mejoradas (las 6 fotos del negocio ya vienen del Plan INICIAL).</li>
+                    <li>3 historias destacadas en Instagram.</li>
+                    <li>3 meses de historias de Instagram programadas para autopublicarse, a ritmo de 3 por semana.</li>
+                </ul>
+            </details>
+            <p><strong>Más en el Plan IMPARABLE:</strong></p>
             <ul class="plan-detail-list">
-                <li>Sitio web completo con múltiples secciones.</li>
-                <li>Estructura personalizable: inicio, productos, ofertas, outlet, carrito, contacto, y secciones por rubro.</li>
-                <li>Sesión de fotos completa: 24 fotos editadas.</li>
-                <li>5 historias destacadas en Instagram.</li>
+                <li>Sitio web completo con múltiples secciones (a definir según proyecto).</li>
+                <li>Estructura personalizable: inicio, productos, ofertas, outlet, carrito, contacto, secciones por rubro, y menú/carta online con QR para bares y restaurantes.</li>
+                <li class="li-icon"><svg class="li-icon__svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Sesión de fotos completa de hasta 24 fotos editadas: tu negocio va a lucir increíble en todas las redes.</span></li>
+                <li>6 meses de historias programadas en Instagram publicitando tus productos destacados, tu web e institucionales, que se suman a tus 5 secciones de destacados.</li>
                 <li>QR de reseñas impreso.</li>
-                <li>Tarjetas personales + flyer listo para impresión.</li>
-                <li>Capacitación básica de autogestión.</li>
+                <li>Flyer publicitario imprimible para tu negocio, con actualización de precios una vez al mes si hace falta, y tarjeta personal con QR. Se suma a todo el soporte gráfico de los planes INICIAL y VISIBLE.</li>
+                <li>Instructivo y capacitación básica para mantener tus redes actualizadas.</li>
             </ul>
 
             <h3>Productos incluidos</h3>
             <ul class="plan-detail-list">
-                <li>Carga inicial de hasta <strong>30 productos</strong> con foto y descripción.</li>
-                <li>Durante los 6 meses bonificados: actualización de hasta <strong>30 productos</strong> en total.</li>
+                <li>Carga inicial de hasta <strong>50 productos</strong> con foto y descripción.</li>
+                <li>Hasta <strong>20 actualizaciones o adiciones de productos extras por mes</strong> en tu web.</li>
                 <li>Actualizaciones adicionales: se cotizan como mantenimiento web.</li>
             </ul>
 
-            <h3>Gestión profesional de redes (incluida 3 meses)</h3>
+            <h3>Gestión profesional de redes (incluida 6 meses)</h3>
             <ul class="plan-detail-list">
                 <li>Programación de <strong>3 publicaciones semanales</strong> en Facebook e Instagram.</li>
                 <li>Contenido orientado a presencia de marca y posicionamiento local.</li>
+                <li><strong>Coordinación cada 15 días</strong> para mantener tus publicaciones siempre actualizadas.</li>
                 <li><strong>1 edición mensual de novedad</strong>: pieza gráfica destacada sobre promoción, lanzamiento o temporada.</li>
-                <li>Configuración de Meta Business Suite para que puedas continuar la gestión.</li>
             </ul>
 
             <div class="plan-detail-highlight">
                 <h4>¿Cuánto vale la gestión de redes?</h4>
-                <p>Durante 3 meses publicamos 3 veces por semana en tus redes para que tu marca esté activa, aparezca en el feed de tu zona y genere confianza. Eso equivale a más de 36 publicaciones profesionales + 3 piezas de novedad. Contratar un community manager para hacer eso sale entre $450.000.- y $1.200.000.- en el mercado. Acá viene incluido en tu plan.</p>
+                <p>Durante 6 meses publicamos 3 veces por semana en tus redes, con coordinación cada 15 días para estar siempre al día. Eso equivale a más de 72 publicaciones profesionales + 6 piezas de novedad. Contratar un community manager para hacer eso sale entre $450.000.- y $1.200.000.- por mes en el mercado. Acá viene incluido en tu plan.</p>
             </div>
 
             <h3>Beneficios principales</h3>
             <ul class="plan-detail-benefits">
-                <li><strong>Web completa con secciones propias</strong>, no una sola página.</li>
-                <li><strong>Redes activas durante 3 meses</strong> sin contratar a nadie aparte.</li>
-                <li><strong>Más productos cargados y más actualizaciones</strong> incluidas.</li>
-                <li><strong>Todo el posicionamiento queda en tus cuentas</strong> para seguir usándolo.</li>
+                <li><strong>Es un sitio web completo, no una sola página</strong>: landing page para recibir a tu público, catálogo con carrito de compras por WhatsApp, institucional (quiénes somos) y sección de contacto con formulario completo que deriva las respuestas a tu mail.</li>
+                <li><strong>Redes activas durante 6 meses</strong> sin contratar a nadie aparte.</li>
+                <li><strong>Más productos cargados y más actualizaciones</strong> incluidas, para estar siempre al día.</li>
+                <li><strong>Guía de recomendaciones y capacitación</strong> para que puedas seguir haciéndolo vos cuando lo desees.</li>
             </ul>
         </div>
 
@@ -240,7 +266,7 @@
 
             <div class="plan-detail-box plan-detail-box--muted">
                 <h4>Web incluida</h4>
-                <p>6 meses gratis de hosting y mantenimiento.<br>A partir del mes 7: <strong>$78.000.-/mes</strong> hasta completar 1 año.</p>
+                <p>6 meses de hosting, mantenimiento y dominio incluidos en el costo del plan.<br>A partir del mes 7: <strong>$78.000.-/mes</strong> hasta completar 1 año.</p>
             </div>
 
             <div class="plan-cta-wrap plan-cta-wrap--producto">

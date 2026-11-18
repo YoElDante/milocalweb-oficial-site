@@ -128,17 +128,17 @@ $orgLogo = LOGOS_URL . '/' . rawurlencode('LOGO VERDE NARANJA.webp');
     {
       "@type": "Question",
       "name": "¿El dominio propio está incluido?",
-      "acceptedAnswer": { "@type": "Answer", "text": "El subdominio tunegocio.milocalweb.com.ar es gratuito. El dominio propio .com.ar tiene un costo anual aparte." }
+      "acceptedAnswer": { "@type": "Answer", "text": "El subdominio tunegocio.milocalweb.com.ar es gratuito en todos los planes. El dominio propio .com.ar tiene un costo anual aparte, salvo en el Plan IMPARABLE, donde el dominio queda incluido durante los 6 meses bonificados." }
     },
     {
       "@type": "Question",
       "name": "¿Cuántos productos puedo tener en el plan VISIBLE?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Te cargamos hasta 15 productos inicialmente y te actualizamos hasta 10 durante los 3 meses bonificados. Después podés contratar mantenimiento adicional." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Te cargamos hasta 20 productos inicialmente y te actualizamos hasta 10 por mes durante los 3 meses bonificados. Después podés contratar mantenimiento adicional." }
     },
     {
       "@type": "Question",
       "name": "¿La publicación en redes incluye respuesta a mensajes?",
-      "acceptedAnswer": { "@type": "Answer", "text": "El plan IMPARABLE incluye programación de contenido durante 3 meses. La atención de mensajes y comentarios puede contratarse como servicio adicional." }
+      "acceptedAnswer": { "@type": "Answer", "text": "El plan IMPARABLE incluye programación de contenido durante 6 meses. La atención de mensajes y comentarios puede contratarse como servicio adicional." }
     },
     {
       "@type": "Question",

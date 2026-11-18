@@ -13,7 +13,7 @@
 
 <section id="resumen-planes" class="section section-plans section-resumen-planes" aria-labelledby="resumen-planes-heading">
     <h2 id="resumen-planes-heading">Planes a tu medida</h2>
-    <p class="section-subtitle">Elegí el plan de posicionamiento digital que se ajuste a tu negocio. Todos incluyen configuración profesional de tus perfiles. Agregá una web propia con meses gratis y mantenimiento fijo por 1 año.</p>
+    <p class="section-subtitle">Elegí el plan de posicionamiento digital que se ajuste a tu negocio. Todos incluyen configuración profesional de tus perfiles. Agregá una web propia con meses bonificados y mantenimiento fijo por 1 año.</p>
 
     <?php /* Orden visual: INICIAL, IMPARABLE (destacado) y VISIBLE. El badge y el borde naranja identifican la recomendación; no cambiar sin revisar la grilla de 08-planes.css. */ ?>
     <div class="plans-grid">
@@ -33,8 +33,9 @@
             <ul class="plan-features">
                 <li>Google Business Profile configurado</li>
                 <li>Instagram, Facebook y WhatsApp profesionales</li>
-                <li>Web propia con subdominio gratis</li>
-                <li>6 fotos editadas + kit QR</li>
+                <li>Web propia: tunegocio.milocalweb.com.ar</li>
+                <li>6 fotos del negocio + hasta 9 de productos</li>
+                <li>Kit QR para locales o tarjeta digital para profesionales</li>
             </ul>
             <a href="#plan-inicial" class="btn-plan-anchor btn-plan-anchor--ghost" data-scroll-to-product>Ver detalles del plan INICIAL</a>
             <div class="plan-share">
@@ -66,9 +67,9 @@
             </div>
             <ul class="plan-features">
                 <li>Todo lo de VISIBLE</li>
-                <li>Web completa con múltiples secciones</li>
-                <li>Hasta 30 productos cargados + 30 actualizaciones</li>
-                <li>3 meses de publicaciones profesionales en redes</li>
+                <li>Sitio web completo con múltiples secciones</li>
+                <li>Hasta 50 productos + 20 actualizaciones al mes</li>
+                <li>6 meses de publicaciones profesionales en redes</li>
             </ul>
             <a href="#plan-imparable" class="btn-plan-anchor btn-plan-anchor--ghost btn-plan-anchor--ghost-destacado" data-scroll-to-product>Ver detalles del plan IMPARABLE</a>
             <div class="plan-share">
@@ -100,8 +101,8 @@
             <ul class="plan-features">
                 <li>Todo lo de INICIAL</li>
                 <li>Catálogo web con carrito por WhatsApp</li>
-                <li>Hasta 15 productos cargados + 10 actualizaciones</li>
-                <li>12 fotos editadas + 1 mes de publicaciones</li>
+                <li>Hasta 20 productos + 10 actualizaciones al mes</li>
+                <li>Fotos de productos + 3 meses de historias programadas</li>
             </ul>
             <a href="#plan-visible" class="btn-plan-anchor btn-plan-anchor--ghost" data-scroll-to-product>Ver detalles del plan VISIBLE</a>
             <div class="plan-share">
@@ -139,7 +140,7 @@
         <span class="promo-badge promo-badge--accent">Solo Tuyo</span>
         <p>
             ¿Querés tu <strong>dominio propio</strong>? <code>tunegocio.com.ar</code>
-            desde <strong>$25.000.- ARS/año</strong>. (Sin "milocalweb" en la URL).
+            desde <strong>$50.000.- ARS/año</strong>. (Sin "milocalweb" en la URL).
         </p>
     </div>
 </section>

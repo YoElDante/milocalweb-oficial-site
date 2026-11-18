@@ -339,3 +339,106 @@
   box-shadow: 0 6px 20px rgba(255, 106, 0, 0.45);
 }
 
+/* Dropdown "Todo lo del Plan INICIAL" — <details> nativo dentro de VISIBLE. */
+.plan-incluye-prev {
+  background: var(--mlw-mint-50);
+  border: 1px solid var(--mlw-mint-100);
+  border-radius: var(--mlw-radius-card);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.plan-detail-section--alt .plan-incluye-prev {
+  background: var(--mlw-blanco);
+  border-color: #E8E8E8;
+}
+
+.plan-incluye-prev summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.25rem;
+  font-weight: 700;
+  color: var(--mlw-bosque-900);
+  transition: background 0.2s;
+}
+
+.plan-incluye-prev summary:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.plan-incluye-prev summary::-webkit-details-marker {
+  display: none;
+}
+
+.plan-incluye-prev__hint {
+  margin-left: auto;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--mlw-texto-muted);
+}
+
+.plan-incluye-prev summary::after {
+  content: '▾';
+  color: var(--mlw-naranja-vivo);
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+
+.plan-incluye-prev[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Lista interna del dropdown: tipografía más chica que los ítems del plan. */
+.plan-incluye-prev .plan-detail-list--small {
+  margin: 0;
+  padding: 0 1.25rem 1rem;
+  font-size: 0.85rem;
+}
+
+.plan-incluye-prev .plan-detail-list--small li {
+  padding: 0.35rem 0 0.35rem 1.25rem;
+  color: var(--mlw-gris-700);
+}
+
+.plan-incluye-prev .plan-detail-list--small li::before {
+  font-size: 0.85rem;
+}
+
+/* Ítem de lista con ícono (fotos) — reemplaza la viñeta ✓. */
+.plan-detail-list li.li-icon {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding-left: 0;
+}
+
+.plan-detail-list li.li-icon::before {
+  content: none;
+}
+
+.li-icon__svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.25rem;
+  color: var(--mlw-naranja-vivo);
+}
+
+/* Título con ícono (carrito por WhatsApp). */
+.h4-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.h4-icon__svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--mlw-naranja-vivo);
+}
+

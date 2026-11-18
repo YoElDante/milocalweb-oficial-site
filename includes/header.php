@@ -96,7 +96,7 @@ $seoRobots      = $seoRobots      ?? 'index, follow, max-image-preview:large, ma
             <ul class="navbar-menu" id="navbar-menu">
                 <li><a href="/#inicio">Inicio</a></li>
                 <li><a href="/#beneficios">Beneficios</a></li>
-                <li><a href="/#resumen-planes">Planes</a></li>
+                <li><a href="/#productos">Planes</a></li>
                 <li><a href="/#garantia">Garantía</a></li>
                 <li><a href="/#complementarios">Servicios</a></li>
                 <li><a href="/#preguntas-frecuentes">Preguntas</a></li>

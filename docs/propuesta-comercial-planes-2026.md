@@ -94,12 +94,13 @@ Estas tarjetas son el resumen. Cada una termina con un botón que hace scroll su
 - **Tagline:** "Que te encuentren y te contacten"
 - **Precio contado:** $498.000
 - **Financiación:** 3 cuotas de $199.000
-- **Web:** 1 mes gratis, luego $50.000/mes
+- **Web:** 2 meses incluidos, luego $50.000/mes
 - **Bullets clave:**
   - Google Business Profile configurado.
   - Instagram, Facebook y WhatsApp profesionales.
-  - Web propia con subdominio gratis.
-  - 6 fotos editadas + kit QR.
+  - Web propia: `tunegocio.milocalweb.com.ar`.
+  - 6 fotos del negocio + hasta 9 de productos.
+  - Kit QR para locales o tarjeta digital para profesionales.
 - **CTA:** "Conocer plan INICIAL" → scroll a `#plan-inicial`
 
 ### Tarjeta VISIBLE
@@ -107,12 +108,12 @@ Estas tarjetas son el resumen. Cada una termina con un botón que hace scroll su
 - **Tagline:** "Que te vean y te elijan"
 - **Precio contado:** $648.000
 - **Financiación:** 4 cuotas de $199.000
-- **Web:** 3 meses gratis, luego $68.000/mes
+- **Web:** 4 meses incluidos, luego $68.000/mes
 - **Bullets clave:**
   - Todo lo de INICIAL.
   - Catálogo web con carrito por WhatsApp.
-  - Hasta 15 productos cargados + 10 actualizaciones.
-  - 12 fotos editadas + 1 mes de publicaciones programadas.
+  - Hasta 20 productos + 10 actualizaciones al mes.
+  - Fotos de productos + 3 meses de historias programadas.
 - **CTA:** "Conocer plan VISIBLE" → scroll a `#plan-visible`
 
 ### Tarjeta IMPARABLE (destacado como recomendado)
@@ -120,12 +121,12 @@ Estas tarjetas son el resumen. Cada una termina con un botón que hace scroll su
 - **Tagline:** "Que te prefieran"
 - **Precio contado:** $998.000
 - **Financiación:** $399.000 + 4 cuotas de $199.000
-- **Web:** 6 meses gratis, luego $78.000/mes
+- **Web:** 6 meses de hosting, mantenimiento y dominio incluidos, luego $78.000/mes
 - **Bullets clave:**
   - Todo lo de VISIBLE.
-  - Web completa con múltiples secciones.
-  - Hasta 30 productos cargados + 30 actualizaciones.
-  - 3 meses de publicaciones profesionales en redes.
+  - Sitio web completo con múltiples secciones.
+  - Hasta 50 productos + 20 actualizaciones al mes.
+  - 6 meses de publicaciones profesionales en redes.
 - **CTA:** "Conocer plan IMPARABLE" → scroll a `#plan-imparable`
 
 > **Nota de diseño:** la tarjeta IMPARABLE debe llevar un badge "Recomendado" y un CTA más prominente, siguiendo el patrón de Slack, Linear y Notion.
@@ -143,32 +144,33 @@ Para comercios, profesionales independientes y emprendedores que quieren aparece
 - Primera cuota al contratar; siguientes cuotas cada 30 días.
 
 ### Web incluida
-- Página web propia (landing o sitio básico según lo acordado).
-- 1 mes gratis de hosting y mantenimiento web.
-- A partir del mes 2: **$50.000/mes** hasta completar 1 año.
-- Subdominio gratuito: `tunegocio.milocalweb.com.ar`.
-- Dominio propio `.com.ar` opcional (consultar costo anualual).
+- Página web propia: `tunegocio.milocalweb.com.ar` (landing o sitio básico según lo acordado).
+- Hosting, mantenimiento y actualizaciones incluidos en el precio del plan durante los primeros 2 meses.
+- A partir del mes 3: **$50.000/mes** hasta completar 1 año.
+- Dominio propio `.com.ar` opcional (consultar costo anual).
 
 ### Posicionamiento digital incluido (permanece del cliente)
 - Relevamiento completo del negocio.
 - Configuración y optimización de Google Business Profile.
 - Instagram profesional (bio, foto, links, historias destacadas iniciales).
+- Historias de Instagram programadas: 3 por semana durante 1 mes.
 - Página de Facebook vinculada.
-- Redirección de WhatsApp Business.
-- Sesión de fotos: 6 fotos editadas.
-- Kit QR A4 plastificado + expositor acrílico.
+- Redirección a WhatsApp desde todas tus redes.
+- Sesión de fotos del negocio: 6 fotos por dentro y por fuera, editadas y mejoradas.
+- Hasta 9 fotos de productos editadas y mejoradas: 3 productos estrella, 3 novedades y 3 ofertas para la web.
+- Kit QR A4 plastificado + expositor acrílico para locales físicos, o tarjeta personal digital con PDF imprimible para profesionales.
 - Revisión final y entrega.
 
 ### Beneficios principales
 1. **Aparecés en Google Maps** cuando busquen tu rubro en tu zona.
 2. **Tus redes quedan profesionales** desde el primer día.
-3. **Tu web queda online** con mes gratis para probar el servicio.
+3. **Tu web queda online** con 2 meses de hosting, mantenimiento y actualizaciones incluidos en el precio del plan.
 4. **Todo es tuyo**: las cuentas y configuraciones quedan a tu nombre.
 
 ### Inversión del primer año (escenario con web)
 - Desarrollo: $498.000
-- Mantenimiento: 11 meses × $50.000 = $550.000
-- **Total año 1:** $1.048.000
+- Mantenimiento: 10 meses × $50.000 = $500.000
+- **Total año 1:** $998.000
 
 ### CTA
 > "Quiero el plan INICIAL" → botón a WhatsApp con mensaje predefinido.
@@ -188,36 +190,34 @@ Para negocios que venden productos físicos y quieren mostrar catálogo online s
 ### Web incluida
 - Sitio web con catálogo de productos.
 - Carrito virtual **sin login**: el cliente arma su lista de productos y, al tocar "Comprar", se abre WhatsApp con el listado listo para enviar al vendedor.
-- 3 meses gratis de hosting y mantenimiento web.
+- 4 meses de hosting, mantenimiento y actualizaciones incluidos en el costo del plan (el mes de desarrollo + los 3 meses de las cuotas).
 - A partir del mes 4: **$68.000/mes** hasta completar 1 año.
 - Subdominio gratuito: `tunegocio.milocalweb.com.ar`.
 - Dominio propio `.com.ar` opcional (consultar costo anual).
 - Estructura sugerida: inicio, catálogo, ofertas, contacto.
 
 ### Productos incluidos
-- Carga inicial de hasta **15 productos** con foto y descripción según indicaciones del cliente.
-- Durante los 3 meses bonificados: actualización de hasta **10 productos** en total (cambios de precio, fotos, descripciones, altas o bajas).
+- Carga inicial de hasta **20 productos** con foto y descripción según indicaciones del cliente.
+- Durante los 3 meses bonificados: hasta **10 actualizaciones de productos por mes** (cambios de precio, fotos, descripciones, altas o bajas).
 - Actualizaciones adicionales: se cotizan como mantenimiento web.
 
 ### Posicionamiento digital incluido (permanece del cliente)
 - Todo lo del Plan INICIAL.
-- Catálogo sincronizado con WhatsApp Business.
-- Configuración de botón de WhatsApp flotante en la web.
-- Sesión de fotos ampliada: 12 fotos editadas.
+- Fotos de hasta 20 productos, editadas y mejoradas (las 6 fotos del negocio ya vienen del Plan INICIAL).
 - 3 historias destacadas en Instagram.
-- 1 mes de publicaciones programadas en redes.
+- 3 meses de historias de Instagram programadas para autopublicarse, a ritmo de 3 por semana.
 
 ### Beneficios principales
 1. **Tu cliente elige productos en tu web** y te manda el pedido por WhatsApp.
 2. **Sin comisiones por venta**, sin pasarelas de pago complejas.
-3. **Nosotros cargamos y actualizamos tus productos** durante los meses bonificados.
+3. **Nosotros cargamos y actualizamos tus productos**.
 4. **Todo el posicionamiento queda en tus cuentas**, no en las nuestras.
 
 ### Cómo explicar el carrito sin login
 > "Tu cliente elige productos en tu web como si armara una lista de pedido. Al tocar 'Pedir por WhatsApp', le llega a vos el mensaje con el listado completo. Vos cerrás la venta como siempre: por WhatsApp, con transferencia, efectivo o el medio de pago que uses. Sin comisiones por venta, sin pasarelas complejas."
 
 ### Cómo explicar el límite de productos
-> "Nosotros te cargamos los primeros 15 productos con foto y descripción y, durante los 3 meses bonificados, te actualizamos hasta 10 productos en total. Si después necesitás cambiar precios o fotos con frecuencia, eso ya entra en el mantenimiento mensual, que es mucho más económico que contratar a alguien para que lo haga."
+> "Nosotros te cargamos los primeros 20 productos con foto y descripción y, durante los 3 meses bonificados, te actualizamos hasta 10 productos por mes. Si después necesitás cambiar precios o fotos con frecuencia, eso ya entra en el mantenimiento mensual, que es mucho más económico que contratar a alguien para que lo haga."
 
 ### Inversión del primer año (escenario con web)
 - Desarrollo: $648.000
@@ -242,46 +242,46 @@ Para negocios que quieren una presencia digital completa: web propia con múltip
 - Primera cuota al contratar; siguientes cuotas cada 30 días.
 
 ### Web incluida
-- Sitio web completo con múltiples secciones.
-- Hasta 6 meses gratis de hosting y mantenimiento web.
+- Sitio web completo con múltiples secciones (a definir según proyecto).
+- 6 meses de hosting, mantenimiento y dominio incluidos en el costo del plan.
 - A partir del mes 7: **$78.000/mes** hasta completar 1 año.
 - Subdominio gratuito: `tunegocio.milocalweb.com.ar`.
-- Dominio propio `.com.ar` opcional (consultar costo anual).
-- Estructura sugerida: inicio, productos, ofertas, outlet, carrito, contacto, y secciones personalizadas por tipo de producto o rubro (`/productos`, `/ofertas`, `/outlet`, `/calzado`, `/ropa`, `/bike`, etc.).
+- Dominio propio `.com.ar` incluido durante los 6 meses bonificados (luego costo anual).
+- Estructura sugerida: inicio, productos, ofertas, outlet, carrito, contacto, secciones personalizadas por tipo de producto o rubro (`/productos`, `/ofertas`, `/outlet`, `/calzado`, `/ropa`, `/bike`, etc.), y menú/carta online con QR para bares y restaurantes.
 
 ### Productos incluidos
-- Carga inicial de hasta **30 productos** con foto y descripción.
-- Durante los 6 meses bonificados: actualización de hasta **30 productos** en total.
+- Carga inicial de hasta **50 productos** con foto y descripción.
+- Hasta **20 actualizaciones o adiciones de productos extras por mes** en la web.
 - Actualizaciones adicionales: se cotizan como mantenimiento web.
 
-### Gestión profesional de redes (incluida por 3 meses)
-- Programación de **3 publicaciones semanales** en Facebook e Instagram durante 3 meses.
+### Gestión profesional de redes (incluida por 6 meses)
+- Programación de **3 publicaciones semanales** en Facebook e Instagram durante 6 meses.
 - Contenido orientado a presencia de marca y posicionamiento local.
+- **Coordinación cada 15 días** para mantener las publicaciones siempre actualizadas.
 - **1 edición mensual de novedad**: pieza gráfica o publicación destacada sobre promoción, lanzamiento o temporada.
-- Configuración de Meta Business Suite para que el cliente pueda continuar la gestión si lo desea.
 
 ### Posicionamiento digital incluido (permanece del cliente)
 - Todo lo de los planes anteriores.
-- Sesión de fotos completa: 24 fotos editadas.
-- 5 historias destacadas en Instagram.
-- Capacitación básica de autogestión.
+- Sesión de fotos completa de hasta 24 fotos editadas: tu negocio va a lucir increíble en todas las redes.
+- 6 meses de historias programadas en Instagram publicitando tus productos destacados, tu web e institucionales, que se suman a tus 5 secciones de destacados.
+- Instructivo y capacitación básica para mantener tus redes actualizadas.
 - QR de reseñas impreso.
-- Tarjetas personales + flyer listo para impresión.
+- Flyer publicitario imprimible para tu negocio, con actualización de precios una vez al mes si hace falta, y tarjeta personal con QR. Se suma a todo el soporte gráfico de los planes INICIAL y VISIBLE.
 
 ### Beneficios principales
-1. **Web completa con secciones propias**, no una sola página.
-2. **Redes activas durante 3 meses** sin contratar a nadie aparte.
-3. **Más productos cargados y más actualizaciones** incluidas.
-4. **Todo el posicionamiento queda en tus cuentas** para seguir usándolo cuando quieras.
+1. **Es un sitio web completo, no una sola página**: landing page para recibir a tu público, catálogo con carrito de compras por WhatsApp, institucional (quiénes somos) y sección de contacto con formulario completo que deriva las respuestas a tu mail.
+2. **Redes activas durante 6 meses** sin contratar a nadie aparte.
+3. **Más productos cargados y más actualizaciones** incluidas, para estar siempre al día.
+4. **Guía de recomendaciones y capacitación** para que puedas seguir haciéndolo vos cuando lo desees.
 
 ### Cómo explicar el beneficio de redes (versión comercial)
-> "Durante 3 meses publicamos 3 veces por semana en tus redes para que tu marca esté activa, aparezca en el feed de tu zona y genere confianza. Eso equivale a más de 36 publicaciones profesionales + 3 piezas de novedad. Contratar un community manager para hacer eso sale entre $450.000 y $1.200.000 en el mercado. Acá viene incluido en tu plan."
+> "Durante 6 meses publicamos 3 veces por semana en tus redes, con coordinación cada 15 días para estar siempre al día. Eso equivale a más de 72 publicaciones profesionales + 6 piezas de novedad. Contratar un community manager para hacer eso sale entre $450.000 y $1.200.000 por mes en el mercado. Acá viene incluido en tu plan."
 
 ### Justificación técnica para uso interno
-- 3 publicaciones/semana × 4 semanas × 3 meses = 36 publicaciones.
-- 1 edición mensual de novedad × 3 meses = 3 piezas adicionales.
+- 3 publicaciones/semana × 4 semanas × 6 meses = 72 publicaciones.
+- 1 edición mensual de novedad × 6 meses = 6 piezas adicionales.
 - Mercado argentino: gestión de 2 redes con 12-20 publicaciones mensuales oscila entre $150.000 y $600.000/mes según el nivel del profesional.
-- Valor aproximado del servicio incluido: entre $450.000 y $1.800.000.
+- Valor aproximado del servicio incluido: entre $900.000 y $3.600.000.
 
 ### Inversión del primer año (escenario con web)
 - Desarrollo: $998.000
@@ -302,11 +302,11 @@ Para negocios que quieren una presencia digital completa: web propia con múltip
 | Financiación | 3 × $199.000 | 4 × $199.000 | $399.000 + 4 × $199.000 |
 | Total financiado | $597.000 | $796.000 | $1.195.000 |
 | Ahorro por pago único | $99.000 | $148.000 | $197.000 |
-| Web gratis | 1 mes | 3 meses | 6 meses |
+| Web incluida | 2 meses | 4 meses | 6 meses (mantenimiento + dominio) |
 | Mantenimiento mensual | $50.000/mes | $68.000/mes | $78.000/mes |
-| Productos carga inicial | No aplica | Hasta 15 | Hasta 30 |
-| Actualizaciones incluidas | No aplica | Hasta 10 en 3 meses | Hasta 30 en 6 meses |
-| Publicaciones en redes | No incluye | 1 mes programado | 3 meses profesionales |
+| Productos carga inicial | Hasta 9 | Hasta 20 | Hasta 50 |
+| Actualizaciones incluidas | No aplica | Hasta 10 por mes | Hasta 20 por mes |
+| Publicaciones en redes | Historias 3/semana × 1 mes | Historias 3/semana × 3 meses | 3 publicaciones/semana × 6 meses |
 
 > **Texto sugerido en la web:** "Pagá de contado y ahorrá. O financiá en cuotas fijas. La primera cuota se abona al contratar."
 
@@ -379,7 +379,7 @@ Este punto es diferencial y debe estar bien visible en la web.
 - **Web con garantía:** Meses bonificados y precio de mantenimiento fijo durante el primer año.
 
 ### Sección de tarjetas de planes (intro)
-> "Elegí el plan de posicionamiento digital que se ajuste a tu negocio. Todos incluyen configuración profesional de tus perfiles. Agregá una web propia con meses gratis y mantenimiento fijo por 1 año."
+> "Elegí el plan de posicionamiento digital que se ajuste a tu negocio. Todos incluyen configuración profesional de tus perfiles. Agregá una web propia con meses bonificados y mantenimiento fijo por 1 año."
 
 ### Nota legal sugerida
 > "Los precios son en pesos argentinos. La financiación implica un costo total mayor al contado. El mantenimiento mensual aplica después del período bonificado y se mantiene fijo durante 12 meses desde la contratación."
@@ -395,13 +395,13 @@ Se suspende el sitio web, pero todo el posicionamiento configurado (Google, rede
 Porque financiar el pago tiene un costo administrativo. Pagando de contado accedés al mejor precio.
 
 **¿El dominio propio está incluido?**  
-El subdominio `tunegocio.milocalweb.com.ar` es gratuito. El dominio propio `.com.ar` tiene un costo anual aparte.
+El subdominio `tunegocio.milocalweb.com.ar` es gratuito en todos los planes. El dominio propio `.com.ar` tiene un costo anual aparte, salvo en el Plan IMPARABLE, donde el dominio queda incluido durante los 6 meses bonificados.
 
 **¿Cuántos productos puedo tener en el plan VISIBLE?**  
-Te cargamos hasta 15 productos inicialmente y te actualizamos hasta 10 durante los 3 meses bonificados. Después podés contratar mantenimiento adicional.
+Te cargamos hasta 20 productos inicialmente y te actualizamos hasta 10 por mes durante los 3 meses bonificados. Después podés contratar mantenimiento adicional.
 
 **¿La publicación en redes incluye respuesta a mensajes?**  
-El plan IMPARABLE incluye programación de contenido durante 3 meses. La atención de mensajes y comentarios puede contratarse como servicio adicional.
+El plan IMPARABLE incluye programación de contenido durante 6 meses. La atención de mensajes y comentarios puede contratarse como servicio adicional.
 
 **¿Puedo cambiar de plan después?**  
 Sí, podés actualizar tu plan en cualquier momento. Consultanos por WhatsApp y te explicamos cómo hacer la transición.
@@ -467,7 +467,7 @@ html {
 |---------|----------------------|-------------------------------|
 | Landing / sitio básico | Desde $498.000 (incluye posicionamiento) | $150.000 – $1.200.000 |
 | E-commerce básico | $648.000 + mantenimiento $68.000/mes | $750.000 – $1.800.000 |
-| Community manager 3 meses | Incluido en IMPARABLE | $450.000 – $1.800.000 |
+| Community manager 6 meses | Incluido en IMPARABLE | $900.000 – $3.600.000 |
 | Mantenimiento web | $50.000 – $78.000/mes | $50.000 – $75.000/mes |
 | Propiedad del cliente | Todo el posicionamiento es suyo | Variable según proveedor |
 
